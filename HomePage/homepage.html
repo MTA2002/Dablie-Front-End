@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dablie Foundation</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="homepage.css">
     <link rel="stylesheet" href="footer.css">
+    <style>
+        .program_card.hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -35,7 +37,7 @@
                     <a href="#">Our Program <i class="arroww down"></i></a>
                     <ul class="dropdown">
                         <li><a href="../leadership page/index.html">Leadership Program</a></li>
-                        <li><a href="#">Scholarship Program</a></li>
+                        <li><a href="./scholarship.html">Scholarship Program</a></li>
                         <li><a href="#">Economic Empowerment</a></li>
                         <li><a href="#">Dablie Business Froum</a></li>
                         <li><a href="#">Partners Directory</a></li>
@@ -50,7 +52,6 @@
             <a href="#">Donate</a>
         </div>
     </header>
-
     <div class="menu-overlay">
         <nav class="mobile-navbar">
             <ul>
@@ -68,7 +69,7 @@
                         <li><a href="../leadership page/index.html">Leadership Program</a></li>
                         <li><a href="#">Scholarship Program</a></li>
                         <li><a href="#">Economic Empowerment</a></li>
-                        <li><a href="#">Dablie Business Froum</a></li>
+                        <li><a href="#">Dablie Business Forum</a></li>
                         <li><a href="#">Partners Directory</a></li>
                         <li><a href="#">Youth Club</a></li>
                     </ul>
@@ -105,7 +106,8 @@
                 <div class="update_card">
                     <img src="./images/News_Two.png" alt="Update 2">
                     <h4>Youth-Led Movement Makes Strides in Local Schools Supported by Dablie</h4>
-                    <h5>Dablie partners with leaders to combat climate injustice inside Ethiopia, focusing on sustainable edu...<a href="#">Read More</a></h5>            </div>
+                    <h5>Dablie partners with leaders to combat climate injustice inside Ethiopia, focusing on sustainable edu...<a href="#">Read More</a></h5>            
+                </div>
                 <div class="update_card">
                     <img src="./images/News_Three.png" alt="Update 3">
                     <h4>Dablie Scholarship Program Supports Underprivileged Students</h4>
@@ -130,7 +132,7 @@
                         <div class="program_text_left">
                             <h3>Scholarship Program</h3>
                             <p>Recognizing the transformative power of education, we offer scholarships and educational opportunities to marginalized Muslim communities in Ethiopia.</p>
-                            <a href="#">Learn More</a>
+<a href="#">Learn More</a>
                         </div>
                         <img src="./images/Programs_bulb.png" alt="Scholarship Program">
                     </div>
@@ -153,14 +155,30 @@
                         <img src="./images/Programs_bulb.png" alt="Economic Empowerment Program">
                     </div>
                 </div>
-            </div>
-            <div class="see_more">
-                <br><br><br>
-                <a href="#">See more programs <i class="arrow down"></i></a>
+                <div class="see_more">
+                    <br><br><br>
+                    <a href="#" id="toggle-more">See more programs <i class="arrow down"></i></a>
+                </div>
+                <div class="program_card hidden">
+                    <img src="./images/Programs_bulb.png" alt="Partners Directory">
+                    <div class="program_text_right">
+                        <h3>Partners Directory</h3>
+                        <p>Are you a young Muslim seeking to connect, learn, and make a difference? Look no further than our vibrant Youth Club!</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="program_card hidden">
+                    <div class="program_card_Two">
+                        <div class="program_text_left">
+                            <h3>Dablie Business Forum</h3>
+                            <p>We believe in fostering self-reliance and economic prosperity within the Muslim community.</p>
+                            <a href="#">Learn More</a>
+                        </div>
+                        <img src="./images/Programs_bulb.png" alt="Economic Empowerment Program">
+                    </div>
+                </div>
             </div>
         </section>
-        <!-- Write your code here -->
- 
     </main>
     <footer class="footer">
         <div class="footer-section">
@@ -208,5 +226,15 @@
     </footer>   
     
     <script src="header.js"></script>
+    <script>
+        document.getElementById('toggle-more').addEventListener('click', function(event) {
+            event.preventDefault();
+            var hiddenCards = document.querySelectorAll('.program_card.hidden');
+            hiddenCards.forEach(function(card) {
+                card.classList.toggle('hidden');
+            });
+            this.textContent = this.textContent.includes('more') ? 'See less programs <i class="arrow up"></i>' : 'See more programs <i class="arrow down"></i>';
+        });
+    </script>
 </body>
 </html>

@@ -43,7 +43,7 @@ body {
     border-radius: 18px; /* Border radius */
     color: white; /* Text color */
     text-decoration: none; /* Remove underline */
-    transition: background 0.3s, color 0.3s; /* Transition effect */
+    transition: 0.3s, color 0.3s; /* Transition effect */
 }
 
 /* Hover styles for buttons within the hero section */
