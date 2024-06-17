@@ -84,11 +84,11 @@ body {
     display: flex;
     /* margin-top: 2rem; */
     /* margin: 3rem 2rem; */
-    padding: 50px;
-    gap: 5rem;
+    padding: 120px;
+    gap: 18rem;
 }
 .ready_box img{
-    width: 340px;
+    width: 400px;
 }
 .ready_written{
     text-align: center;
@@ -112,7 +112,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 5rem;
+    gap: 18rem;
 }
 .features_content{
     /* border: 1px solid #333; */
