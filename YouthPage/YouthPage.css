@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif; 
+    background-color: #ffffff;
+    color: #333;
+    text-align: center;
+}
+.youth_hero{
+    background-image: url(./youth_assets/Hero\ section\ \(3\).png);
+    background-repeat: none;
+    background-size: cover;
+    height:526px;
+    padding: 2rem;
+}
+.hero_header p{
+    color: #508991;
+    font-size: 1.05rem;
+    margin: 2rem;
+}
+.youth_hero h1{
+    font-size: 2.5rem;
+    font-weight: light;
+}
+.youth_hero span{
+    color:#508991 ;
+}
+.youth_icons img{
+    width: 30px;
+    border: 0.25px solid #333;
+    border-radius: 50px;
+    padding: 10px;
+    margin: 3rem 0.5rem;
+}
+.youth_icons img:hover{
+    cursor: pointer;
+    background: rgb(199, 242, 217);
+    color: #0072c6;
+    transition: ease-in 0.2s;
+}
+/* .youth_hero button{
+    background-color: #508991;
+    border-radius: 5px;
+    width: 120px;
+    height: 30px;
+} */
+.donate_button {
+    order: 2; /* Ensure it appears second in flex order */
+    margin-left: 98%; /* Pushes the donate button to the far right */
+}
+
+.donate_button a {
+    text-decoration: none;
+    background-color: #004346;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.625rem;
+    font-weight: normal;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    transform: rotate(270deg);
+}
+
+.donate_button a:hover {
+    background-color: #002d2e; /* Darker shade on hover */
+}
+
+.donate-button a::after {
+    content: '♥';
+    margin-left: 0.5rem;
+}
+.youth_hero p{
+    text-align: center;
+    width: 50rem;
+    margin: 2rem auto;
+}
+
