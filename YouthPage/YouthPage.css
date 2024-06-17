@@ -72,7 +72,7 @@ body {
 }
 .youth_hero p{
     text-align: center;
-    width: 50rem;
+    /* width: 50rem; */
     margin: 2rem auto;
 }
 .Ready{
@@ -82,13 +82,18 @@ body {
 .ready_box{
     background-color: #E4EBEF;
     display: flex;
+    /* flex-wrap: wrap; */
     /* margin-top: 2rem; */
     /* margin: 3rem 2rem; */
-    padding: 120px;
-    gap: 18rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    gap: 8rem;
 }
 .ready_box img{
-    width: 400px;
+    width: 300px;
+    height: 200px;
 }
 .ready_written{
     text-align: center;
@@ -112,7 +117,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 18rem;
+    gap: 1rem;
 }
 .features_content{
     /* border: 1px solid #333; */
@@ -120,7 +125,7 @@ body {
     height: 21rem;
     padding: 1.2rem;
     text-align: center;
-    margin: 1rem;
+    margin:1rem;
 }
 .features_content img{
     margin: 0.5rem;
@@ -137,7 +142,8 @@ body {
 .modules{
     background-color:#f3f3f3;
     text-align: left;
-    padding: 3rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 .modules h1{
     margin-left: 7rem;
@@ -151,17 +157,17 @@ body {
 .youth_reserve{
     background-color:#F5F9FF ;
     padding: 2rem;
-    height: 300px;
+    height: 230px;
 }
 .youth_reserve p{
     font-size: 1.15rem;
-    text-align: left;
-    margin-left: 10%;
-    margin-bottom: 8rem;
+    text-align: center;
+    /* margin-left: 10%; */
+    margin-bottom: 6rem;
 }
 .youth_reserve a{
     color: #508991;
-    margin-left: 70%;
+    /* margin-left: 70%; */
     text-decoration: none;
 }
 .youth_reserve a:hover{
@@ -172,7 +178,7 @@ body {
     color: #ffff;
     transition: ease-in 0.5s;
 }
-@media (max-width: 768px){
+@media (max-width: 960px){
     .Ready{
         background-color: #F5F9FF;
         padding: 5rem 2rem;
@@ -181,13 +187,35 @@ body {
         background-color: #E4EBEF;
         display: flex;
         flex-direction: column-reverse;
+        gap: 3rem;
+        padding: 10px;
     }
     .ready_picture img{
-        width: 320px;
-        margin-top: 10%;
+    width: 340px;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: -1.5rem;
     }
     .ready_written{
         text-align: center;
         padding: 5%;
     }
+    .modules h1{
+        margin-left: 3rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+    .bullets p{
+        margin-left: 5rem;
+        color: #508991;
+    }
+    .youth_reserve p{
+        font-size: 1.15rem;
+        text-align: left;
+        /* margin-left: 10%; */
+        margin-bottom: 8rem;
+    }
 }
+/* @media (max-width: 960px){
+
+} */
