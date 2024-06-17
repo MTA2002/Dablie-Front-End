@@ -77,26 +77,27 @@ body {
 }
 .Ready{
     background-color: #F5F9FF;
-    padding: 0.25rem 0.5rem;
-    height: 526px;
+    padding: 2.5rem 1.5rem;
 }
 .ready_box{
     background-color: #E4EBEF;
     display: flex;
     /* margin-top: 2rem; */
-    margin: 3rem 2rem;
-    height: 350px;
-    padding: 40px;
+    /* margin: 3rem 2rem; */
+    padding: 50px;
+    gap: 5rem;
 }
 .ready_box img{
-    width: 435px;
-    margin-left: 30%;
+    width: 340px;
 }
 .ready_written{
-    width: 50%;
     text-align: center;
+    font-weight: bolder;
+    color: #508991;
 }
 .points{
+    color: #333;
+    font-weight: lighter;
     text-align: left;
     margin-top: 2rem;
 }
@@ -153,7 +154,7 @@ body {
     height: 300px;
 }
 .youth_reserve p{
-    font-size: 1.5rem;
+    font-size: 1.15rem;
     text-align: left;
     margin-left: 10%;
     margin-bottom: 8rem;
@@ -170,4 +171,23 @@ body {
     padding: 5px;
     color: #ffff;
     transition: ease-in 0.5s;
+}
+@media (max-width: 768px){
+    .Ready{
+        background-color: #F5F9FF;
+        padding: 5rem 2rem;
+    }
+    .ready_box{
+        background-color: #E4EBEF;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .ready_picture img{
+        width: 320px;
+        margin-top: 10%;
+    }
+    .ready_written{
+        text-align: center;
+        padding: 5%;
+    }
 }
