@@ -9,7 +9,7 @@ body {
 .youth_hero{
     background-image: url(./Scholarship_assets/photo_2024-06-17\ 22.59.59.jpeg);
     width:auto ;
-    background-repeat: none;
+    background-repeat: no-repeat;
     background-size: cover;
     height:726px;
     padding: 2rem;
@@ -275,7 +275,7 @@ body {
     }
     .youth_hero{
         height: fit-content;
-        background-image:url(./Leadership_assets/Hero\ section\ \(4\).png);
+        background-image:url(./Scholarship_assets/photo_2024-06-17\ 22.59.59.jpeg);
     }
 }
 @media (max-width:1000px) {
