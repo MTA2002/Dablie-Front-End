@@ -185,7 +185,7 @@ body {
 }
 .program_card_Two{
     display: flex;
-    gap: 3rem;
+    gap: 4.5rem;
 }
 .program_text_left{
     display: flex;
