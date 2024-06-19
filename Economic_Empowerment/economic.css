@@ -215,14 +215,14 @@ body {
 .youth_reserve{
     background-color:#F5F9FF ;
     padding: 2rem;
-    text-align: center;
-    align-items: center;
+    text-align: left;
 }
 .youth_reserve span{
     color: #1b7985;
 }
 .youth_reserve h1{
     margin-bottom: 4rem;
+    margin-left: 20%;
 }
 .youth_reserve p{
     font-size: 1rem;
@@ -250,7 +250,7 @@ body {
     margin-bottom: 8rem;
 }
 .youth_written p{
-    margin-left: 25%;
+    margin-left: 20%;
     margin-bottom: 2rem;
 }
 @media (max-width: 960px){
