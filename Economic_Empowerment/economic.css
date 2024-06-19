@@ -215,17 +215,24 @@ body {
 .youth_reserve{
     background-color:#F5F9FF ;
     padding: 2rem;
+    text-align: center;
+    align-items: center;
 }
 .youth_reserve span{
     color: #1b7985;
 }
+.youth_reserve h1{
+    margin-bottom: 4rem;
+}
 .youth_reserve p{
     font-size: 1rem;
-    text-align: center;
+    text-align: left;
     /* margin-left: 10%; */
-    margin-bottom: 6rem;
+    /* margin-bottom: 6rem; */
 }
 .youth_reserve a{
+    margin-top: 6rem;
+    margin-bottom: 4rem;
     color: #508991;
     /* margin-left: 70%; */
     text-decoration: none;
@@ -237,6 +244,14 @@ body {
     padding: 5px;
     color: #ffff;
     transition: ease-in 0.5s;
+}
+.youth_written{
+    margin-bottom: 3rem;
+    margin-bottom: 8rem;
+}
+.youth_written p{
+    margin-left: 25%;
+    margin-bottom: 2rem;
 }
 @media (max-width: 960px){
     .Ready{
