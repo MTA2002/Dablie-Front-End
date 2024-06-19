@@ -1,0 +1,327 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif; 
+    background-color: #ffffff;
+    color: #333;
+    text-align: center;
+}
+.youth_hero{
+    background-image: url(./economic_assets/Hero\ section.png);
+    width:auto ;
+    background-repeat: none;
+    background-size: cover;
+    height:726px;
+    padding: 2rem;
+}
+.hero_header p{
+    color: #508991;
+    font-size: 1.05rem;
+}
+.headtext{
+    width: 928px;
+    text-align: left !important;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    /* color: #213B49; */
+    color: #ffff;
+    margin: 0 auto;
+    margin-top: 36px;
+}
+.youth_hero h1{
+    font-size: 2.5rem;
+    font-weight: light;
+    margin-top: 36px;
+}
+.youth_hero span{
+    color:#004346 ;
+    /* color: #ffff; */
+}
+.youth_icons img{
+    width: 30px;
+    border: 0.25px solid #333;
+    border-radius: 50px;
+    padding: 10px;
+    margin: 3rem 0.5rem;
+    margin-top: 36px;
+}
+.youth_icons img:hover{
+    cursor: pointer;
+    background: rgb(156, 156, 156);
+    color: #0072c6;
+    transition: ease-in 0.2s;
+}
+/* .youth_hero button{
+    background-color: #508991;
+    border-radius: 5px;
+    width: 120px;
+    height: 30px;
+} */
+.donate_button {
+    order: 2; /* Ensure it appears second in flex order */
+    margin-left: 98%; /* Pushes the donate button to the far right */
+}
+
+.donate_button a {
+    text-decoration: none;
+    background-color: #004346;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.625rem;
+    font-weight: normal;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    transform: rotate(270deg);
+}
+
+.donate_button a:hover {
+    background-color: #002d2e; /* Darker shade on hover */
+}
+
+.donate-button a::after {
+    content: '♥';
+    margin-left: 0.5rem;
+}
+.youth_hero p{
+    text-align: center;
+    /* width: 50rem; */
+    margin: 2rem auto;
+}
+.title2{
+    color: #5E6161;
+    font-family: 'Montserrat';
+    font-size: 1.5rem;
+    font-weight: lighter;
+    margin: 2rem;
+    text-align: center;
+}
+.Ready{
+    display: flex;
+    flex-direction: column;
+    background-color: #F5F9FF;
+    align-items: center;
+    padding: 2.5rem 1.5rem;
+    gap: 2rem;
+}
+.ready_box{
+    background-color: #E4EBEF;
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* margin-top: 2rem; */
+    /* margin: 3rem 2rem; */
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    gap: 5rem;
+    width: 1216px;
+    margin-left: 55px;
+}
+.subtitle2{
+    color: #5E6161;
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    font-weight:bolder;
+    margin: 1rem;
+    text-align: center;
+    
+}
+.ready_picture img{
+    margin: 3rem;
+    width: 300px;
+}
+.ready_box2{
+    margin:1rem;
+    background-color: #DBEAF2;
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* margin-top: 2rem; */
+    /* margin: 3rem 2rem; */
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    gap: 5rem;
+    width: 1216px;
+    margin-left: 55px;
+}
+.ready2_picture img{
+    width: 300px;
+}
+.ready_written{
+    text-align: center;
+    font-weight: bolder;
+    color: #508991;
+}
+.points{
+    color: #333;
+    font-weight: lighter;
+    text-align: left;
+    margin-top: 2rem;
+}
+.features{
+    padding: 1rem;
+}
+.features_header p{
+    font-size: 1.5rem;
+    margin: 5rem auto;
+}
+.features_header span{
+    color: #1b7985;
+}
+.features_box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+.features_content{
+    /* border: 1px solid #333; */
+    width: 18rem;
+    height: 21rem;
+    padding: 1.2rem;
+    text-align: center;
+    margin:1rem;
+}
+
+.features_content img{
+    margin: 0.5rem;
+    width: 7.5rem;
+}
+.features_content h1{
+    color: #508991;
+    font-size: large;
+    font-weight: lighter;
+}
+.features_content p{
+    font-size:medium;
+}
+.modules{
+    background-color:#f3f3f3;
+    text-align: left;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.modules h1{
+    margin-left: 7rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+.bullets p{
+    margin-left: 7rem;
+    color: #508991;
+}
+.youth_reserve{
+    background-color:#F5F9FF ;
+    padding: 2rem;
+}
+.youth_reserve span{
+    color: #1b7985;
+}
+.youth_reserve p{
+    font-size: 1rem;
+    text-align: center;
+    /* margin-left: 10%; */
+    margin-bottom: 6rem;
+}
+.youth_reserve a{
+    color: #508991;
+    /* margin-left: 70%; */
+    text-decoration: none;
+}
+.youth_reserve a:hover{
+    border: 1px solid #508991;
+    background-color: #508991;
+    border-radius: 12px;
+    padding: 5px;
+    color: #ffff;
+    transition: ease-in 0.5s;
+}
+@media (max-width: 960px){
+    .Ready{
+        background-color: #F5F9FF;
+        padding: 5rem 2rem;
+    }
+    .ready_box{
+        background-color: #E4EBEF;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 0rem;
+        padding: 10px;
+    }
+    .ready_box2{
+        background-color: #DBEAF2;
+        display: flex;
+        flex-direction: column;
+        gap: 0rem;
+        padding: 10px;
+    }
+    /* .ready_picture img{
+    width: 340px;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: -1.5rem;
+    } */
+    .ready_written{
+        text-align: center;
+        padding: 5%;
+    }
+    .modules h1{
+        margin-left: 3rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+    .bullets p{
+        margin-left: 5rem;
+        color: #508991;
+    }
+    .youth_reserve p{
+        font-size: 1.15rem;
+        text-align: left;
+        /* margin-left: 10%; */
+        margin-bottom: 8rem;
+    }
+    .youth_hero{
+        height: fit-content;
+        background-image:url(./economic_assets/Hero\ section.png);
+    }
+}
+@media (max-width:1000px) {
+    .headtext{
+        width: auto;
+        text-align: justify;
+    }
+}
+@media (max-width: 1400px){
+    .ready_box{
+     width: 70%;
+     margin-left:12% ;
+    }
+    .ready_box2{
+     width: 70%;  
+     margin-left: 12%;
+ 
+    }
+}
+@media (max-width: 730px){
+    .ready_picture img{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .Ready{
+        gap: 0px;
+    }
+    .title2{
+        margin-top: 0px;
+    }
+    .youth_reserve p{
+        margin-bottom: 1rem;
+    }
+    .features_box{
+        gap: 0rem;
+    }
+    .features_content{
+        height:auto;
+    }
+}
