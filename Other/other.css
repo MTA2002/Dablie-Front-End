@@ -7,9 +7,9 @@ body {
     text-align: center;
 }
 .youth_hero{
-    background-image: url(./Business_assets/Hero\ section.png);
+    background-image: url(./Other_Assets/Hero\ section\ \(5\).png);
     width:auto ;
-    background-repeat: no-repeat;
+    background-repeat: none;
     background-size: cover;
     height:726px;
     padding: 2rem;
@@ -33,7 +33,7 @@ body {
     margin-top: 36px;
 }
 .youth_hero span{
-    color:#004346 ;
+    color:#508991 ;
 }
 .youth_icons img{
     width: 30px;
@@ -45,7 +45,7 @@ body {
 }
 .youth_icons img:hover{
     cursor: pointer;
-    background: rgb(59, 112, 153);
+    background: rgb(156, 156, 156);
     color: #0072c6;
     transition: ease-in 0.2s;
 }
@@ -85,8 +85,6 @@ body {
     text-align: center;
     /* width: 50rem; */
     margin: 2rem auto;
-    color: #141A1E;
-    font-family: 'Montserrat';
 }
 .title2{
     color: #5E6161;
@@ -215,10 +213,8 @@ body {
 .youth_reserve p{
     font-size: 1.15rem;
     text-align: center;
-    font-family: 'Montesserat';
     /* margin-left: 10%; */
     margin-bottom: 6rem;
-    color: #141A1E;
 }
 .youth_reserve a{
     color: #508991;
@@ -233,26 +229,12 @@ body {
     color: #ffff;
     transition: ease-in 0.5s;
 }
-.youth_reserve2{
-    background-color:#FFFFFF ;
-    padding: 2rem;
-    text-align: left;
-    padding-left: 20%;
-}
-.youth_reserve2 span{
+.ready_written span{
     color: #1b7985;
 }
-.youth_reserve2 h1{
-    margin-bottom: 3rem;
-}
-.youth_written p{
-
-    margin-bottom: 2rem;
-}
-
 @media (max-width: 960px){
     .Ready{
-        background-color: #ffffff;
+        background-color: #F5F9FF;
         padding: 5rem 2rem;
     }
     .ready_box{
@@ -296,7 +278,7 @@ body {
     }
     .youth_hero{
         height: fit-content;
-        background-image: url(./Business_assets/Hero\ section.png);
+        background-image:url(./Other_Assets/Hero\ section\ \(5\).png);
     }
 }
 @media (max-width:1000px) {
@@ -304,9 +286,6 @@ body {
         width: auto;
         text-align: justify;
     }
-    selector br{
-        display: none;
-        }
 }
 @media (max-width: 1400px){
     .ready_box{
@@ -339,5 +318,4 @@ body {
     .features_content{
         height:auto;
     }
-    
 }
