@@ -132,7 +132,7 @@
                         <div class="program_text_left">
                             <h3>Scholarship Program</h3>
                             <p>Recognizing the transformative power of education, we offer scholarships and educational opportunities to marginalized Muslim communities in Ethiopia.</p>
-<a href="#">Learn More</a>
+                            <a href="#">Learn More</a>
                         </div>
                         <img src="./images/Programs_bulb.png" alt="Scholarship Program">
                     </div>
@@ -155,10 +155,6 @@
                         <img src="./images/Programs_bulb.png" alt="Economic Empowerment Program">
                     </div>
                 </div>
-                <div class="see_more">
-                    <br><br><br>
-                    <a href="#" id="toggle-more">See more programs <i class="arrow down"></i></a>
-                </div>
                 <div class="program_card hidden">
                     <img src="./images/Programs_bulb.png" alt="Partners Directory">
                     <div class="program_text_right">
@@ -176,6 +172,9 @@
                         </div>
                         <img src="./images/Programs_bulb.png" alt="Economic Empowerment Program">
                     </div>
+                </div>
+                <div class="see_more">
+                    <a href="#" id="toggle-more">See more programs <i class="arrow down"></i></a>
                 </div>
             </div>
         </section>
@@ -227,13 +226,69 @@
     
     <script src="header.js"></script>
     <script>
-        document.getElementById('toggle-more').addEventListener('click', function(event) {
-            event.preventDefault();
-            var hiddenCards = document.querySelectorAll('.program_card.hidden');
-            hiddenCards.forEach(function(card) {
-                card.classList.toggle('hidden');
+        document.addEventListener('DOMContentLoaded', function() {
+            var toggleButton = document.getElementById('toggle-more');
+
+            if (toggleButton) {
+                toggleButton.addEventListener('click', function(event) {
+                    event.preventDefault();
+
+                    var hiddenCards = document.querySelectorAll('.program_card.hidden');
+                    var buttonText = this.querySelector('.text');
+                    var arrowIcon = this.querySelector('.arrow');
+
+                    // Toggle visibility of hidden cards
+                    hiddenCards.forEach(function(card) {
+                        card.classList.toggle('hidden');
+                    });
+
+                    // Toggle button text and arrow icon
+                    if (hiddenCards.length > 0) {
+                        buttonText.textContent = 'See less programs ';
+                        arrowIcon.classList.remove('down');
+                        arrowIcon.classList.add('up');
+                    } else {
+                        buttonText.textContent = 'See more programs ';
+                        arrowIcon.classList.remove('up');
+                        arrowIcon.classList.add('down');
+                    }
+
+                    // Toggle 'See less' button visibility
+                    var seeLessButton = document.getElementById('see-less');
+                    if (seeLessButton) {
+                        seeLessButton.style.display = hiddenCards.length > 0 ? 'inline-block' : 'none';
+                    }
+                });
+            }
+
+            // Adding 'See less' functionality
+            var seeLessButton = document.createElement('a');
+            seeLessButton.setAttribute('href', '#');
+            seeLessButton.setAttribute('id', 'see-less');
+            seeLessButton.innerHTML = 'See less programs <i class="arrow up"></i>';
+            seeLessButton.style.display = 'none'; // Initially hide the 'See less' button
+            toggleButton.parentNode.insertBefore(seeLessButton, toggleButton.nextSibling);
+
+            seeLessButton.addEventListener('click', function(event) {
+                event.preventDefault();
+
+                var visibleCards = document.querySelectorAll('.program_card:not(.hidden)');
+                var buttonText = toggleButton.querySelector('.text');
+                var arrowIcon = toggleButton.querySelector('.arrow');
+
+                // Toggle visibility of visible cards
+                visibleCards.forEach(function(card) {
+                    card.classList.add('hidden');
+                });
+
+                // Toggle button text and arrow icon
+                buttonText.textContent = 'See more programs ';
+                arrowIcon.classList.remove('up');
+                arrowIcon.classList.add('down');
+
+                // Hide 'See less' button
+                seeLessButton.style.display = 'none';
             });
-            this.textContent = this.textContent.includes('more') ? 'See less programs <i class="arrow up"></i>' : 'See more programs <i class="arrow down"></i>';
         });
     </script>
 </body>

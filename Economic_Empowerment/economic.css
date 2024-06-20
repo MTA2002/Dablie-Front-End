@@ -103,6 +103,7 @@ body {
     align-items: center;
     padding: 2.5rem 1.5rem;
     gap: 2rem;
+    align-items: center;
 }
 .ready_box{
     background-color: #E4EBEF;

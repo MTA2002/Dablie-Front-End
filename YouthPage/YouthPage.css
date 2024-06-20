@@ -78,6 +78,7 @@ body {
 .Ready{
     background-color: #F5F9FF;
     padding: 2.5rem 1.5rem;
+    align-items: center;
 }
 .ready_box{
     background-color: #E4EBEF;
