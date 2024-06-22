@@ -114,7 +114,7 @@ body {
     padding-left: 2rem;
     gap: 5rem;
     width: 1216px;
-    margin-left: 55px;
+    /* margin-left: 55px; */
 }
 .subtitle2{
     color: #5E6161;
@@ -142,7 +142,7 @@ body {
     padding-left: 2rem;
     gap: 5rem;
     width: 1216px;
-    margin-left: 55px;
+    /* margin-left: 55px; */
 }
 .ready2_picture img{
     width: 300px;
@@ -206,20 +206,37 @@ body {
     margin-left: 7rem;
     color: #508991;
 }
+.youth_reserve_parent{
+    height:auto;
+    width: 100%;
+    background-color:#F5F9FF ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .youth_reserve{
     background-color:#F5F9FF ;
     padding: 2rem;
     height: 230px;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
 }
 .youth_reserve p{
     font-size: 1.15rem;
-    text-align: center;
     /* margin-left: 10%; */
     margin-bottom: 6rem;
+    /* max-width: 80vw; */
+    /* margin-left: 5%; */
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    /* padding-right: 2rem;
+    padding-left: 2rem; */
+   
 }
 .youth_reserve a{
     color: #508991;
-    /* margin-left: 70%; */
     text-decoration: none;
 }
 .youth_reserve a:hover{
@@ -268,11 +285,14 @@ body {
         margin-left: 5rem;
         color: #508991;
     }
+    .youth_reserve{
+        padding-bottom: 5rem;
+    }
     .youth_reserve p{
         font-size: 1.15rem;
         text-align: left;
         /* margin-left: 10%; */
-        margin-bottom: 8rem;
+        margin-bottom: 5rem;
     }
     .youth_hero{
         height: fit-content;
@@ -288,18 +308,18 @@ body {
 @media (max-width: 1400px){
     .ready_box{
      width: 70%;
-     margin-left:12% ;
+     /* margin-left:12% ; */
     }
     .ready_box2{
      width: 70%;  
-     margin-left: 12%;
+     /* margin-left: 12%; */
  
     }
 }
 @media (max-width: 730px){
     .ready_picture img{
         width: 80%;
-        margin-left: 10%;
+        /* margin-left: 10%; */
     }
     .Ready{
         gap: 0px;
@@ -316,4 +336,32 @@ body {
     .features_content{
         height:auto;
     }
+}
+
+@media (max-width: 450px){
+
+.ready_picture img{
+    margin: 0 !important;
+    margin-top: 20px !important;
+
+}
+.youth_reserve p{
+    margin: 0%;
+    margin-bottom: 1rem;  
+}
+.youth_reserve{
+    padding-bottom: 10rem;
+    margin: 0%;
+}
+.ready_box{
+    padding: 0;
+    width: fit-content;
+}
+.ready_box2{
+    padding: 0;
+    width: fit-content;
+    margin: 0;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
 }
