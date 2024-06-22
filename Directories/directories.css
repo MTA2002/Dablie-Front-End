@@ -9,7 +9,6 @@ body {
 .main_content{
     display: flex;
     flex-direction: row;
-    padding: 20px;
 }
 .filter{
     background-color: #F9FAFC;
@@ -37,7 +36,7 @@ body {
     color: #F9FAFC;
 }
 .gallery{
-    padding:4rem;
+    padding: 4rem;
     align-items: center;
 }
 .search{
@@ -50,16 +49,19 @@ body {
     border-radius: 12px;
     border: none;
     padding: 6px;
+    padding-left: 2rem;
     width: 19rem;
     color: #345973;
-    text-transform: lowercase;
+    /* text-transform: lowercase; */
     line-height: 1.5;
+    margin-bottom: 2rem;
 }
 .gallery img{
     
 }
 .gallery input::placeholder{
     color: #345973;
+    /* padding-left: 1rem; */
 }
 .gallery_boxes{
     display: flex;
