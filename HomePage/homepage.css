@@ -215,8 +215,18 @@ body {
     display: inline-block;
    position: relative;
 }
+.see_more a:hover{
+    background-color: transparent;
+    transition: 0.2s ease-in-out;
+    scale: 1.05;
+
+}
+.see_more span{
+    font-size: 16px;
+    
+}
 /* Underline animation for see more */
-.see_more a::after{
+/* .see_more a::after{
 content: '';
   position: absolute;
   width: 100%;
@@ -231,7 +241,7 @@ content: '';
 .see_more a:hover::after{
     transform: scaleX(1);
     transform-origin: bottom left;
-}
+} */
 /* .see_more a:hover{
     text-decoration: underline;
     transition:ease-in 1s;
