@@ -31,9 +31,9 @@ body {
     padding: 1rem;
 }
 .filter_parameters a:hover{
-    background-color: #5E6161;
+    background-color: #508991;
     transition: 0.15s ease-in;
-    color: #F9FAFC;
+    color: #ffffff;
 }
 .gallery{
     padding: 4rem;
@@ -59,6 +59,10 @@ body {
 .gallery img{
     
 }
+/* .gallery input:active{
+    color: #345973;
+    border: none;
+} */
 .gallery input::placeholder{
     color: #345973;
     /* padding-left: 1rem; */
@@ -72,6 +76,9 @@ body {
     padding: 20px;
     border-radius: 25px;
     border:1px solid #333;
+}
+.gallery_box:hover{
+    cursor: pointer;
 }
 .gallery_box img{
     width: 15rem;
