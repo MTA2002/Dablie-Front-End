@@ -130,7 +130,7 @@ body {
     width: 300px;
 }
 .ready_box2{
-    margin:1rem;
+    /* margin:1rem; */
     background-color: #DBEAF2;
     display: flex;
     /* flex-wrap: wrap; */
@@ -230,6 +230,10 @@ body {
     color: #ffff;
     transition: ease-in 0.5s;
 }
+
+.second_p {
+    margin:25px 0 ;
+}
 @media (max-width: 960px){
     .Ready{
         background-color: #F5F9FF;
@@ -279,6 +283,7 @@ body {
         background-image:url(./Leadership_assets/Hero\ section\ \(4\).png);
     }
 }
+
 @media (max-width:1000px) {
     .headtext{
         width: auto;
@@ -288,11 +293,11 @@ body {
 @media (max-width: 1400px){
     .ready_box{
      width: 70%;
-     margin-left:12% ;
+     /* margin-left:12% ; */
     }
     .ready_box2{
      width: 70%;  
-     margin-left: 12%;
+     /* margin-left: 12%; */
  
     }
 }
@@ -317,3 +322,11 @@ body {
         height:auto;
     }
 }
+
+@media (max-width: 450px){
+
+
+    .second_p {
+        margin:30px 0 ;
+    }
+    }

@@ -76,7 +76,7 @@ body {
 .updates_grid {
     display: flex; /* Use flexbox */
     justify-content: center; /* Center items horizontally */
-    gap: 7rem; /* Gap between items */
+    gap: 2.5rem; /* Gap between items */
     flex-wrap: wrap; /* Wrap items if they overflow */
     margin-top: 20px; /* Space above container */
 
