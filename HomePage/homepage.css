@@ -51,7 +51,7 @@ body {
 /* Hover styles for buttons within the hero section */
 .hero_button a:hover {
     background: white; /* Background color on hover */
-    color: #0072c6; /* Text color on hover */
+    color: #508991; /* Text color on hover */
 }
 
 /* Styles for the updates section */
@@ -109,7 +109,7 @@ body {
 }
 /* Styles for links within update cards */
 .update_card a {
-    color: #0072c6; /* Link color */
+    color: #508991; /* Link color */
     text-decoration: none; /* Remove underline */
     padding-left: 0.75rem;
 }
@@ -172,7 +172,7 @@ body {
 }
 .program_card a:hover{
     background: white; /* Background color on hover */
-    color: #0072c6; /* Text color on hover */
+    color: #508991; /* Text color on hover */
     transition: 0.1s;
     scale: 1.01;
 }
@@ -217,8 +217,24 @@ body {
     display: inline-block;
    position: relative;
 }
-/* Underline animation for see more */
+.see_more a:hover{
+    background-color: transparent;
+    transition: 0.2s ease-in-out;
+    scale: 1.05;
+
+}
 .see_more a::after{
+    display: none;
+}
+.see_more span{
+    font-size: 16px;
+    
+}
+.hidden{
+    display: none;
+}
+/* Underline animation for see more */
+/* .see_more a::after{
 content: '';
   position: absolute;
   width: 100%;
@@ -233,7 +249,7 @@ content: '';
 .see_more a:hover::after{
     transform: scaleX(1);
     transform-origin: bottom left;
-}
+} */
 /* .see_more a:hover{
     text-decoration: underline;
     transition:ease-in 1s;
