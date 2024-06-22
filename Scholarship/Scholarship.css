@@ -116,6 +116,7 @@ body {
     width: 1216px;
     /* margin-left: 55px; */
 }
+
 .subtitle2{
     color: #5E6161;
     font-family: 'Montserrat';
@@ -363,5 +364,8 @@ body {
     margin: 0;
     margin-top: 10%;
     margin-bottom: 10%;
+}
+.second_p {
+    margin:30px 0 ;
 }
 }

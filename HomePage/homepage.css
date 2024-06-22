@@ -63,11 +63,14 @@ body {
 /* Styles for headings within the updates section */
 .updates h3 {
     color: #333; /* Text color */
+    font-weight: 400;
 
 }
 .updates h1 {
     color: #333; /* Text color */
     font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 4rem;
 }
 /* Styles for the container of update cards */
 .updates_grid {
@@ -179,10 +182,11 @@ body {
 .program_text_right{
     display: flex;
     flex-direction: column;
+    /* align-items: center; */
     width: 306px;
     height: 184px;
     /* margin: auto auto; */
-    margin-top: 3rem;
+    margin-top: 10%;
     margin-right: 4rem;
 }
 .program_card_Two{
@@ -194,8 +198,8 @@ body {
     flex-direction: column;
     width: 306px;
     height: 184px;
+    margin-top: 10%;
     /* margin: auto auto; */
-    margin-top: 3rem;
     margin-left: 5rem;
 }
 /* Styles for headings within program cards */
@@ -216,6 +220,8 @@ body {
     color: #508991;
     display: inline-block;
    position: relative;
+   margin-top: 7%;
+   /* margin-bottom: ; */
 }
 .see_more a:hover{
     background-color: transparent;
@@ -311,13 +317,19 @@ content: '';
 
     .program_text_left {
         margin: auto;
+
     }
 
     .program_text_right {
         margin: auto;
     }
+    .program_card_Two {
+        gap: 0;
+    }
     
 }
-@media (max-width: 430px) {
-    
+@media (max-width: 821px) {
+    .program_card {
+        width: 750px;
+    }
 }
