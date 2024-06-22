@@ -67,7 +67,7 @@ body {
 .gallery_boxes{
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 3rem;
 }
 .gallery_box{
     padding: 20px;
