@@ -14,10 +14,6 @@ body {
     height:726px;
     padding: 2rem;
 }
-.youth_hero h1{
-    color: #DBEAF2;
-    font-weight: lighter;
-}
 .hero_header p{
     color: #508991;
     font-size: 1.05rem;
@@ -37,7 +33,7 @@ body {
     margin-top: 36px;
 }
 .youth_hero span{
-    color:#004346 ;
+    color:#508991 ;
 }
 .youth_icons img{
     width: 30px;
@@ -49,7 +45,7 @@ body {
 }
 .youth_icons img:hover{
     cursor: pointer;
-    background: rgb(59, 112, 153);
+    background: rgb(156, 156, 156);
     color: #0072c6;
     transition: ease-in 0.2s;
 }
@@ -89,8 +85,6 @@ body {
     text-align: center;
     /* width: 50rem; */
     margin: 2rem auto;
-    color: #141A1E;
-    font-family: 'Montserrat';
 }
 .title2{
     color: #5E6161;
@@ -120,7 +114,7 @@ body {
     padding-left: 2rem;
     gap: 5rem;
     width: 1216px;
-    margin-left: 55px;
+    /* margin-left: 55px; */
 }
 .subtitle2{
     color: #5E6161;
@@ -148,7 +142,7 @@ body {
     padding-left: 2rem;
     gap: 5rem;
     width: 1216px;
-    margin-left: 55px;
+    /* margin-left: 55px; */
 }
 .ready2_picture img{
     width: 300px;
@@ -212,22 +206,37 @@ body {
     margin-left: 7rem;
     color: #508991;
 }
+.youth_reserve_parent{
+    height:auto;
+    width: 100%;
+    background-color:#F5F9FF ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .youth_reserve{
     background-color:#F5F9FF ;
     padding: 2rem;
     height: 230px;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
 }
 .youth_reserve p{
     font-size: 1.15rem;
-    text-align: center;
-    font-family: 'Montesserat';
     /* margin-left: 10%; */
     margin-bottom: 6rem;
-    color: #141A1E;
+    /* max-width: 80vw; */
+    /* margin-left: 5%; */
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    /* padding-right: 2rem;
+    padding-left: 2rem; */
+   
 }
 .youth_reserve a{
     color: #508991;
-    /* margin-left: 70%; */
     text-decoration: none;
 }
 .youth_reserve a:hover{
@@ -238,26 +247,9 @@ body {
     color: #ffff;
     transition: ease-in 0.5s;
 }
-.youth_reserve2{
-    background-color:#FFFFFF ;
-    padding: 2rem;
-    text-align: left;
-    padding-left: 20%;
-}
-.youth_reserve2 span{
-    color: #1b7985;
-}
-.youth_reserve2 h1{
-    margin-bottom: 3rem;
-}
-.youth_written p{
-
-    margin-bottom: 2rem;
-}
-
 @media (max-width: 960px){
     .Ready{
-        background-color: #ffffff;
+        background-color: #F5F9FF;
         padding: 5rem 2rem;
     }
     .ready_box{
@@ -293,15 +285,18 @@ body {
         margin-left: 5rem;
         color: #508991;
     }
+    .youth_reserve{
+        padding-bottom: 5rem;
+    }
     .youth_reserve p{
         font-size: 1.15rem;
         text-align: left;
         /* margin-left: 10%; */
-        margin-bottom: 8rem;
+        margin-bottom: 5rem;
     }
     .youth_hero{
         height: fit-content;
-        background-image: url(./event_assets/Hero\ section\ \(1\).png);
+        background-image:url(./event_assets/Hero\ section\ \(1\).png);
     }
 }
 @media (max-width:1000px) {
@@ -309,25 +304,22 @@ body {
         width: auto;
         text-align: justify;
     }
-    selector br{
-        display: none;
-        }
 }
 @media (max-width: 1400px){
     .ready_box{
      width: 70%;
-     margin-left:12% ;
+     /* margin-left:12% ; */
     }
     .ready_box2{
      width: 70%;  
-     margin-left: 12%;
+     /* margin-left: 12%; */
  
     }
 }
 @media (max-width: 730px){
     .ready_picture img{
         width: 80%;
-        margin-left: 10%;
+        /* margin-left: 10%; */
     }
     .Ready{
         gap: 0px;
@@ -344,5 +336,32 @@ body {
     .features_content{
         height:auto;
     }
-    
+}
+
+@media (max-width: 450px){
+
+.ready_picture img{
+    margin: 0 !important;
+    margin-top: 20px !important;
+
+}
+.youth_reserve p{
+    margin: 0%;
+    margin-bottom: 1rem;  
+}
+.youth_reserve{
+    padding-bottom: 10rem;
+    margin: 0%;
+}
+.ready_box{
+    padding: 0;
+    width: fit-content;
+}
+.ready_box2{
+    padding: 0;
+    width: fit-content;
+    margin: 0;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
 }
