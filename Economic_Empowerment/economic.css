@@ -7,7 +7,7 @@ body {
     text-align: center;
 }
 .youth_hero{
-    background-image: url(./economic_assets/Hero\ section.png);
+    background-image: url(./economic_assets/new_hero_section.png);
     width:auto ;
     background-repeat: none;
     background-size: cover;
@@ -117,7 +117,7 @@ body {
     padding-left: 2rem;
     gap: 5rem;
     width: 1216px;
-    margin-left: 55px;
+    /* margin-left: 55px; */
 }
 .subtitle2{
     color: #5E6161;
@@ -145,7 +145,7 @@ body {
     padding-left: 2rem;
     gap: 5rem;
     width: 1216px;
-    margin-left: 55px;
+    /* margin-left: 55px; */
 }
 .ready2_picture img{
     width: 300px;
@@ -160,6 +160,9 @@ body {
     font-weight: lighter;
     text-align: left;
     margin-top: 2rem;
+}
+.points p{
+    margin: 25px 0;
 }
 .features{
     padding: 1rem;
@@ -222,8 +225,9 @@ body {
     color: #1b7985;
 }
 .youth_reserve h1{
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
     margin-left: 20%;
+    color: #5E6161;
 }
 .youth_reserve p{
     font-size: 1rem;
@@ -254,7 +258,7 @@ body {
     margin-left: 20%;
     margin-bottom: 2rem;
 }
-@media (max-width: 960px){
+@media (max-width: 1024px){
     .Ready{
         background-color: #F5F9FF;
         padding: 5rem 2rem;
@@ -296,11 +300,11 @@ body {
         font-size: 1.15rem;
         text-align: left;
         /* margin-left: 10%; */
-        margin-bottom: 8rem;
+        margin-bottom: 3rem;
     }
     .youth_hero{
         height: fit-content;
-        background-image:url(./economic_assets/Hero\ section.png);
+        background-image:url(./economic_assets/new_hero_section.png);
     }
 }
 @media (max-width:1000px) {
@@ -312,11 +316,11 @@ body {
 @media (max-width: 1400px){
     .ready_box{
      width: 70%;
-     margin-left:12% ;
+     /* margin-left:12% ; */
     }
     .ready_box2{
      width: 70%;  
-     margin-left: 12%;
+     /* margin-left: 12%; */
  
     }
 }
@@ -339,5 +343,20 @@ body {
     }
     .features_content{
         height:auto;
+    }
+    .points p{
+        margin: 30px 0;
+    }
+}
+@media(max-width:1024px){
+    .youth_written p{
+        margin-left: auto;
+        padding: 0 1rem;
+        margin-bottom: 2rem;
+    }
+    .youth_reserve h1 {
+        margin-bottom: 2.5rem;
+        margin-left: 0;
+        color: #5E6161;
     }
 }
