@@ -159,6 +159,9 @@ body {
     text-align: left;
     margin-top: 2rem;
 }
+.points p{
+    margin: 25px 0;
+}
 .features{
     padding: 1rem;
 }
