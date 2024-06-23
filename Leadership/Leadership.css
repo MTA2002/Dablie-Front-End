@@ -108,13 +108,13 @@ body {
     /* flex-wrap: wrap; */
     /* margin-top: 2rem; */
     /* margin: 3rem 2rem; */
-    padding-top: 2rem;
-    padding-bottom: 1rem;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
     padding-right: 2rem;
     padding-left: 2rem;
     gap: 5rem;
     width: 1216px;
-    margin-left: 55px;
+    /* margin-left: 55px; */
 }
 .subtitle2{
     color: #5E6161;
@@ -136,13 +136,13 @@ body {
     /* flex-wrap: wrap; */
     /* margin-top: 2rem; */
     /* margin: 3rem 2rem; */
-    padding-top: 2rem;
-    padding-bottom: 1rem;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
     padding-right: 2rem;
     padding-left: 2rem;
     gap: 5rem;
     width: 1216px;
-    margin-left: 55px;
+    /* margin-left: 55px; */
 }
 .ready2_picture img{
     width: 300px;
@@ -206,11 +206,27 @@ body {
     margin-left: 7rem;
     color: #508991;
 }
+.youth_reserve_parent{
+    height:auto;
+    width: 100%;
+    background-color:#F5F9FF ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .youth_reserve{
     background-color:#F5F9FF ;
     padding: 2rem;
     height: 230px;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
 }
+/* .youth_reserve{
+    background-color:#F5F9FF ;
+    padding: 2rem;
+    height: 230px;
+} */
 .youth_reserve p{
     font-size: 1.15rem;
     text-align: center;
@@ -234,7 +250,7 @@ body {
 .second_p {
     margin:25px 0 ;
 }
-@media (max-width: 960px){
+@media (max-width: 1150px){
     .Ready{
         background-color: #F5F9FF;
         padding: 5rem 2rem;
@@ -244,14 +260,14 @@ body {
         display: flex;
         flex-direction: column-reverse;
         gap: 0rem;
-        padding: 10px;
+        /* padding: 10px; */
     }
     .ready_box2{
         background-color: #DBEAF2;
         display: flex;
         flex-direction: column;
         gap: 0rem;
-        padding: 10px;
+        /* padding: 10px; */
     }
     /* .ready_picture img{
     width: 340px;
@@ -306,9 +322,9 @@ body {
         width: 80%;
         margin-left: 10%;
     }
-    .Ready{
+    /* .Ready{
         gap: 0px;
-    }
+    } */
     .title2{
         margin-top: 0px;
     }
