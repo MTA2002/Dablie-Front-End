@@ -8,19 +8,30 @@ body {
 }
 .youth_hero{
     background-image: url(./youth_assets/Hero\ section\ \(3\).png);
+    width:auto ;
     background-repeat: none;
     background-size: cover;
-    height:526px;
+    height:726px;
     padding: 2rem;
+    padding-top: 80px;
 }
 .hero_header p{
     color: #508991;
     font-size: 1.05rem;
-    margin: 2rem;
+}
+.headtext{
+    width: 928px;
+    text-align: left !important;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    color: #213B49;
+    margin: 0 auto;
+    margin-top: 36px;
 }
 .youth_hero h1{
     font-size: 2.5rem;
     font-weight: light;
+    margin-top: 36px;
 }
 .youth_hero span{
     color:#508991 ;
@@ -31,10 +42,11 @@ body {
     border-radius: 50px;
     padding: 10px;
     margin: 3rem 0.5rem;
+    margin-top: 36px;
 }
 .youth_icons img:hover{
     cursor: pointer;
-    background: rgb(199, 242, 217);
+    background: rgb(156, 156, 156);
     color: #0072c6;
     transition: ease-in 0.2s;
 }
@@ -75,12 +87,21 @@ body {
     /* width: 50rem; */
     margin: 2rem auto;
 }
+.title2{
+    color: #5E6161;
+    font-family: 'Montserrat';
+    font-size: 1.5rem;
+    font-weight: lighter;
+    margin: 2rem;
+    text-align: center;
+}
 .Ready{
+    display: flex;
+    flex-direction: column;
     background-color: #F5F9FF;
     padding: 2.5rem 1.5rem;
+    gap: 2rem;
     align-items: center;
-    text-align: center;
-    padding: 8rem 0;
 }
 .ready_box{
     background-color: #E4EBEF;
@@ -88,18 +109,44 @@ body {
     /* flex-wrap: wrap; */
     /* margin-top: 2rem; */
     /* margin: 3rem 2rem; */
-    padding-top: 2rem;
-    padding-bottom: 1rem;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
     padding-right: 2rem;
     padding-left: 2rem;
-    gap: 8rem;
+    gap: 5rem;
     width: 1216px;
-    justify-content: center;
-    margin: 0 10%;
+    /* margin-left: 55px; */
 }
-.ready_box img{
+.subtitle2{
+    color: #5E6161;
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    font-weight:bolder;
+    margin: 1rem;
+    text-align: center;
+    
+}
+.ready_picture img{
+    margin: 3rem;
     width: 300px;
-    height: 200px;
+}
+.ready_box2{
+    /* margin:1rem; */
+    background-color: #DBEAF2;
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* margin-top: 2rem; */
+    /* margin: 3rem 2rem; */
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    gap: 5rem;
+    width: 1216px;
+    /* margin-left: 55px; */
+}
+.ready2_picture img{
+    width: 300px;
 }
 .ready_written{
     text-align: center;
@@ -113,7 +160,7 @@ body {
     margin-top: 2rem;
 }
 .features{
-    padding: 3rem;
+    padding: 1rem;
 }
 .features_header p{
     font-size: 1.5rem;
@@ -147,24 +194,50 @@ body {
 }
 .modules{
     background-color:#f3f3f3;
-    text-align: left;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    margin: 0 auto;
 }
-.modules h1{
+.module_contents h1 {
     margin-left: 7rem;
     margin-top: 1rem;
     margin-bottom: 2rem;
+    font-size: 20px;
+    font-weight: 500;
+    color: #5E6161;
+    /* text-align: center; */
+}
+.module_contents{
+    text-align: left;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    margin: 0 auto;
+    width: 80%;
+
 }
 .bullets p{
     margin-left: 7rem;
     color: #508991;
 }
+.youth_reserve_parent{
+    height:auto;
+    width: 100%;
+    background-color:#F5F9FF ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .youth_reserve{
     background-color:#F5F9FF ;
     padding: 2rem;
     height: 230px;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
 }
+/* .youth_reserve{
+    background-color:#F5F9FF ;
+    padding: 2rem;
+    height: 230px;
+} */
 .youth_reserve p{
     font-size: 1.15rem;
     text-align: center;
@@ -184,7 +257,11 @@ body {
     color: #ffff;
     transition: ease-in 0.5s;
 }
-@media (max-width: 960px){
+
+.second_p {
+    margin:25px 0 ;
+}
+@media (max-width: 1150px){
     .Ready{
         background-color: #F5F9FF;
         padding: 5rem 2rem;
@@ -193,15 +270,22 @@ body {
         background-color: #E4EBEF;
         display: flex;
         flex-direction: column-reverse;
-        gap: 3rem;
-        padding: 10px;
+        gap: 0rem;
+        /* padding: 10px; */
     }
-    .ready_picture img{
+    .ready_box2{
+        background-color: #DBEAF2;
+        display: flex;
+        flex-direction: column;
+        gap: 0rem;
+        /* padding: 10px; */
+    }
+    /* .ready_picture img{
     width: 340px;
     align-items: center;
     margin-top: 1rem;
     margin-bottom: -1.5rem;
-    }
+    } */
     .ready_written{
         text-align: center;
         padding: 5%;
@@ -221,7 +305,55 @@ body {
         /* margin-left: 10%; */
         margin-bottom: 8rem;
     }
+    .youth_hero{
+        height: fit-content;
+        background-image:url(./youth_assets/Hero\ section\ \(3\).png);
+    }
 }
-/* @media (max-width: 960px){
 
-} */
+@media (max-width:1000px) {
+    .headtext{
+        width: auto;
+        text-align: justify;
+    }
+}
+@media (max-width: 1400px){
+    .ready_box{
+     width: 70%;
+     /* margin-left:12% ; */
+    }
+    .ready_box2{
+     width: 70%;  
+     /* margin-left: 12%; */
+ 
+    }
+}
+@media (max-width: 730px){
+    .ready_picture img{
+        width: 80%;
+        margin-left: 10%;
+    }
+    /* .Ready{
+        gap: 0px;
+    } */
+    .title2{
+        margin-top: 0px;
+    }
+    .youth_reserve p{
+        margin-bottom: 4rem;
+    }
+    .features_box{
+        gap: 0rem;
+    }
+    .features_content{
+        height:auto;
+    }
+}
+
+@media (max-width: 450px){
+
+
+    .second_p {
+        margin:30px 0 ;
+    }
+    }
