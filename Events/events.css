@@ -7,7 +7,7 @@ body {
     text-align: center;
 }
 .youth_hero{
-    background-image: url(./event_assets/Hero\ section\ \(1\).png);
+    background-image: url(./event_assets/Hero\ section\ \(3\).png);
     width:auto ;
     background-repeat: no-repeat;
     background-size: cover;
@@ -300,7 +300,7 @@ body {
     }
     .youth_hero{
         height: fit-content;
-        background-image:url(./event_assets/Hero\ section\ \(1\).png);
+        background-image:url(./event_assets/Hero\ section\ \(3\).png);
     }
 }
 @media (max-width:1000px) {
