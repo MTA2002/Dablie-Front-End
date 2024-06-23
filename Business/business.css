@@ -116,7 +116,7 @@ body {
     padding-left: 2rem;
     gap: 5rem;
     width: 1216px;
-    margin-left: 55px;
+    /* margin-left: 55px; */
 }
 .subtitle2{
     color: #5E6161;
@@ -144,7 +144,7 @@ body {
     padding-left: 2rem;
     gap: 5rem;
     width: 1216px;
-    margin-left: 55px;
+    /* margin-left: 55px; */
 }
 .ready2_picture img{
     width: 300px;
@@ -216,7 +216,7 @@ body {
 .youth_reserve p{
     font-size: 1.15rem;
     text-align: center;
-    font-family: 'Montesserat';
+    /* font-family: 'Montesserat'; */
     /* margin-left: 10%; */
     margin-bottom: 6rem;
     color: #141A1E;
@@ -244,16 +244,36 @@ body {
     color: #1b7985;
 }
 .youth_reserve2 h1{
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
+    color: #5E6161;
 }
 .youth_written p{
 
     margin-bottom: 2rem;
 }
+.second_p {
+    margin:25px 0 ;
+}
+.youth_reserve_parent{
+    height:auto;
+    width: 100%;
+    background-color:#F5F9FF ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.youth_reserve{
+    background-color:#F5F9FF ;
+    padding: 2rem;
+    height: 230px;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
 
 @media (max-width: 960px){
     .Ready{
-        background-color: #ffffff;
+        background-color: #F5F9FF;
         padding: 5rem 2rem;
     }
     .ready_box{
@@ -293,11 +313,20 @@ body {
         font-size: 1.15rem;
         text-align: left;
         /* margin-left: 10%; */
-        margin-bottom: 8rem;
+        margin-bottom: 3rem;
     }
     .youth_hero{
         height: fit-content;
         background-image: url(./Business_assets/Hero\ section.png);
+    }
+    .youth_reserve2{
+        background-color:#FFFFFF ;
+        padding: 2rem;
+        text-align: left;
+        padding-left:2rem;
+    }
+    .youth_reserve2 h1{
+        padding-left: 1rem;
     }
 }
 @media (max-width:1000px) {
@@ -312,13 +341,14 @@ body {
 @media (max-width: 1400px){
     .ready_box{
      width: 70%;
-     margin-left:12% ;
+     /* margin-left:12% ; */
     }
     .ready_box2{
      width: 70%;  
-     margin-left: 12%;
+     /* margin-left: 12%; */
  
     }
+    
 }
 @media (max-width: 730px){
     .ready_picture img{
@@ -342,3 +372,22 @@ body {
     }
     
 }
+@media (max-width: 450px){
+
+
+    .second_p {
+        margin:30px 0 ;
+    }
+    }
+    @media(max-width:1024px){
+        .youth_written p{
+            margin-left: auto;
+            padding: 0 1rem;
+            margin-bottom: 2rem;
+        }
+        .youth_reserve h1 {
+            margin-bottom: 2.5rem;
+            margin-left: 0;
+            color: #5E6161;
+        }
+    }
