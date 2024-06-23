@@ -108,14 +108,15 @@ body {
     /* flex-wrap: wrap; */
     /* margin-top: 2rem; */
     /* margin: 3rem 2rem; */
-    padding-top: 2rem;
-    padding-bottom: 1rem;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
     padding-right: 2rem;
     padding-left: 2rem;
     gap: 5rem;
     width: 1216px;
     /* margin-left: 55px; */
 }
+
 .subtitle2{
     color: #5E6161;
     font-family: 'Montserrat';
@@ -126,7 +127,7 @@ body {
     
 }
 .ready_picture img{
-    margin: 3rem;
+    margin-top: 1rem;
     width: 300px;
 }
 .ready_box2{
@@ -136,8 +137,8 @@ body {
     /* flex-wrap: wrap; */
     /* margin-top: 2rem; */
     /* margin: 3rem 2rem; */
-    padding-top: 2rem;
-    padding-bottom: 1rem;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
     padding-right: 2rem;
     padding-left: 2rem;
     gap: 5rem;
@@ -205,6 +206,9 @@ body {
 .bullets p{
     margin-left: 7rem;
     color: #508991;
+}
+.second_p {
+    margin:25px 0 ;
 }
 .youth_reserve_parent{
     height:auto;
@@ -363,5 +367,8 @@ body {
     margin: 0;
     margin-top: 10%;
     margin-bottom: 10%;
+}
+.second_p {
+    margin:30px 0 ;
 }
 }
