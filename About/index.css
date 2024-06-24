@@ -264,31 +264,6 @@ body {
   justify-content: flex-start;
   padding: 2.4px 0 0;
 }
-.donate-button {
-  cursor: pointer;
-  border: 0;
-  padding: 9.3px var(--padding-6xs) 10.8px;
-  background-color: #004346;
-  align-self: stretch;
-  border-radius: 10.89px;
-  overflow: hidden;
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: 2.3px;
-}
-.donate-button,
-.donate-parent,
-.header {
-  display: flex;
-  align-items: flex-start;
-}
-.donate-parent {
-  width: 63px;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: var(--padding-mini) 0 0;
-  box-sizing: border-box;
-}
 .header {
   align-self: stretch;
   background-color: var(--dablie-grey-300);
