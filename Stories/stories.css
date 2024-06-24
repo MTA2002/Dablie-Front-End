@@ -13,6 +13,9 @@ body {
     margin-bottom:3rem ;
     padding-left: 5rem;
     padding-right:5rem ;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
 }
 .stories_section h1{
     margin: 5rem;
