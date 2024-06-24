@@ -15,7 +15,7 @@ body {
     padding-right:5rem ;
     max-width: 1400px;
     margin: 0 auto;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 .stories_section h1{
     margin: 5rem;
@@ -45,4 +45,40 @@ body {
 }
 .stories_box label{
     margin-top: 1rem;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+    border-radius: 5px;
+}
+
+/* .pagination a.active {
+    background-color:#afafaf;
+} */
+
+.pagination a:hover {
+    background-color: #ddd;
+}
+
+@media screen and (max-width: 600px) {
+    .pagination span{
+        display: none;
+    }
 }
