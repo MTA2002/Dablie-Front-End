@@ -1,3 +1,6 @@
+.program_card.hidden {
+    display: none;
+}
 body {
     margin: 0;
     padding: 0;
@@ -15,7 +18,7 @@ body {
     padding: 5rem;
 }
 .filter h1{
-    color:#5E6161;
+    color: #5E6161;
     font-weight: lighter;
 }
 .filter_parameters{
@@ -27,7 +30,7 @@ body {
 .filter_parameters a{
     text-decoration: none;
     color: #333;
-    border:1px solid #333;
+    border: 1px solid #333;
     padding: 1rem;
 }
 .filter_parameters a:hover{
@@ -41,28 +44,22 @@ body {
 }
 .search{
     text-align: right;
-    padding:6px;
-    padding-right:20px ;
+    padding: 6px;
+    padding-right: 20px;
 }
 .gallery input{
-    background-color:#F9FAFC;
+    background-color: #F9FAFC;
     border-radius: 12px;
     border: none;
     padding: 6px;
     padding-left: 2rem;
     width: 19rem;
     color: #345973;
-    /* text-transform: lowercase; */
     line-height: 1.5;
     margin-bottom: 2rem;
 }
-/* .gallery input:active{
-    color: #345973;
-    border: none;
-} */
 .gallery input::placeholder{
     color: #345973;
-    /* padding-left: 1rem; */
 }
 .gallery_boxes{
     display: flex;
@@ -72,11 +69,54 @@ body {
 .gallery_box{
     padding: 20px;
     border-radius: 25px;
-    border:1px solid #333;
+    border: 1px solid #333;
 }
 .gallery_box:hover{
     cursor: pointer;
 }
 .gallery_box img{
     width: 15rem;
+}
+@media (max-width: 1024px) {
+    .main_content {
+        flex-direction: column;
+    }
+    .filter, .gallery {
+        padding: 2rem;
+    }
+    .gallery input {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .gallery_boxes {
+        justify-content: center;
+    }
+    .gallery_box img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+}
+@media (max-width: 768px) {
+    .filter {
+        padding: 1rem;
+    }
+    .gallery {
+        padding: 1rem;
+    }
+    .gallery_box img {
+        width: 100%;
+    }
+}
+@media (max-width: 480px) {
+    .main_content {
+        padding: 1rem;
+    }
+    .filter_parameters {
+        gap: 1rem;
+    }
+    .gallery_boxes {
+        flex-direction: column;
+        gap: 1rem;
+    }
 }
