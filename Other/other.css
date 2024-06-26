@@ -243,6 +243,7 @@ body {
 }
 .ready_written span{
     color: #1b7985;
+    font-weight: bolder;
 }
 .second_p {
     margin:25px 0 ;
@@ -250,7 +251,7 @@ body {
 @media (max-width: 960px){
     .Ready{
         background-color: #F5F9FF;
-        padding: 5rem 2rem;
+        padding: 5rem 0rem;
     }
     .ready_box{
         background-color: #E4EBEF;

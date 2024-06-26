@@ -161,6 +161,10 @@ body {
     text-align: left;
     margin-top: 2rem;
 }
+.points span{
+    color: #508991;
+    font-weight: bolder;
+}
 .features{
     padding: 1rem;
 }
@@ -256,14 +260,14 @@ body {
 @media (max-width: 960px){
     .Ready{
         background-color: #F5F9FF;
-        padding: 5rem 2rem;
+        padding: 5rem 1rem;
     }
     .ready_box{
         background-color: #E4EBEF;
         display: flex;
         flex-direction: column-reverse;
         gap: 0rem;
-        padding: 10px;
+        /* padding: 10px; */
     }
     .ready_box2{
         background-color: #DBEAF2;
@@ -323,6 +327,7 @@ body {
     }
 }
 @media (max-width: 730px){
+
     .ready_picture img{
         width: 80%;
         /* margin-left: 10%; */
@@ -346,7 +351,11 @@ body {
 
 @media (max-width: 450px){
 
-.ready_picture img{
+    .Ready{
+        background-color: #F5F9FF;
+        padding: 5rem 0.85rem;
+    }
+    .ready_picture img{
     margin: 0 !important;
     margin-top: 20px !important;
 
