@@ -12,14 +12,13 @@ body {
 .hero {
     /* Gradient background */
     /* background: linear-gradient(to bottom, #0072c6, #70c6ff); */
-    background-image: url("./images/Hero\ section\ \(6\).png");
+    background-image: url("./images/Hero_Background.jpg");
     background-repeat: no-repeat;
     background-size:cover;
     color: white; /* Text color */
     height: 720px;
     padding: 60px 20px; /* Padding for content */
 }
-
 /* Styles for the logo within the hero section */
 .hero_logo img {
     width: 95;
