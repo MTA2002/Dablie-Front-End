@@ -160,6 +160,10 @@ body {
     font-weight: lighter;
     text-align: left;
     margin-top: 2rem;
+}   
+.points span{
+    color: #508991;
+    font-weight: bolder;
 }
 .features{
     padding: 1rem;
@@ -256,7 +260,7 @@ body {
 @media (max-width: 960px){
     .Ready{
         background-color: #F5F9FF;
-        padding: 5rem 2rem;
+        padding: 5rem 0rem;
     }
     .ready_box{
         background-color: #E4EBEF;
@@ -345,6 +349,10 @@ body {
 }
 
 @media (max-width: 450px){
+    .Ready{
+        background-color: #F5F9FF;
+        padding: 5rem 1rem;
+    }
 
 .ready_picture img{
     margin: 0 !important;
