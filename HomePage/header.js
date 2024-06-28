@@ -1,33 +1,37 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const menuOverlay = document.querySelector('.menu-overlay');
-    const mobileNavLinks = document.querySelectorAll('.mobile-navbar li a');
+document.addEventListener("DOMContentLoaded", function() {
+  const menuWrapper = document.querySelector(".menu-wrapper");
+  const menuBtn = document.querySelector(".menu-btn");
+  const menuOverlay = document.querySelector(".menu-overlay");
+  const mainMenu = document.querySelector(".main-menu");
+  const submenu = document.querySelector(".submenu");
+  const submenuToggle = document.querySelector(".submenu-toggle");
+  const backToMainMenu = document.querySelector(".back-to-main-menu");
 
-    menuToggle.addEventListener('click', function() {
-        menuOverlay.classList.toggle('active');
-    });
+  menuWrapper.addEventListener("click", function() {
+      menuWrapper.classList.toggle("menu-wrapper-on");
+      menuBtn.classList.toggle("menu-btn-on");
+      menuOverlay.classList.toggle("open");
+  });
 
-    menuOverlay.addEventListener('click', function(e) {
-        if (e.target === menuOverlay) {
-            menuOverlay.classList.remove('active');
-        }
-    });
+  submenuToggle.addEventListener("click", function(event) {
+      event.preventDefault();
+      mainMenu.classList.add("hidden");
+      submenu.classList.add("open");
+  });
 
-    mobileNavLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            const parentLi = this.parentElement;
+  backToMainMenu.addEventListener("click", function(event) {
+      event.preventDefault();
+      mainMenu.classList.remove("hidden");
+      submenu.classList.remove("open");
+  });
 
-            if (parentLi.querySelector('.dropdown')) {
-                e.preventDefault();
-                parentLi.classList.toggle('active');
-
-                const siblingDropdowns = Array.from(parentLi.parentElement.children).filter(
-                    li => li !== parentLi
-                );
-                siblingDropdowns.forEach(li => li.classList.remove('active'));
-            } else {
-                menuOverlay.classList.remove('active');
-            }
-        });
-    });
+  window.addEventListener("click", function(event) {
+      if (!menuWrapper.contains(event.target) && !menuOverlay.contains(event.target)) {
+          menuWrapper.classList.remove("menu-wrapper-on");
+          menuBtn.classList.remove("menu-btn-on");
+          menuOverlay.classList.remove("open");
+          mainMenu.classList.remove("hidden");
+          submenu.classList.remove("open");
+      }
+  });
 });
