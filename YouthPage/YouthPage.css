@@ -7,7 +7,7 @@ body {
     text-align: center;
 }
 .youth_hero{
-    background-image: url(./youth_assets/Hero\ section\ \(3\).png);
+    background-image: url(./youth_assets/Dablie\ background\ 34-01.jpg);
     width:auto ;
     background-repeat: none;
     background-size: cover;
@@ -315,7 +315,7 @@ body {
     }
     .youth_hero{
         height: fit-content;
-        background-image:url(./youth_assets/Hero\ section\ \(3\).png);
+        background-image:url(./youth_assets/Dablie\ background\ 34-01.jpg);
     }
 }
 

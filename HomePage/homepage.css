@@ -12,7 +12,7 @@ body {
 .hero {
     /* Gradient background */
     /* background: linear-gradient(to bottom, #0072c6, #70c6ff); */
-    background-image: url("./images/Hero_Background.jpg");
+    background-image: url("./images/hero_home.jpg");
     background-repeat: no-repeat;
     background-size:cover;
     color: white; /* Text color */
@@ -341,5 +341,42 @@ content: '';
         gap: 4rem; /* Gap between items */
         flex-wrap: wrap; /* Wrap items if they overflow */
         margin-top: 20px; /* Space above container */
+    }
+}
+
+.donateh-button {
+    position: fixed;
+    z-index: 1000;
+    background-color: rgba(0, 67, 70, 0.8);
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 10px 10px;
+    text-align: center;
+    white-space: nowrap; /* Ensure the text does not wrap */
+}
+
+.donateh-button a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block; /* Ensure the link respects the rotation */
+}
+
+.donateh-button a:hover {
+    text-decoration: underline;
+}
+/* Adjustments for mobile view */
+@media (max-width: 766px) {
+    .donateh-button {
+        top: 40%;
+        bottom: auto;
+        right: 0;
+        transform: rotate(270deg) translateY(-70%);
+        transform-origin: top right;
+    }
+}
+@media (min-width:768px) {
+    .donateh-button{
+        display: none;
     }
 }

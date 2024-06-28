@@ -7,7 +7,7 @@ body {
     text-align: center;
 }
 .youth_hero{
-    background-image: url(./Scholarship_assets/photo_2024-06-17\ 22.59.59.jpeg);
+    background-image: url(./Scholarship_assets/Dablie\ background\ 1024\ all-01.jpg);
     width:auto ;
     background-repeat: no-repeat;
     background-size: cover;
@@ -306,7 +306,7 @@ body {
     }
     .youth_hero{
         height: fit-content;
-        background-image:url(./Scholarship_assets/photo_2024-06-17\ 22.59.59.jpeg);
+        background-image:url(./Scholarship_assets/Dablie\ background\ 1024\ all-01.jpg);
     }
 }
 @media (max-width:1000px) {

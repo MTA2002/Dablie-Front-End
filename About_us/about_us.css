@@ -7,7 +7,7 @@ body {
     text-align: center;
 }
 .youth_hero{
-    background-image: url(./about_us_assets/about_us_hero.png);
+    background-image: url(./about_us_assets/Dablie\ background\ iykyk-02.jpg);
     width:auto ;
     background-repeat: no-repeat;
     background-size: cover;
@@ -386,7 +386,7 @@ body {
     }
     .youth_hero{
         height: fit-content;
-        background-image:url(./about_us_assets/about_us_hero.png);
+        background-image: url(./about_us_assets/Dablie\ background\ iykyk-02.jpg);
     }
 }
 @media (max-width:1000px) {
