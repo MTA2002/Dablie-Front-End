@@ -10,48 +10,56 @@
 <body>
     <div class="form-container">
         <h1>Individual Form</h1>
-        <form action="/submit" method="post">
+        <form id="individualForm" action="/submit" method="post" novalidate>
             <label for="first-name">First name <span class="required">*</span></label>
             <input type="text" id="first-name" name="first-name" required>
-            
+            <div class="error-message" id="first-name-error"></div>
+
             <label for="last-name">Last name <span class="required">*</span></label>
             <input type="text" id="last-name" name="last-name" required>
-            
+            <div class="error-message" id="last-name-error"></div>
+
             <label for="email">Email address <span class="required">*</span></label>
             <input type="email" id="email" name="email" required>
-            
+            <div class="error-message" id="email-error"></div>
+
             <label for="phone">Phone number <span class="required">*</span></label>
-            <input type="tel" id="phone" name="phone" required>
-            
+            <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}">
+            <div class="error-message" id="phone-error"></div>
+
             <label for="occupation">Occupation <span class="required">*</span></label>
             <input type="text" id="occupation" name="occupation" required>
-            
+            <div class="error-message" id="occupation-error"></div>
+
             <label for="city">City <span class="required">*</span></label>
             <input type="text" id="city" name="city" required>
-            
+            <div class="error-message" id="city-error"></div>
+
             <label for="state">State/Region <span class="required">*</span></label>
             <input type="text" id="state" name="state" required>
-            
+            <div class="error-message" id="state-error"></div>
+
             <label for="country">Country <span class="required">*</span></label>
             <input type="text" id="country" name="country" required>
-            
+            <div class="error-message" id="country-error"></div>
+
             <label for="reasons">Briefly describe your reasons for joining the Dabile Foundation</label>
             <textarea id="reasons" name="reasons"></textarea>
-            
+
             <label for="how-heard">How did you hear about the Dabile Foundation?</label>
             <textarea id="how-heard" name="how-heard"></textarea>
-            
+
             <label for="interest">What are your interest in joining the Foundation?</label>
             <textarea id="interest" name="interest"></textarea>
-            
+
             <label for="skills">What skills or experience can you contribute?</label>
             <textarea id="skills" name="skills"></textarea>
-            
+
             <div class="agreement">
                 <p>By submitting this form, you agree to abide by the Dabile Foundation's terms and conditions of membership. You also acknowledge that we may use your contact information to keep you informed about our activities and events.</p>
                 <p>Please review your application carefully before submitting it. You can click "Clear" to start over or "Submit" to send your application. Thank you for your interest in the Dabile Foundation!</p>
             </div>
-            
+
             <div class="buttons">
                 <button type="reset" class="clear-btn">Clear</button>
                 <button type="submit">Submit</button>
@@ -60,27 +68,84 @@
     </div>
     <script>
         document.getElementById('individualForm').addEventListener('submit', function(event) {
-    const form = event.target;
-    
-    if (!form.checkValidity()) {
-        event.preventDefault();
-        event.stopPropagation();
-        
-        form.classList.add('was-validated');
-    }
-}, false);
+            const form = event.target;
 
-document.querySelectorAll('input, textarea').forEach((input) => {
-    input.addEventListener('invalid', () => {
-        input.classList.add('invalid');
-    });
-    
-    input.addEventListener('input', () => {
-        if (input.validity.valid) {
-            input.classList.remove('invalid');
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+
+                form.classList.add('was-validated');
+
+                // Show custom error messages
+                showValidationErrors(form);
+            } else {
+                event.preventDefault();
+                alert('Thank you for submitting the form!');
+                form.reset();
+                form.classList.remove('was-validated');
+                clearErrorMessages(form);
+            }
+        }, false);
+
+        document.querySelectorAll('input, textarea').forEach((input) => {
+            input.addEventListener('invalid', () => {
+                input.classList.add('invalid');
+            });
+
+            input.addEventListener('input', () => {
+                if (input.validity.valid) {
+                    input.classList.remove('invalid');
+                    clearErrorMessage(input);
+                }
+            });
+        });
+
+        function showValidationErrors(form) {
+            const inputs = form.querySelectorAll('input, textarea');
+
+            inputs.forEach((input) => {
+                if (!input.validity.valid) {
+                    const errorElement = document.getElementById(`${input.id}-error`);
+                    if (errorElement) {
+                        if (input.validity.valueMissing) {
+                            errorElement.textContent = 'This field is required.';
+                        } else if (input.validity.typeMismatch) {
+                            errorElement.textContent = 'Please enter a valid value.';
+                        } else if (input.validity.patternMismatch) {
+                            errorElement.textContent = 'Please match the requested format.';
+                        }
+                    }
+                }
+            });
         }
-    });
-});
+
+        function clearErrorMessages(form) {
+            const errorElements = form.querySelectorAll('.error-message');
+            errorElements.forEach((errorElement) => {
+                errorElement.textContent = '';
+            });
+        }
+
+        function clearErrorMessage(input) {
+            const errorElement = document.getElementById(`${input.id}-error`);
+            if (errorElement) {
+                errorElement.textContent = '';
+            }
+        }
+
+        document.getElementById('email').addEventListener('input', function() {
+            const email = this.value;
+            const emailError = document.getElementById('email-error');
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+            if (!emailPattern.test(email)) {
+                emailError.textContent = 'Please enter a valid email address.';
+                this.classList.add('invalid');
+            } else {
+                emailError.textContent = '';
+                this.classList.remove('invalid');
+            }
+        });
     </script>
 </body>
 </html>
