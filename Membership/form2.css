@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat';
     background-color: #ddd;
     display: flex;
     justify-content: center;
@@ -52,6 +52,17 @@ textarea {
 textarea {
     resize: vertical;
     height: 100px;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.radio-label {
+    margin-bottom: 0; /* Remove margin bottom for radio labels */
 }
 
 .agreement {
