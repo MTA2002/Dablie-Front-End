@@ -3,9 +3,12 @@ body {
     background-color: #f9f9f9;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Align items at the top */
     height: 100vh;
     margin: 0;
+    overflow-y: auto; /* Enable scrolling for the entire page */
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .form-container {
@@ -15,8 +18,6 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 500px;
-    overflow-y: auto; /* Ensures all content is viewable */
-    max-height: 90vh; /* Adjust this as necessary */
 }
 
 h1 {
