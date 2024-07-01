@@ -23,9 +23,22 @@
             <input type="email" id="email" name="email" required>
             <div class="error-message" id="email-error"></div>
 
-            <label for="phone">Phone number <span class="required">*</span></label>
-            <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}">
-            <div class="error-message" id="phone-error"></div>
+            <label for="phone-number">Phone Number <span class="required">*</span></label>
+            <div class="phone-input-container">
+                <select id="primary-area-code" name="primary-area-code" required>
+                    <option value="">Select Area Code</option>
+                    <option value="+1">+1 (USA, Canada)</option>
+                    <option value="+44">+44 (UK)</option>
+                    <option value="+61">+61 (Australia)</option>
+                    <option value="+81">+81 (Japan)</option>
+                    <option value="+91">+91 (India)</option>
+                    <option value="+251">+251 (Ethiopia)</option>
+                    <!-- Add more area codes as needed -->
+                </select>
+                <input type="tel" id="phone-number" name="phone-number" required pattern="[0-9]{10}">
+            </div>
+            <div class="error-message" id="phone-number-error"></div>
+
 
             <label for="occupation">Occupation <span class="required">*</span></label>
             <input type="text" id="occupation" name="occupation" required>
