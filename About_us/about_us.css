@@ -132,7 +132,7 @@ body {
     background: #fff; /* Background color */
     /* border-radius: 12px; Border radius */
     /* padding: 15px; Padding */
-    width: 350px; /* Card width */
+    width: 30%; /* Card width */
     /* height: 420px; */
     text-align: center; /* Text alignment */
 }
@@ -192,10 +192,12 @@ body {
     /* margin: 3rem 2rem; */
     padding-top: 4rem;
     padding-bottom: 5rem;
-    padding-right: 2rem;
-    padding-left: 2rem;
-    gap: 4rem;
+    /* padding-right: 2rem;
+    padding-left: 2rem; */
+    /* gap: 4rem; */
     width: 80%;
+    align-items: center;
+    justify-content: space-evenly;
     /* margin-left: 55px; */
 }
 
@@ -220,10 +222,11 @@ body {
     /* margin: 3rem 2rem; */
     padding-top: 4rem;
     padding-bottom: 5rem;
-    padding-right: 2rem;
-    padding-left: 2rem;
+    /* padding-right: 2rem;
+    padding-left: 2rem; */
     gap: 5rem;
     width: 1216px;
+    justify-content: space-evenly;
     /* margin-left: 55px; */
 }
 .ready2_picture img{
@@ -354,7 +357,7 @@ body {
         display: flex;
         flex-direction: column;
         gap: 0rem;
-        padding: 10px;
+        /* padding: 10px; */
     }
     /* .ready_picture img{
     width: 340px;
@@ -364,7 +367,7 @@ body {
     } */
     .ready_written{
         text-align: center;
-        padding: 5%;
+        /* padding: 5%; */
     }
     .modules h1{
         margin-left: 3rem;
@@ -462,4 +465,9 @@ body {
 .second_p {
     margin:30px 0 ;
 }
+}
+@media (max-width:600px){
+    .update_card{
+        width: 80%;
+    }
 }
