@@ -58,5 +58,29 @@
             </div>
         </form>
     </div>
+    <script>
+        document.getElementById('individualForm').addEventListener('submit', function(event) {
+    const form = event.target;
+    
+    if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        form.classList.add('was-validated');
+    }
+}, false);
+
+document.querySelectorAll('input, textarea').forEach((input) => {
+    input.addEventListener('invalid', () => {
+        input.classList.add('invalid');
+    });
+    
+    input.addEventListener('input', () => {
+        if (input.validity.valid) {
+            input.classList.remove('invalid');
+        }
+    });
+});
+    </script>
 </body>
 </html>

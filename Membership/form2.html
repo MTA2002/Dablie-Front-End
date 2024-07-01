@@ -10,7 +10,7 @@
 <body>
     <div class="form-container">
         <h1>Organizational Membership</h1>
-        <form action="/submit" method="post">
+        <form id="organizationalForm" action="/submit" method="post">
             <label for="organization-name">Organization name <span class="required">*</span></label>
             <input type="text" id="organization-name" name="organization-name" required>
 
@@ -18,7 +18,7 @@
             <input type="url" id="website-url" name="website-url">
 
             <label for="phone-number">Phone Number <span class="required">*</span></label>
-            <input type="tel" id="phone-number" name="phone-number" required>
+            <input type="tel" id="phone-number" name="phone-number" required pattern="[0-9]{10}">
 
             <label for="address">Address <span class="required">*</span></label>
             <input type="text" id="address" name="address" required>
@@ -39,7 +39,7 @@
             <input type="email" id="primary-email" name="primary-email" required>
 
             <label for="primary-phone">Primary Contact Phone Number <span class="required">*</span></label>
-            <input type="tel" id="primary-phone" name="primary-phone" required>
+            <input type="tel" id="primary-phone" name="primary-phone" required pattern="[0-9]{10}">
 
             <label for="organization-type">Organization Type <span class="required">*</span></label>
             <select id="organization-type" name="organization-type" required>
@@ -109,5 +109,29 @@
             </div>
         </form>
     </div>
+    <script>
+        document.getElementById('organizationalForm').addEventListener('submit', function(event) {
+    const form = event.target;
+    
+    if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        form.classList.add('was-validated');
+    }
+}, false);
+
+document.querySelectorAll('input, textarea, select').forEach((input) => {
+    input.addEventListener('invalid', () => {
+        input.classList.add('invalid');
+    });
+    
+    input.addEventListener('input', () => {
+        if (input.validity.valid) {
+            input.classList.remove('invalid');
+        }
+    });
+});
+    </script>
 </body>
 </html>
