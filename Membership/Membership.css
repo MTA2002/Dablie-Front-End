@@ -3,25 +3,63 @@ body {
     background-color: #ddd;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Align items at the top */
+    align-items: flex-start;
     height: 100vh;
     margin: 0;
-    overflow-y: auto; /* Enable scrolling for the entire page */
+    overflow-y: auto;
     padding: 20px;
     box-sizing: border-box;
 }
 
-.form-container {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px;
+header, footer {
+    background-color: #004346;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
 }
 
-h1 {
-    margin-bottom: 20px;
+main {
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.membership-selection {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.membership-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.membership-button {
+    background-color: #005a5b;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.membership-button:hover {
+    background-color: #003f40;
+}
+
+.membership-form-section {
+    display: none;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
     text-align: center;
 }
 
@@ -38,10 +76,13 @@ label {
 input[type="text"],
 input[type="email"],
 input[type="tel"],
+input[type="url"],
+input[type="number"],
+select,
 textarea {
-    width: 90%;
+    width: 100%;
     padding: 8px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
@@ -54,42 +95,8 @@ textarea {
 .error-message {
     color: red;
     font-size: 0.875em;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
-
-input.invalid,
-textarea.invalid {
-    border-color: red;
-}
-
-.was-validated input:invalid,
-.was-validated textarea:invalid {
-    border-color: red;
-}
-
-.agreement {
-    font-size: 12px;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-.buttons {
-    display: flex;
-    justify-content: space-between;
-}
-
-button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 48%;
-    text-align: center;
-}
-
-
 
 input.invalid,
 textarea.invalid {
@@ -135,6 +142,17 @@ button:hover {
     background-color: #c82333;
 }
 
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.radio-label {
+    margin-bottom: 0; /* Remove margin bottom for radio labels */
+}
+
 /* Responsive design */
 @media (max-width: 600px) {
     .form-container {
@@ -154,7 +172,7 @@ button:hover {
         margin-bottom: 10px;
     }
 
-    button:last-child {
+    /* button:last-child {
         margin-bottom: 0;
-    }
+    } */
 }

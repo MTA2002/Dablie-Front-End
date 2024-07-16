@@ -51,8 +51,6 @@ header {
   text-decoration: none;
   color: #333;
   font-weight: normal;
-  /* display: flex;
-  align-items: center; */
   padding: 10px 15px; /* Added padding for better touch area */
   transition: color 0.3s ease;
 }
@@ -314,7 +312,7 @@ header {
   .donate-button {
       display: none;
   }
-  
+
   .button a {
     text-decoration: none;
     background-color: #004346;
@@ -335,6 +333,30 @@ header {
     content: '♥';
     margin-left: 8px;
   }
+
+  .buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .join-us-button1,
+  .button {
+    display: inline-block;
+    margin: 10px 5px;
+  }
+
+  .join-us-button1 a,
+  .button a {
+    display: inline-flex;
+    justify-content: center;
+    width: 100px; /* Adjust width as needed */
+  }
 }
 
 @media (min-width: 769px) {
@@ -350,3 +372,47 @@ header {
       display: inline-flex !important; /* Ensure it is displayed on larger screens */
   }
 }
+
+/* Styles for the Join Us button */
+.join-us-button {
+  order: 2; /* Ensure it appears next to the donate button /
+  margin-right: 10px; / Add some space between the buttons */
+  }
+  
+  .join-us-button a {
+  text-decoration: none;
+  background-color: #005A5B; /* Adjust color as needed */
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-weight: normal;
+  display: inline-flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  }
+  
+  .join-us-button a:hover {
+  background-color: #003f40; /* Darker shade on hover */
+  }
+  
+  @media (max-width: 830px) {
+  .join-us-button {
+  display: none; /* Hide the button on smaller screens */
+  }
+  }
+  
+  .join-us-button1 a {
+  text-decoration: none;
+  background-color: #005A5B; /* Adjust color as needed */
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-weight: normal;
+  display: inline-flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  }
+  
+  .join-us-button1 a:hover {
+  background-color: #555555; /* Darker shade on hover */
+  }
