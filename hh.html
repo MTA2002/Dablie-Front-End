@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us</title>
+    <link rel="stylesheet" href="hh.css">
+</head>
+<body>
+    <section id="join-us" class="membership-section">
+        <div class="container">
+          <h2>Join Us</h2>
+          <p>Membership</p>
+          <p id="membership-text">Membership is open to both individuals and businesses.</p>
+          <p id="membership-options-text">If you are an individual, you have two membership options</p>
+          
+          <div class="membership-tabs">
+            <button class="tab-button active" onclick="openTab(event, 'individual')">Individual</button>
+            <button class="tab-button" onclick="openTab(event, 'organization')">Organization</button>
+          </div>
+          
+          <div id="individual" class="tab-content active">
+            <div class="membership-option">
+              <h3>Member</h3>
+              <p class="price">ETB 1,200/year</p>
+              <ul>
+                <li>Linkage with financial and non-financial institutions</li>
+                <li>Access to support programs hosted by EYEA including business competitions</li>
+                <li>Access to Educational workshops and trainings</li>
+                <li>Access to Networking events</li>
+              </ul>
+              <button class="btn btn-primary">Get Started Now</button>
+            </div>
+            <div class="membership-option">
+              <h3>Member Plus</h3>
+              <p class="price">ETB 2,400/year</p>
+              <ul>
+                <li>Access to support programs and projects hosted by EYEA including business competitions</li>
+                <li>Access to training and mentorship programs</li>
+                <li>Access to Networking events</li>
+                <li>Promotion of business ideas</li>
+                <li>Exclusive chances to pitch business ideas or projects to potential investors</li>
+                <li>Access to educational workshops on entrepreneurship</li>
+              </ul>
+              <button class="btn btn-primary">Get Started Now</button>
+            </div>
+          </div>
+      
+          <div id="organization" class="tab-content">
+            <div class="membership-option">
+              <h3>Small</h3>
+              <p class="price">ETB 5,000/year</p>
+              <ul>
+                <li>Access to financial and non-financial support programs directed to member enterprises</li>
+                <li>Access to Networking events</li>
+                <li>Access to educational workshops on entrepreneurship</li>
+                <li>Business development support programs</li>
+                <li>Access to support programs hosted by EYEA including business competitions</li>
+                <li>Access to linkage with financial institutions</li>
+                <li>Access to funding sources</li>
+              </ul>
+              <button class="btn btn-primary">Get Started Now</button>
+            </div>
+            <div class="membership-option">
+              <h3>Medium</h3>
+              <p class="price">ETB 10,000/year</p>
+              <ul>
+                <li>Exclusive chances to pitch business ideas or projects to potential investors</li>
+                <li>Access to support programs and projects hosted by EYEA including business competitions</li>
+                <li>Access to exclusive networking event to create linkage with large enterprises</li>
+                <li>Access to funding sources by providing information and assistance</li>
+                <li>Access to training programs of employees</li>
+                <li>Business development support programs</li>
+                <li>Access to financial and non-financial support programs directed to member enterprises</li>
+                <li>Access to Networking events</li>
+                <li>Access to educational workshops on entrepreneurship</li>
+              </ul>
+              <button class="btn btn-primary">Get Started Now</button>
+            </div>
+            <div class="membership-option">
+              <h3>Large</h3>
+              <p class="price">ETB 15,000/year</p>
+              <ul>
+                <li>Strategic partnerships with EYEA and its partners</li>
+                <li>Access to industry experts</li>
+                <li>Access to funding sources by providing information and assistance</li>
+                <li>Access to all educational workshops on entrepreneurship</li>
+                <li>Access to support programs hosted by EYEA including business competitions</li>
+                <li>Access to training programs of employees</li>
+                <li>Business development support programs</li>
+                <li>Networking events with large corporations</li>
+                <li>Representation and advocacy for the interests of large organizations</li>
+                <li>Access to financial and non-financial support programs directed to member enterprises</li>
+                <li>Access to Networking events</li>
+              </ul>
+              <button class="btn btn-primary">Get Started Now</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <script>
+        function openTab(evt, tabName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tab-content");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tab-button");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(tabName).style.display = "block";
+          evt.currentTarget.className += " active";
+      
+          var membershipText = document.getElementById("membership-text");
+          var membershipOptionsText = document.getElementById("membership-options-text");
+          if (tabName === "individual") {
+            membershipText.innerHTML = "Membership is open to both individuals and businesses.";
+            membershipOptionsText.innerHTML = "If you are an individual, you have two membership options";
+          } else {
+            membershipText.innerHTML = "Membership is open to both individuals and businesses.";
+            membershipOptionsText.innerHTML = "If you are an enterprise, you have three membership options";
+          }
+        }
+      
+        document.getElementById("individual").style.display = "block";
+      </script>
+</body>
+</html>
