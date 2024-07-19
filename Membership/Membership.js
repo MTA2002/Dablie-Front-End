@@ -1,29 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const individualButton = document.getElementById('individualButton');
-    const organizationButton = document.getElementById('organizationButton');
-    const individualFormSection = document.getElementById('individualFormSection');
-    const organizationFormSection = document.getElementById('organizationFormSection');
-
-    individualButton.addEventListener('click', function() {
-        individualFormSection.style.display = 'block';
-        organizationFormSection.style.display = 'none';
-    });
-
-    organizationButton.addEventListener('click', function() {
-        individualFormSection.style.display = 'none';
-        organizationFormSection.style.display = 'block';
-    });
-
     function handleFormSubmission(form) {
         form.addEventListener('submit', function(event) {
             if (!form.checkValidity()) {
-                console.log("Hello tam");
                 event.preventDefault();
                 event.stopPropagation();
                 form.classList.add('was-validated');
                 showValidationErrors(form);
             } else {
-                console.log("Hello mta");
                 event.preventDefault();
                 sendFormData(form);
             }
@@ -75,8 +58,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function sendFormData(form) {
-        alert('Thank you for submitting the form! siw');
-        alert(form.action);
         const formData = new FormData(form);
         fetch(form.action, {
             method: 'POST',
@@ -95,6 +76,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // handleFormSubmission(document.getElementById('individualForm'));
+    handleFormSubmission(document.getElementById('individualForm'));
     handleFormSubmission(document.getElementById('organizationalForm'));
 });

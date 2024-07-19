@@ -46,9 +46,7 @@ body {
 .stories_box label{
     margin-top: 1rem;
 }
-body {
-    font-family: Arial, sans-serif;
-}
+
 
 .pagination {
     display: flex;
