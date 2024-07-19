@@ -14,20 +14,18 @@ document.addEventListener('DOMContentLoaded', function() {
         organizationFormSection.style.display = 'block';
     });
 
-    // Validation and submission handling for both forms
     function handleFormSubmission(form) {
         form.addEventListener('submit', function(event) {
             if (!form.checkValidity()) {
+                console.log("Hello tam");
                 event.preventDefault();
                 event.stopPropagation();
                 form.classList.add('was-validated');
                 showValidationErrors(form);
             } else {
+                console.log("Hello mta");
                 event.preventDefault();
-                alert('Thank you for submitting the form!');
-                form.reset();
-                form.classList.remove('was-validated');
-                clearErrorMessages(form);
+                sendFormData(form);
             }
         }, false);
 
@@ -76,6 +74,27 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    handleFormSubmission(document.getElementById('individualForm'));
+    function sendFormData(form) {
+        alert('Thank you for submitting the form! siw');
+        alert(form.action);
+        const formData = new FormData(form);
+        fetch(form.action, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert('Thank you for submitting the form!');
+            console.log('Success:', data);
+            form.reset();
+            form.classList.remove('was-validated');
+            clearErrorMessages(form);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+
+    // handleFormSubmission(document.getElementById('individualForm'));
     handleFormSubmission(document.getElementById('organizationalForm'));
 });
