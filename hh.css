@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Montserrat';
   background-color: #f9f9f9;
 }
 
@@ -17,50 +17,50 @@ body {
 
 .membership-tabs {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   margin-bottom: 30px;
-  }
-  
-  .tab-button {
+}
+
+.tab-button {
   padding: 10px 20px;
   border: none;
   background-color: transparent;
   cursor: pointer;
   font-size: 16px;
   transition: color 0.3s, border-bottom 0.3s;
-  }
-  
-  .tab-button.active {
-  color: #FFA500;
-  border-bottom: 2px solid #FFA500;
-  }
-  
-  .tab-content {
+}
+
+.tab-button.active {
+  color: #004346;
+  border-bottom: 2px solid #004346;
+}
+
+.tab-content {
   display: none;
   transition: opacity 0.5s ease-in-out;
-  }
-  
-  .tab-content.active {
+}
+
+.tab-content.active {
   display: block;
   opacity: 1;
-  }
-  
-  .membership-options {
+}
+
+.membership-options {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  }
-  
-  .membership-option {
-  flex: 1 1 calc(50% - 40px); /* Adjust width to 50% minus gap /
-  max-width: calc(50% - 40px); / Ensure maximum width is half minus gap */
+}
+
+.membership-option {
+  flex: 1 1 calc(50% - 40px); /* Adjust width to 50% minus gap */
+  max-width: calc(50% - 40px); /* Ensure maximum width is half minus gap */
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  }
-  
-  .card {
+}
+
+.card {
   background-color: #fff; /* Set background to white */
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -69,104 +69,96 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  }
-  
-  .card:hover {
+}
+
+.card:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .card.locked .card-body {
+}
+
+.card.locked .card-body {
   opacity: 0.5;
-  }
-  
-  .card.locked .card-footer button {
+}
+
+.card.locked .card-footer button {
   cursor: not-allowed;
-  }
-  
-  .card-header, .card-footer {
+}
+
+.card-header, .card-footer {
   padding: 20px;
   background-color: #f9f9f9;
-  }
-  
-  .card-header {
+}
+
+.card-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  }
-  
-  .card-header h3 {
+  text-align: left; /* Ensure left alignment */
+}
+
+.card-header h3 {
   font-size: 24px;
   margin: 0;
-  }
-  
-  .card-header .price {
+}
+
+.card-header .price {
   font-size: 18px;
   color: #666;
-  }
-  
-  .card-header .price span {
+}
+
+.card-header .price span {
   font-size: 24px;
   color: #333;
-  }
-  
-  .card-body {
+}
+
+.card-body {
   padding: 20px;
   flex: 1;
-  }
-  
-  .card-body .benefits {
-  list-style: none;
-  padding: 0;
+  text-align: left; /* Ensure left alignment */
+}
+
+.card-body .benefits {
+  list-style-type: disc; /* Ensure bullets are displayed */
+  padding-left: 20px; /* Indent the list */
   margin: 0;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  }
-  
-  .card-body .benefits li {
-  display: flex;
-  align-items: center;
+}
+
+.card-body .benefits li {
   font-size: 16px;
   color: #555;
-  }
-  
-  .card-body .benefits li::before {
-  content: ‘✔’;
-  color: #FFA500;
-  margin-right: 10px;
-  }
-  
-  .card-footer {
+}
+
+.card-footer {
   text-align: center;
-  }
-  
-  .btn-primary {
-  background-color: #FFA500;
+}
+
+.btn-primary {
+  background-color: #004346;
   color: white;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 4px;
   transition: background-color 0.3s, transform 0.3s;
-  }
-  
+}
 
-
-  .btn-primary:hover {
+.btn-primary:hover {
   background-color: #FF8C00;
   transform: scale(1.05);
-  }
-  
-  .btn-primary[disabled] {
+}
+
+.btn-primary[disabled] {
   background-color: #ccc;
   cursor: not-allowed;
-  }
-  
-  /* Media query for mobile view */
-  @media (max-width: 768px) {
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
   .membership-option {
-  flex: 1 1 100%; /* Stack cards vertically on small screens */
-  max-width: 100%;
+    flex: 1 1 100%; /* Stack cards vertically on small screens */
+    max-width: 100%;
   }
-  }
+}
