@@ -1,0 +1,172 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.membership-section {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.membership-tabs {
+  display: flex;
+  justify-content:center;
+  margin-bottom: 30px;
+  }
+  
+  .tab-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.3s, border-bottom 0.3s;
+  }
+  
+  .tab-button.active {
+  color: #FFA500;
+  border-bottom: 2px solid #FFA500;
+  }
+  
+  .tab-content {
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+  }
+  
+  .tab-content.active {
+  display: block;
+  opacity: 1;
+  }
+  
+  .membership-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  }
+  
+  .membership-option {
+  flex: 1 1 calc(50% - 40px); /* Adjust width to 50% minus gap /
+  max-width: calc(50% - 40px); / Ensure maximum width is half minus gap */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  }
+  
+  .card {
+  background-color: #fff; /* Set background to white */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  }
+  
+  .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card.locked .card-body {
+  opacity: 0.5;
+  }
+  
+  .card.locked .card-footer button {
+  cursor: not-allowed;
+  }
+  
+  .card-header, .card-footer {
+  padding: 20px;
+  background-color: #f9f9f9;
+  }
+  
+  .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+  
+  .card-header h3 {
+  font-size: 24px;
+  margin: 0;
+  }
+  
+  .card-header .price {
+  font-size: 18px;
+  color: #666;
+  }
+  
+  .card-header .price span {
+  font-size: 24px;
+  color: #333;
+  }
+  
+  .card-body {
+  padding: 20px;
+  flex: 1;
+  }
+  
+  .card-body .benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  }
+  
+  .card-body .benefits li {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #555;
+  }
+  
+  .card-body .benefits li::before {
+  content: ‘✔’;
+  color: #FFA500;
+  margin-right: 10px;
+  }
+  
+  .card-footer {
+  text-align: center;
+  }
+  
+  .btn-primary {
+  background-color: #FFA500;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.3s;
+  }
+  
+
+
+  .btn-primary:hover {
+  background-color: #FF8C00;
+  transform: scale(1.05);
+  }
+  
+  .btn-primary[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+  }
+  
+  /* Media query for mobile view */
+  @media (max-width: 768px) {
+  .membership-option {
+  flex: 1 1 100%; /* Stack cards vertically on small screens */
+  max-width: 100%;
+  }
+  }

@@ -7,7 +7,7 @@ body {
     text-align: center;
 }
 .youth_hero{
-    background-image: url(./Leadership_assets/Dablie\ background\ 1024\ all-09.jpg);
+    background-image: url(./Leadership_assets/7.jpg);
     width:auto ;
     background-repeat: none;
     background-size: cover;
@@ -302,7 +302,7 @@ body {
     }
     .youth_hero{
         height: fit-content;
-        background-image:url(./Leadership_assets/Dablie\ background\ 1024\ all-09.jpg);
+        background-image:url(./Leadership_assets/7.jpg);
     }
 }
 
