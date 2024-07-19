@@ -283,7 +283,7 @@ body {
     width: 1rem;
     height: 1rem;
     position: absolute;
-    left: -1rem; /* Adjust for more space */
+    left: -0.7rem; /* Adjust for more space */
     top: 0.3rem; /* Adjust as needed to align with text */
 }
 .points span {
