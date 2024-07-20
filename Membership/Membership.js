@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     function handleFormSubmission(form) {
+        if (!form) return;
+
         form.addEventListener('submit', function(event) {
             if (!form.checkValidity()) {
                 event.preventDefault();
@@ -59,11 +61,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function sendFormData(form) {
         const formData = new FormData(form);
+        const data = {};
+        
+        formData.forEach((value, key) => {
+            data[key] = value || ''; // Ensure optional fields have default values
+        });
+
         fetch(form.action, {
             method: 'POST',
-            body: formData
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
         })
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                return response.json().then(errorData => {
+                    throw new Error(`Server responded with ${response.status}: ${errorData.message}`);
+                });
+            }
+            return response.json();
+        })
         .then(data => {
             alert('Thank you for submitting the form!');
             console.log('Success:', data);

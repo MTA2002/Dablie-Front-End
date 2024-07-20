@@ -270,22 +270,11 @@ body {
 .points li {
     margin-bottom: 1rem;
     padding-left: 2rem; /* Increase padding for more space */
-    text-indent: -1.5rem;
+    /* text-indent: -1.5rem; */
     line-height: 1.5;
     position: relative;
 }
-.points li::before {
-    content: '';
-    background-image: url('../HomePage/images/Dablie_logo.png'); /* Adjust the path to your logo */
-    background-size: contain;
-    background-repeat: no-repeat;
-    display: inline-block;
-    width: 1rem;
-    height: 1rem;
-    position: absolute;
-    left: -0.7rem; /* Adjust for more space */
-    top: 0.3rem; /* Adjust as needed to align with text */
-}
+
 .points span {
     color: #508991;
     font-weight: bolder;

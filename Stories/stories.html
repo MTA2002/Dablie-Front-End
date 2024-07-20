@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../Header & Footer/header.css">
+    <link rel="stylesheet" href="../Header & Footer/footer.css">
+    <link rel="stylesheet" href="./stories.css">
+    <link rel="icon" type="image/x-icon" href="../HomePage/images/Dablie_logo.png">
+
+    <style>
+        .program_card.hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div data-include="../Header & Footer/header.html"></div>
+
+    <section class="stories_section">
+        <h1>Latest <span>Stories</span></h1>
+        <div class="stories_boxes" id="stories_boxes">
+            <!-- Stories will be inserted here by JavaScript -->
+        </div>
+    </section>
+
+    <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <span><a href="#">4</a></span>
+        <span><a href="#">5</a></span>
+        <a href="#">&raquo;</a>
+    </div>
+
+    <div data-include="../Header & Footer/footer.html"></div>
+    
+    <script src="../Header & Footer/include.js"></script>
+    <script src="../Header & Footer/header.js"></script>
+    <script src="../HomePage/header.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const url = 'http://64.112.124.78:8000/news?page=1&pagination=6';
+
+            fetch(url, {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.articles) {
+                    const storiesBoxes = document.getElementById('stories_boxes');
+                    data.articles.forEach(article => {
+                        const storyBox = document.createElement('div');
+                        storyBox.classList.add('stories_box');
+
+                        const img = document.createElement('img');
+                        img.src = `http://64.112.124.78/data/images/${article.image}`;
+                        img.alt = "";
+
+                        const label = document.createElement('label');
+                        label.textContent = article.headline;
+
+                        const p = document.createElement('p');
+                        p.textContent = article.description;
+
+                        storyBox.appendChild(img);
+                        storyBox.appendChild(label);
+                        storyBox.appendChild(p);
+
+                        storiesBoxes.appendChild(storyBox);
+                    });
+                } else {
+                    console.error('Error decoding JSON: articles not found in response');
+                }
+            })
+            .catch(error => console.error('Error fetching data:', error));
+        });
+    </script>
+</body>
+</html>

@@ -12,7 +12,7 @@ body {
 .hero {
     /* Gradient background */
     /* background: linear-gradient(to bottom, #0072c6, #70c6ff); */
-    background-image: url("./images/hero_home.webp");
+    background-image: url("./images/hero_part1\ \(1\)\ \(1\).png");
     background-repeat: no-repeat;
     background-size:cover;
     color: white; /* Text color */
@@ -76,7 +76,8 @@ body {
 .updates_grid {
     display: flex; /* Use flexbox */
     justify-content: center; /* Center items horizontally */
-    gap: 2.5rem; /* Gap between items */
+    gap: 3rem; 
+    /* justify-content: space-evenly; */
     margin-top: 20px; /* Space above container */
 }
 
@@ -85,8 +86,8 @@ body {
     background: #E4EBEF; /* Background color */
     /* border-radius: 12px; Border radius */
     /* padding: 15px; Padding */
-    width: 350px; /* Card width */
-    height: 420px;
+    width: 320px; /* Card width */
+    height: 380px;
     text-align: left; /* Text alignment */
 }
 
@@ -94,6 +95,7 @@ body {
 .update_card img {
     width: 100%; /* Image width */
     /* border-radius: 10px; Border radius */
+    height: 210px;
 }
 
 /* Styles for paragraphs within update cards */
@@ -211,6 +213,9 @@ body {
     font-size: 0.75em; /* Font size */
     margin-bottom: 15px; /* Space below paragraph */
 }
+.see_more {
+    width: 500px;
+}
 .see_more a {
     text-decoration: none;
     font-size: 20px;
@@ -271,7 +276,7 @@ content: '';
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
   }
-  @media (max-width: 768px) {
+  @media (max-width: 838px) {
     /* .hero {
         height: auto;
         padding: 40px 20px;
@@ -293,6 +298,7 @@ content: '';
     .program_card {
         flex-direction: column;
         width: 90%;
+        max-width:500px ;
         height: auto;
     }
     .program_card h3{
@@ -329,11 +335,11 @@ content: '';
     }
     
 }
-@media (max-width: 821px) {
+/* @media (max-width: 821px) {
     .program_card {
         width: 750px;
     }
-}
+} */
 @media (max-width:1100px){
     .updates_grid {
         display: flex; /* Use flexbox */
@@ -380,3 +386,29 @@ content: '';
         display: none;
     }
 }
+.learn-leje{
+    padding-bottom: 10px;
+}
+/* .Donate-Button {
+  width: 84px;
+  height: 31px;
+  padding: 4px 8.1px 5px 12px;
+  border-radius: 10.9px;
+  border: solid 1px #004346;
+  background-color: #d2e6f0;
+}
+
+.Become-a-member {
+  width: 51px;
+  height: 22px;
+  margin: 0 1px 0 0;
+  font-family: Montserrat;
+  font-size: 9.3px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #004346;
+} */
