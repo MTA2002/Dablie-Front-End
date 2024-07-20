@@ -76,13 +76,9 @@ body {
 }
 
 .donate_button a:hover {
-    background-color: #002d2e; /* Darker shade on hover */
+    /* background-color: #002d2e;  */
 }
 
-.donate-button a::after {
-    content: '♥';
-    margin-left: 0.5rem;
-}
 .youth_hero p{
     text-align: center;
     /* width: 50rem; */

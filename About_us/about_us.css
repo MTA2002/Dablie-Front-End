@@ -79,10 +79,7 @@ body {
     background-color: #002d2e; /* Darker shade on hover */
 }
 
-.donate-button a::after {
-    content: '♥';
-    margin-left: 0.5rem;
-}
+
 .youth_hero p{
     text-align: center;
     /* width: 50rem; */
@@ -243,12 +240,16 @@ body {
     color: #333;
     font-weight: lighter;
     text-align: left;
-    margin-top: 15%;
+    /* margin-top: 15%; */
 }
 .points span{
     color: #508991;
     font-weight: bolder;
 }
+.point2{
+margin-top: 15% !important  ;
+}
+
 .features{
     padding: 1rem;
 }
@@ -396,6 +397,9 @@ span{
         height: fit-content;
         background-image: url(./about_us_assets/9.jpg);
     }
+    .point2{
+margin-top: 0 !important  ;
+}
 }
 @media (max-width:1000px) {
     .headtext{
@@ -483,4 +487,8 @@ span{
     .update_card{
         width: 80%;
     }
+}
+
+.marginit{
+    margin-right: 5%;
 }
