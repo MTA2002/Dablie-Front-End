@@ -6,13 +6,15 @@ body {
     padding: 20px;
     box-sizing: border-box;
 }
-#individualFormSection{
-    display: block;
-}
-#organizationFormSection{
-    display: block;
 
+#individualFormSection {
+    display: block;
 }
+
+#organizationFormSection {
+    display: block;
+}
+
 main {
     justify-content: center;
     padding: 20px;
@@ -132,11 +134,15 @@ button:hover {
 }
 
 .clear-btn {
-    background-color: #dc3545;
+    background-color: #fff;
+    color: #dc3545;
+    border: 2px solid #dc3545;
 }
 
 .clear-btn:hover {
-    background-color: #c82333;
+    background-color: #fff;
+    color: #c82333;
+    border: 2px solid #c82333;
 }
 
 .radio-group {
@@ -152,11 +158,11 @@ button:hover {
 
 /* Responsive design */
 @media (max-width: 600px) {
-    .form-container {
+    main {
         padding: 15px;
     }
 
-    h1 {
+    h1, h2 {
         font-size: 1.5em;
     }
 
@@ -169,7 +175,16 @@ button:hover {
         margin-bottom: 10px;
     }
 
-    /* button:last-child {
-        margin-bottom: 0;
-    } */
+    .phone-input-container {
+        flex-direction: column;
+    }
+
+    .phone-input-container select,
+    .phone-input-container input {
+        width: 100%;
+    }
+
+    .phone-input-container select {
+        margin-bottom: 10px;
+    }
 }

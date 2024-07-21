@@ -136,36 +136,32 @@ header {
   text-decoration: none;
   transition: background-color 0.3s ease;
   display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 31px;
-    background-color: #16909d;
-    color:#F3F3F3;
-    border: solid 1px #16909d;
-
-    padding: 10px 14px 10px 18px;
-  
+  align-items: center;
+  justify-content: center;
+  height: 31px;
+  background-color: #16909d;
+  color:#F3F3F3;
+  border: solid 1px #16909d;
+  padding: 10px 14px 10px 18px;
   border-radius: 10.9px;
   font-family: Montserrat;
   font-size: 9.3px;
   font-weight: normal;
   font-stretch: normal;
-    text-align: left;
-    cursor: pointer;
+  text-align: left;
+  cursor: pointer;
 }
 
-
 .icon-2 {
-    display: flex;
-    margin-left: 4px;
-    width: 8px;
-    height: 8px;
+  display: flex;
+  margin-left: 4px;
+  width: 8px;
+  height: 8px;
 }
 
 .donate-button a:hover {
   background-color: #002d2e; /* Darker shade on hover */
 }
-
 
 .hamburger-menu-container {
   display: none; /* Hidden on larger screens */
@@ -176,7 +172,6 @@ header {
 /* New Hamburger Menu Styles */
 .menu-wrapper {
   width: 50px;
-  /* height: 50px; */
   cursor: pointer;
   border-radius: 25px;
   transition: all 0.3s ease-out;
@@ -195,7 +190,7 @@ header {
 }
 
 .menu-btn {
-  top: 20%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -215,8 +210,21 @@ header {
   top: 10px;
 }
 
+/* Add middle line for 3-line menu button */
+.menu-btn-middle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 4px;
+  background-color: #858484;
+  transition: all 200ms ease-in-out;
+}
+
 /* Hide the middle line when menu is open */
-.menu-wrapper-on .menu-btn {
+.menu-wrapper-on .menu-btn,
+.menu-wrapper-on .menu-btn-middle {
   background-color: transparent;
 }
 
@@ -247,6 +255,8 @@ header {
   transition: right 0.4s ease;
   padding: 50px 0px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .menu-overlay.open {
@@ -267,10 +277,11 @@ header {
 
 .menu-overlay li {
   margin: 10px 0;
+  border-bottom: 1px solid #ccc; /* Add underline */
+  padding-bottom: 5px;
 }
 
 .menu-overlay a {
-  /* margin-right: 10%; */
   color: #868686;
   text-decoration: none;
   font-size: 18px;
@@ -341,142 +352,181 @@ header {
   }
 
   .button a {
-     text-decoration: none;
-  transition: background-color 0.3s ease;
-  display: flex;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: flex;
     align-items: center;
     justify-content: center;
     height: 31px;
     background-color: #16909d;
-    color:#F3F3F3;
+    color: #F3F3F3;
     border: solid 1px #16909d;
-
     padding: 5px 14px 5px 18px;
-
-  border-radius: 10.9px;
-  font-family: Montserrat;
-  font-size: 9.3px;
-  font-weight: normal;
-  font-stretch: normal;
+    border-radius: 10.9px;
+    font-family: Montserrat;
+    font-size: 9.3px;
+    font-weight: normal;
+    font-stretch: normal;
     text-align: left;
     cursor: pointer;
-  }
-
-  .button a:hover {
+    width: 200px; /* Set fixed width */
+    }
+    
+    .button a:hover {
     background-color: #a3a3a3; /* Darker shade on hover */
-  }
-
-
-.buttons-container {
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-position: absolute;
-top: 40%;
-left: 50%;
-transform: translate(-50%, -50%);
-}
-
-.join-us-button1,
-.button {
-display: inline-block;
-margin: 10px 5px;
-/* width: 100px; */
-}
-
-.join-us-button1 a,
-.button a {
-display: inline-flex;
-justify-content: center;
-}
-}
-
-@media (min-width: 769px) {
-.hamburger-menu-container {
-display: none; /* Hidden on larger screens */
-}
-
-.navbar {
-display: flex !important; /* Ensure it is displayed on larger screens */
-}
-
-.donate-button {
-display: inline-flex !important; /* Ensure it is displayed on larger screens */
-}
-}
-
-/* Styles for the Join Us button */
-.join-us-button {
-order: 2; /* Ensure it appears next to the donate button */
-margin-right: 10px; /* Add some space between the buttons */
-}
-
-.join-us-button a {
-text-decoration: none;
-
-
-display: flex;
+    }
+    
+    .buttons-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+    
+    .join-us-button1,
+    .button {
+    display: inline-block;
+    margin: 10px 5px;
+    }
+    
+    .join-us-button1 a,
+    .button a {
+    display: inline-flex;
+    justify-content: center;
+    width: 200px; /* Set fixed width */
+    }
+    
+    .social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 200px; /* Ensure social media icons match button width /
+    padding-top: 10px; / Adjust padding for spacing /
+    border-top: 1px solid #ccc; / Add border to match buttons /
+    text-align: center; / Center the social media icons */
+    }
+    
+    .social-media a {
+    margin: 0 10px;
+    color: #868686;
+    font-size: 24px;
+    transition: color 0.3s;
+    }
+    
+    .social-media a:hover {
+    color: #004346;
+    }
+    }
+    
+    @media (min-width: 769px) {
+    .hamburger-menu-container {
+    display: none; /* Hidden on larger screens */
+    }
+    
+    .navbar {
+    display: flex !important; /* Ensure it is displayed on larger screens */
+    }
+    
+    .donate-button {
+    display: inline-flex !important; /* Ensure it is displayed on larger screens */
+    }
+    }
+    
+    /* Styles for the Join Us button */
+    .join-us-button {
+    order: 2; /* Ensure it appears next to the donate button */
+    margin-right: 10px; /* Add some space between the buttons */
+    }
+    
+    .join-us-button a {
+    text-decoration: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     height: 31px;
     border: none;
     padding: 4px 8.1px 5px 12px;
-  border-radius: 10.9px;
-  font-family: Montserrat;
-  font-size: 9.3px;
-  font-weight: normal;
-  font-stretch: normal;
+    border-radius: 10.9px;
+    font-family: Montserrat;
+    font-size: 9.3px;
+    font-weight: normal;
+    font-stretch: normal;
     text-align: left;
     cursor: pointer;
-background-color: #d2e6f0;
+    background-color: #d2e6f0;
     color: #004346;
     border: solid 1px #004346;
-}
-.icon {
-    /* margin-right: 10px; */
+    }
+    
+    .icon {
     margin-left: 2px;
     width: 12px;
     height: 12px;
-}
-
-
-.join-us-button a:hover {
-background-color: #003f40; /* Darker shade on hover */
-}
-
-@media (max-width: 830px) {
-.join-us-button {
-display: none; /* Hide the button on smaller screens */
-}
-}
-
-.join-us-button1 a {
-text-decoration: none;
-display: flex;
+    }
+    
+    .join-us-button a:hover {
+    background-color: #9eb1b2; /* Darker shade on hover */
+    }
+    
+    @media (max-width: 830px) {
+    .join-us-button {
+    display: none; /* Hide the button on smaller screens */
+    }
+    }
+    
+    .join-us-button1 a {
+    text-decoration: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     height: 31px;
     border: none;
     padding: 4px 8.1px 5px 12px;
-  border-radius: 10.9px;
-  font-family: Montserrat;
-  font-size: 9.3px;
-  font-weight: normal;
-  font-stretch: normal;
+    border-radius: 10.9px;
+    font-family: Montserrat;
+    font-size: 9.3px;
+    font-weight: normal;
+    font-stretch: normal;
     text-align: left;
     cursor: pointer;
-background-color: #d2e6f0;
+    background-color: #d2e6f0;
     color: #004346;
     border: solid 1px #004346;
+    width: 200px; /* Set fixed width */
+    }
+    
+    .marginit {
+    margin-right: 5%;
+    }
+    /* Add these styles to your existing CSS file */
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+  width: 200px; /* Ensure social media icons match button width */
+  padding-top: 10px; /* Adjust padding for spacing */
+  text-align: center; /* Center the social media icons */
 }
 
-/* .join-us-button1 a:hover {
-background-color: #555555; 
-} */
+.social-media a {
+  margin: 0 10px;
+  color: #868686;
+  font-size: 24px;
+  transition: color 0.3s;
+}
 
-/*  */
+.social-media a:hover {
+  color: #004346;
+}
+/* Add these styles to your existing CSS file */
 
-.marginit{
-  margin-right: 5%;
+.social-media.hidden {
+  display: none;
 }

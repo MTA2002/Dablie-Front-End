@@ -75,10 +75,6 @@ body {
     transform: rotate(270deg);
 }
 
-.donate_button a:hover {
-    /* background-color: #002d2e;  */
-}
-
 .youth_hero p{
     text-align: center;
     /* width: 50rem; */
