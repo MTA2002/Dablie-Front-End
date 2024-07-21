@@ -7,10 +7,7 @@ body {
     box-sizing: border-box;
 }
 
-#individualFormSection {
-    display: block;
-}
-
+#individualFormSection,
 #organizationFormSection {
     display: block;
 }
@@ -157,7 +154,7 @@ button:hover {
 }
 
 /* Responsive design */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     main {
         padding: 15px;
     }
@@ -186,5 +183,22 @@ button:hover {
 
     .phone-input-container select {
         margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .membership-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .membership-button {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .membership-form-section {
+        padding: 15px;
     }
 }

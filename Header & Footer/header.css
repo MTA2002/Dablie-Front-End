@@ -511,7 +511,7 @@ header {
   align-items: center;
   margin-top: 200px;
   width: 200px; /* Ensure social media icons match button width */
-  padding-top: 10px; /* Adjust padding for spacing */
+  padding-top: 25%; /* Adjust padding for spacing */
   text-align: center; /* Center the social media icons */
 }
 
