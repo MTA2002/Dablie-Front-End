@@ -386,9 +386,24 @@ content: '';
         display: none;
     }
 }
+@media (max-width:415px) {
+    .program_text_right{
+        width: 80%;
+        height: auto;
+    }
+    .program_text_left{
+        width: 80%;
+        height: auto;
+    }
+    .program_card a{
+        margin-bottom: 1rem;
+    }
+}
 .learn-leje{
     padding-bottom: 10px;
 }
+
+
 /* .Donate-Button {
   width: 84px;
   height: 31px;
