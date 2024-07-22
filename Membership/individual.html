@@ -136,12 +136,11 @@
 
                 <label for="skills">What skills or experience can you contribute?</label>
                 <textarea id="skills" name="skills"></textarea>
-
                 <div class="agreement">
                     <p>By submitting this form, you agree to abide by the Dabile Foundation's terms and conditions of membership. You also acknowledge that we may use your contact information to keep you informed about our activities and events.</p>
                     <p>Please review your application carefully before submitting it. You can click "Clear" to start over or "Submit" to send your application. Thank you for your interest in the Dabile Foundation!</p>
                 </div>
-
+    
                 <div class="buttons">
                     <button type="reset" class="clear-btn">Clear</button>
                     <button type="submit">Submit</button>
@@ -149,19 +148,19 @@
             </form>
         </section>
     </main>
-
+    
     <div id="footer"></div>
     <div data-include="../Header & Footer/footer.html"></div>
     
     <script src="../Header & Footer/include.js"></script>
     <script src="../Header & Footer/header.js"></script>
     <script src="./Membership.js"></script>
-
+    
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             includeHTML();
         });
-
+    
         function includeHTML() {
             let z, i, elmnt, file, xhttp;
             z = document.querySelectorAll("[data-include]");
@@ -184,51 +183,55 @@
                 }
             }
         }
+    
         document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('form').addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        const formData = new FormData(event.target);
-
-        const data = {
-            first_name: formData.get('first-name'),
-            last_name: formData.get('last-name'),
-            email: formData.get('email'),
-            primary_area_code: formData.get('primary-area-code'),
-            phone: formData.get('phone-number'),
-            occupation: formData.get('occupation'),
-            city: formData.get('city'),
-            state: formData.get('state'),
-            country: formData.get('country'),
-            reasons: formData.get('reasons'),
-            how_heard: formData.get('how-heard'),
-            interest: formData.get('interest'),
-            skills: formData.get('skills')
-        };
-
-        const apiUrl = 'http://64.112.124.78:8000/individual_membership_form';
-        const urlWithQuery = `${apiUrl}?${new URLSearchParams(data).toString()}`;
-
-        fetch(urlWithQuery, {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json'
-            }
-        })
-        .then(response => response.json())
-        .then(responseData => {
-            console.log(responseData);
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            const response = {
-                status: 'error',
-                message: `Fetch error: ${error.message}`
-            };
-            console.log(response);
+            document.querySelector('form').addEventListener('submit', function(event) {
+                event.preventDefault();
+    
+                const formData = new FormData(event.target);
+    
+                const data = {
+                    first_name: formData.get('first-name'),
+                    last_name: formData.get('last-name'),
+                    email: formData.get('email'),
+                    primary_area_code: formData.get('primary-area-code'),
+                    phone: formData.get('phone-number'),
+                    occupation: formData.get('occupation'),
+                    city: formData.get('city'),
+                    state: formData.get('state'),
+                    country: formData.get('country'),
+                    reasons: formData.get('reasons'),
+                    how_heard: formData.get('how-heard'),
+                    interest: formData.get('interest'),
+                    skills: formData.get('skills')
+                };
+    
+                const apiUrl = 'http://64.112.124.78:8000/individual_membership_form';
+                const urlWithQuery = `${apiUrl}?${new URLSearchParams(data).toString()}`;
+    
+                fetch(urlWithQuery, {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => response.json())
+                .then(responseData => {
+                    console.log(responseData);
+                    if (responseData.status === 'success') {
+                        alert('Form submitted successfully! Thank You!!!');
+                        document.querySelector('form').reset();
+                        window.location.href = '../index.html';
+                    } else {
+                        alert('There was an error submitting the form. Please try again.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('There was an error submitting the form. Please try again.');
+                });
+            });
         });
-    });
-});
     </script>
-</body>
-</html>
+    </body>
+    </html>
