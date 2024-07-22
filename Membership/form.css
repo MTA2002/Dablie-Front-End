@@ -152,7 +152,21 @@ button:hover {
 .radio-label {
     margin-bottom: 0; /* Remove margin bottom for radio labels */
 }
+.phone-input-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
 
+.phone-input-container select {
+    flex: 0 0 auto; /* Allow the select element to maintain its width */
+    width: 25%; /* Set a fixed width for the select element */
+}
+
+.phone-input-container input {
+    flex: 1 1 auto; /* Allow the input element to take up the remaining space */
+    width: 70%; /* Adjust width to take up remaining space */
+}
 /* Responsive design */
 @media (max-width: 768px) {
     /* main {
@@ -169,19 +183,6 @@ button:hover {
 
     button {
         width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .phone-input-container {
-        flex-direction: column;
-    }
-
-    .phone-input-container select,
-    .phone-input-container input {
-        width: 97%;
-    }
-
-    .phone-input-container select {
         margin-bottom: 10px;
     }
 }
