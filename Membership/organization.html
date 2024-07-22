@@ -1,17 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Membership - Dablie Foundation</title>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="./form.css">
-    <link rel="stylesheet" href="../Header & Footer/header.css">
-    <link rel="stylesheet" href="../Header & Footer/footer.css">
-    <link rel="icon" type="image/x-icon" href="./HomePage/images/Dablie_logo.png">
-</head>
 <body>
+    <div data-include="../Header & Footer/header.html"></div>
     <header>
         <div class="logo">
             <a href="../index.html"><img src="../leadership page/assests/images/logo.png" alt="Dablie Foundation Logo"></a>
@@ -70,10 +58,10 @@
         </ul>
         <div class="social-media">
             <a href="https://www.linkedin.com/company/dablie-foundation/?viewAsMember=true"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-telegram"></i></a>
         </div>
     </nav>
     <main>
@@ -83,11 +71,9 @@
                 <label for="organization-name">Organization name <span class="required">*</span></label>
                 <input type="text" id="organization-name" name="organization-name" required>
                 <div class="error-message" id="organization-name-error"></div>
-
                 <label for="website-url">Website URL</label>
                 <input type="url" id="website-url" name="website-url" pattern="https?://.+">
                 <div class="error-message" id="website-url-error"></div>
-
                 <label for="phone-number">Phone Number <span class="required">*</span></label>
                 <div class="phone-input-container" style="display: flex; gap: 10px; flex-wrap: wrap;">
                     <select id="primary-area-code" name="primary-area-code" required>
@@ -103,31 +89,24 @@
                     <input type="tel" id="phone-number" name="phone-number" required pattern="[0-9]{9}">
                 </div>
                 <div class="error-message" id="phone-number-error"></div>
-
                 <label for="address">Address <span class="required">*</span></label>
                 <input type="text" id="address" name="address" required>
                 <div class="error-message" id="address-error"></div>
-
                 <label for="city">City <span class="required">*</span></label>
                 <input type="text" id="city" name="city" required>
                 <div class="error-message" id="city-error"></div>
-
                 <label for="state">State/Region <span class="required">*</span></label>
                 <input type="text" id="state" name="state" required>
                 <div class="error-message" id="state-error"></div>
-
                 <label for="country">Country <span class="required">*</span></label>
                 <input type="text" id="country" name="country" required>
                 <div class="error-message" id="country-error"></div>
-
                 <label for="primary-contact">Primary Contact Person <span class="required">*</span></label>
                 <input type="text" id="primary-contact" name="primary-contact" required>
                 <div class="error-message" id="primary-contact-error"></div>
-
                 <label for="primary-email">Primary Contact Email <span class="required">*</span></label>
                 <input type="email" id="primary-email" name="primary-email" required>
                 <div class="error-message" id="primary-email-error"></div>
-
                 <label for="primary-phone">Primary Contact Phone Number <span class="required">*</span></label>
                 <div class="phone-input-container" style="display: flex; gap: 10px; flex-wrap: wrap;">
                     <select id="primary-area-code" name="primary-area-code" required>
@@ -152,7 +131,6 @@
                     <option value="other">Other</option>
                 </select>
                 <div class="error-message" id="organization-type-error"></div>
-    
                 <label for="organization-size">What is the size of your organization? <span class="required">*</span></label>
                 <select id="organization-size" name="organization-size" required>
                     <option value="">Select Size (Revenue)</option>
@@ -161,27 +139,21 @@
                     <option value="large"> > 50 million ETB</option>
                 </select>
                 <div class="error-message" id="organization-size-error"></div>
-    
                 <label for="number-of-employees">Number of Employees</label>
                 <input type="number" id="number-of-employees" name="number-of-employees">
                 <div class="error-message" id="number-of-employees-error"></div>
-    
                 <label for="industry">Industry <span class="required">*</span></label>
                 <input type="text" id="industry" name="industry" required>
                 <div class="error-message" id="industry-error"></div>
-    
                 <label for="mission-description">Briefly describe your organization's mission and activities</label>
                 <textarea id="mission-description" name="mission-description"></textarea>
                 <div class="error-message" id="mission-description-error"></div>
-    
                 <label for="empowerment-contribution">How does your organization contribute to the empowerment of the community?</label>
                 <textarea id="empowerment-contribution" name="empowerment-contribution"></textarea>
                 <div class="error-message" id="empowerment-contribution-error"></div>
-    
                 <label for="joining-reason">Why are you interested in joining the Dabile Foundation?</label>
                 <textarea id="joining-reason" name="joining-reason"></textarea>
                 <div class="error-message" id="joining-reason-error"></div>
-    
                 <label for="business-forum">Are you interested in applying for the Business Forum Membership option? (Yes/No)</label>
                 <div class="radio-group">
                     <input type="radio" id="business-forum-yes" name="business-forum" value="yes" required>
@@ -190,15 +162,12 @@
                     <label for="business-forum-no" class="radio-label">No</label>
                 </div>
                 <div class="error-message" id="business-forum-error"></div>
-    
                 <label for="business-activities">Briefly describe your organization's business activities:</label>
                 <textarea id="business-activities" name="business-activities"></textarea>
                 <div class="error-message" id="business-activities-error"></div>
-    
                 <label for="partnership-goals">What are your organization's goals in partnering with the Dabile Foundation?</label>
                 <textarea id="partnership-goals" name="partnership-goals"></textarea>
                 <div class="error-message" id="partnership-goals-error"></div>
-    
                 <label for="financial-contribution">Are you willing to contribute financially to the Foundation's work? (Yes/No)</label>
                 <div class="radio-group">
                     <input type="radio" id="financial-contribution-yes" name="financial-contribution" value="yes" required>
@@ -206,7 +175,7 @@
                     <input type="radio" id="financial-contribution-no" name="financial-contribution" value="no">
                     <label for="financial-contribution-no" class="radio-label">No</label>
                 </div>
-                <div class="error-message" id="financial-contribution-error">
+                <div class="error-message" id="financial-contribution-error”>
                     <label for="financial-level">If yes, please indicate your preferred level of financial contribution</label>
                     <textarea id="financial-level" name="financial-level"></textarea>
         
@@ -227,46 +196,84 @@
     
     <script src="../Header & Footer/include.js"></script>
     <script src="../Header & Footer/header.js"></script>
-    <script src="./Membership.js"></script>
+        <script src="./Membership.js"></script>
         
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            includeHTML();
-        });
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                includeHTML();
+                document.querySelector('#organizationalForm').addEventListener('submit', function(event) {
+                    event.preventDefault();
     
-        function includeHTML() {
-            let z, i, elmnt, file, xhttp;
-            z = document.querySelectorAll("[data-include]");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                file = elmnt.getAttribute("data-include");
-                if (file) {
-                    xhttp = new XMLHttpRequest();
-                    xhttp.onreadystatechange = function() {
-                        if (this.readyState == 4) {
-                            if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-                            if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
-                            elmnt.removeAttribute("data-include");
-                            includeHTML();
-                        }
+                    // Validate form
+                    const form = event.target;
+                    const formData = new FormData(form);
+                    let isValid = true;
+    
+                    // Clear previous error messages
+                    document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+    
+                    // Custom validation logic
+                    if (!formData.get('organization-name')) {
+                        document.getElementById('organization-name-error').textContent = 'Organization name is required.';
+                        isValid = false;
                     }
-                    xhttp.open("GET", file, true);
-                    xhttp.send();
-                    return;
-                }
-            }
-        }
+                    if (!formData.get('primary-area-code')) {
+                        document.getElementById('phone-number-error').textContent = 'Area code is required.';
+                        isValid = false;
+                    }
+                    if (!formData.get('phone-number')) {
+                        document.getElementById('phone-number-error').textContent = 'Phone number is required.';
+                        isValid = false;
+                    }
+                    if (!formData.get('address')) {
+                        document.getElementById('address-error').textContent = 'Address is required.';
+                        isValid = false;
+                    }
+                    if (!formData.get('city')) {
+                        document.getElementById('city-error').textContent = 'City is required.';
+                        isValid = false;
+                    }
+                    if (!formData.get('state')) {
+                        document.getElementById('state-error').textContent = 'State/Region is required.';
+                        isValid = false;
+                    }
+                    if (!formData.get('country')) {
+                        document.getElementById('country-error').textContent = 'Country is required.';
+                        isValid = false;
+                    }
+                    if (!formData.get('primary-contact')) {
+                        document.getElementById('primary-contact-error').textContent = 'Primary contact person is required.';
+                        isValid = false;
+                    }
+                    if (!formData.get('primary-email')) {
+                        document.getElementById('primary-email-error').textContent = 'Primary contact email is required.';
+                        isValid = false;
+                    }
+                    if (!formData.get('primary-area-code') || !formData.get('phone-number')) {
+                        document.getElementById('primary-phone-error').textContent = 'Primary contact phone number is required.';
+                        isValid = false;
+                    }
+                    if (!formData.get('organization-type')) {
+                        document.getElementById('organization-type-error').textContent = 'Organization type is required.';
+                        isValid = false;
+                    }
+                    if (!formData.get('organization-size')) {
+                        document.getElementById('organization-size-error').textContent = 'Organization size is required.';
+                        isValid = false;
+                    }
+                    if (!formData.get('industry')) {
+                        document.getElementById('industry-error').textContent = 'Industry is required.';
+                        isValid = false;
+                    }
     
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelector('#organizationalForm').addEventListener('submit', function(event) {
-                event.preventDefault();
+                    if (!isValid) {
+                        return;
+                    }
     
-                const formData = new FormData(event.target);
-    
-                const data = {
+                    const data = {
                         organization_name: formData.get('organization-name'),
                         website_url: formData.get('website-url') || '',
-                        primary_area_code: formData.get('primary-area-code'),
+                        area_code: formData.get('primary-area-code'),
                         phone: formData.get('phone-number'),
                         address: formData.get('address'),
                         city: formData.get('city'),
@@ -279,52 +286,46 @@
                         size_of_organization: formData.get('organization-size'),
                         number_of_employees: formData.get('number-of-employees') || '',
                         industry: formData.get('industry'),
-                        mission_description: formData.get('mission-description') || '',
-                        empowerment_contribution: formData.get('empowerment-contribution') || '',
-                        joining_reason: formData.get('joining-reason') || '',
-                        business_forum: formData.get('business-forum'),
+                        mission_and_activities: formData.get('mission-description') || '',
+                        contribute_to_empowerment: formData.get('empowerment-contribution') || '',
+                        interest_in_joining: formData.get('joining-reason') || '',
+                        interest_in_business_forum: formData.get('business-forum'),
                         business_activities: formData.get('business-activities') || '',
-                        partnership_goals: formData.get('partnership-goals') || '',
-                        financial_contribution: formData.get('financial-contribution') || '',
-                        financial_level: formData.get('financial-level') || ''
-                };
+                        goal_of_partnership: formData.get('partnership-goals') || '',
+                        contribute_financially: formData.get('financial-contribution') || '',
+                        level_of_financial_contribution: formData.get('financial-level') || ''
+                    };
     
-                console.log('Form data being sent:', data);
+                    console.log('Form data being sent:', data);
     
-                const apiUrl = 'http://64.112.124.78:8000/organization_membership_form';
+                    const apiUrl = 'http://64.112.124.78:8000/organization_membership_form';
     
-                fetch(apiUrl, {
-                    method: 'POST',
-                    headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(data)
-                })
-                .then(response => {
-                    if (!response.ok) {
-                        return response.json().then(errorData => {
-                            throw new Error(`Server responded with ${response.status}: ${errorData.message}`);
-                        });
-                    }
-                    return response.json();
-                })
-                .then(responseData => {
-                    console.log(responseData);
-                    if (responseData.status === 'success') {
-                        alert('Form submitted successfully! Thank You!!!');
-                        document.querySelector('#organizationalForm').reset();
-                        window.location.href = '../index.html';
-                    } else {
-                        alert('There was an error submitting the form. Please try again.');
+                    fetch(apiUrl, {
+                        method: 'POST',
+                        headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    })
+                    .then(response => {
+                        if (!response.ok) {
+                            return response.json().then(errorData => {
+                                throw new Error(`Server responded with ${response.status}: ${errorData.message}`);
+                            });
                         }
-                })
-                .catch(error => {
-                console.error('Error:', error);
-                alert('There was an error submitting the form. Please try again.');
-                 });
-                 });
-    });
-</script>
-</body>
-</html>
+                        return response.json();
+                    })
+                    .then(responseData => {
+                        console.log(responseData);
+                        alert('Form submitted successfully! Thank You!!!');
+                        window.location.href = '../index.html';
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+                });
+            });
+        </script>
+        </body>
+        </html>
