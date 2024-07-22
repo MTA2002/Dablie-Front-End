@@ -503,30 +503,29 @@ header {
     .marginit {
     margin-right: 5%;
     }
-    /* Add these styles to your existing CSS file */
 
-.social-media {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 200px;
-  width: 200px; /* Ensure social media icons match button width */
-  padding-top: 25%; /* Adjust padding for spacing */
-  text-align: center; /* Center the social media icons */
-}
-
-.social-media a {
-  margin: 0 10px;
-  color: #868686;
-  font-size: 24px;
-  transition: color 0.3s;
-}
-
-.social-media a:hover {
-  color: #004346;
-}
-/* Add these styles to your existing CSS file */
-
-.social-media.hidden {
-  display: none;
-}
+    .social-media {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 200px; /* Ensure social media icons match button width */
+      text-align: center; /* Center the social media icons */
+      position: fixed; /* Make the social media icons fixed */
+      bottom: 22%; /* Set the bottom margin to 22% */
+    }
+    
+    .social-media a {
+      margin: 0 10px;
+      color: #868686;
+      font-size: 24px;
+      transition: color 0.3s;
+    }
+    
+    .social-media a:hover {
+      color: #004346;
+    }
+    
+    /* Hide social media icons by default */
+    .social-media.hidden {
+      display: none;
+    }
