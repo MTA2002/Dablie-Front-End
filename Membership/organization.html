@@ -266,7 +266,7 @@
                 const data = {
                     organization_name: formData.get('organization-name'),
                     website_url: formData.get('website-url') || '',
-                    primary_area_code: formData.get('primary-area-code'),
+                    area_code: formData.get('primary-area-code'),
                     phone: formData.get('phone-number'),
                     address: formData.get('address'),
                     city: formData.get('city'),
@@ -279,14 +279,13 @@
                     size_of_organization: formData.get('organization-size'),
                     number_of_employees: formData.get('number-of-employees') || '',
                     industry: formData.get('industry'),
-                    mission_description: formData.get('mission-description') || '',
-                    empowerment_contribution: formData.get('empowerment-contribution') || '',
-                    joining_reason: formData.get('joining-reason') || '',
-                    business_forum: formData.get('business-forum'),
+                    mission_and_activities: formData.get('mission-description') || '',
+                    contribute_to_empowerment: formData.get('empowerment-contribution') || '',
+                    interest_in_joining: formData.get('joining-reason') || '',
                     business_activities: formData.get('business-activities') || '',
-                    partnership_goals: formData.get('partnership-goals') || '',
-                    financial_contribution: formData.get('financial-contribution') || '',
-                    financial_level: formData.get('financial-level') || ''
+                    goal_of_partnership: formData.get('partnership-goals') || '',
+                    contribute_financially: formData.get('financial-contribution') || '',
+                    level_of_financial_contribution: formData.get('financial-level') || ''
                 };
     
                 console.log('Form data being sent:', data);
