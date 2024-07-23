@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership - Dablie Foundation</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./form.css">
+    <link rel="stylesheet" href="../Header & Footer/header.css">
+    <link rel="stylesheet" href="../Header & Footer/footer.css">
+    <link rel="icon" type="image/x-icon" href="./HomePage/images/Dablie_logo.png">
+</head>
 <body>
     <div data-include="../Header & Footer/header.html"></div>
     <header>
@@ -203,15 +216,15 @@
                 includeHTML();
                 document.querySelector('#organizationalForm').addEventListener('submit', function(event) {
                     event.preventDefault();
-    
+        
                     // Validate form
                     const form = event.target;
                     const formData = new FormData(form);
                     let isValid = true;
-    
+        
                     // Clear previous error messages
                     document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
-    
+        
                     // Custom validation logic
                     if (!formData.get('organization-name')) {
                         document.getElementById('organization-name-error').textContent = 'Organization name is required.';
@@ -265,14 +278,14 @@
                         document.getElementById('industry-error').textContent = 'Industry is required.';
                         isValid = false;
                     }
-    
+        
                     if (!isValid) {
                         return;
                     }
-    
+        
                     const data = {
                         organization_name: formData.get('organization-name'),
-                        website_url: formData.get('website-url') || '',
+                        website_url: formData.get('website-url') || null,
                         area_code: formData.get('primary-area-code'),
                         phone: formData.get('phone-number'),
                         address: formData.get('address'),
@@ -281,25 +294,25 @@
                         country: formData.get('country'),
                         primary_contact_person: formData.get('primary-contact'),
                         primary_contact_email: formData.get('primary-email'),
-                        primary_contact_phone: formData.get('primary-phone'),
+                        primary_contact_phone: formData.get('phone-number'),
                         organization_type: formData.get('organization-type'),
                         size_of_organization: formData.get('organization-size'),
-                        number_of_employees: formData.get('number-of-employees') || '',
+                        number_of_employees: formData.get('number-of-employees') || null,
                         industry: formData.get('industry'),
-                        mission_and_activities: formData.get('mission-description') || '',
-                        contribute_to_empowerment: formData.get('empowerment-contribution') || '',
-                        interest_in_joining: formData.get('joining-reason') || '',
-                        interest_in_business_forum: formData.get('business-forum'),
-                        business_activities: formData.get('business-activities') || '',
-                        goal_of_partnership: formData.get('partnership-goals') || '',
-                        contribute_financially: formData.get('financial-contribution') || '',
-                        level_of_financial_contribution: formData.get('financial-level') || ''
+                        mission_and_activities: formData.get('mission-description') || null,
+                        contribute_to_empowerment: formData.get('empowerment-contribution') || null,
+                        interest_in_joining: formData.get('joining-reason') || null,
+                        interest_in_business_forum: formData.get('business-forum') || null,
+                        business_activities: formData.get('business-activities') || null,
+                        goal_of_partnership: formData.get('partnership-goals') || null,
+                        contribute_financially: formData.get('financial-contribution') || null,
+                        level_of_financial_contribution: formData.get('financial-level') || null
                     };
-    
+        
                     console.log('Form data being sent:', data);
-    
+        
                     const apiUrl = 'http://64.112.124.78:8000/organization_membership_form';
-    
+        
                     fetch(apiUrl, {
                         method: 'POST',
                         headers: {
@@ -323,6 +336,7 @@
                     })
                     .catch(error => {
                         console.error('Error:', error);
+                        alert(`Error: ${error.message}`);
                     });
                 });
             });
