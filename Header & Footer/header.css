@@ -338,7 +338,7 @@ header {
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 830px) {
   .navbar {
     display: none; /* Hidden on smaller screens */
   }
@@ -350,7 +350,9 @@ header {
   .donate-button {
     display: none;
   }
-
+  .join-us-button {
+    display: none; /* Hide the button on smaller screens */
+    }
   .button a {
     text-decoration: none;
     transition: background-color 0.3s ease;
@@ -423,7 +425,7 @@ header {
     }
     }
     
-    @media (min-width: 769px) {
+    @media (min-width: 831px) {
     .hamburger-menu-container {
     display: none; /* Hidden on larger screens */
     }
@@ -473,11 +475,11 @@ header {
     background-color: #9eb1b2; /* Darker shade on hover */
     }
     
-    @media (max-width: 830px) {
+    /* @media (max-width: 830px) {
     .join-us-button {
-    display: none; /* Hide the button on smaller screens */
+    display: none; Hide the button on smaller screens 
     }
-    }
+    } */
     
     .join-us-button1 a {
     text-decoration: none;
