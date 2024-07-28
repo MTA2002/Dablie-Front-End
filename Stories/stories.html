@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Stories</title>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-        <link rel="stylesheet" href="../Header & Footer/header.css">
-        <link rel="stylesheet" href="../Header & Footer/footer.css">
-        <link rel="stylesheet" href="./stories.css">
-        <link rel="icon" type="image/x-icon" href="../HomePage/images/Dablie_logo.png">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../Header & Footer/header.css">
+    <link rel="stylesheet" href="../Header & Footer/footer.css">
+    <link rel="stylesheet" href="./stories.css">
+    <link rel="icon" type="image/x-icon" href="../HomePage/images/Dablie_logo.png">
+
+    <style>
+        .program_card.hidden {
+            display: none;
+        }
+    </style>
+</head>
 <body>
     <header>
         <div class="logo">
@@ -76,127 +82,74 @@
                 <a href="#"><i class="fa-brands fa-telegram"></i></a>
         </div>
     </nav>
-    <div class="container">
-        <h1>Latest <span class="titlestory">Stories</span></h1>
-        <div class="divider"></div>
-        <section>
-            <div id="stories_boxes" class="stories_container"></div>
-            <ul id="pagination" class="pagination"></ul>
-        </section>
+
+    <section class="stories_section">
+        <h1>Latest <span>Stories</span></h1>
+        <div class="stories_boxes" id="stories_boxes">
+            <!-- Stories will be inserted here by JavaScript -->
+        </div>
+    </section>
+
+    <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <span><a href="#">4</a></span>
+        <span><a href="#">5</a></span>
+        <a href="#">&raquo;</a>
     </div>
+
     <div data-include="../Header & Footer/footer.html"></div>
     
     <script src="../Header & Footer/include.js"></script>
     <script src="../Header & Footer/header.js"></script>
-        <script src="../HomePage/header.js"></script>
+    <script src="../HomePage/header.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            let currentPage = 1;
-            const paginationLimit = 6;
+            const url = 'http://64.112.124.78:8000/news?page=1&pagination=6';
 
-            function fetchStories(page) {
-                const url = `http://64.112.124.78:8000/news?page=${page}&pagination=${paginationLimit}`;
-                console.log(`Fetching stories from: ${url}`);
-                fetch(url, {
-                    method: 'GET',
-                    headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/json'
-                    }
-                })
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok ' + response.statusText);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    console.log('Received data:', data);
-                    if (data.status !== 'success' || !data.articles || data.articles.length === 0) {
-                        console.error('Invalid data structure:', data);
-                        throw new Error('Invalid data structure');
-                    }
-                    displayStories(data.articles);
-                    setupPagination(data.total_pages);
-                })
-                .catch(error => console.error('Error fetching data:', error));
-            }
-
-            function displayStories(articles) {
-                const storiesBoxes = document.getElementById('stories_boxes');
-                storiesBoxes.innerHTML = '';
-                articles.forEach(article => {
-                    const storyBox = document.createElement('div');
-                    storyBox.classList.add('stories_box');
-
-                    const img = document.createElement('img');
-                    img.src = `http://64.112.124.78/data/images/${article.image}`;
-                    img.alt = "";
-
-                    const label = document.createElement('label');
-                    label.textContent = article.headline;
-
-                    const p = document.createElement('p');
-                    p.textContent = truncateText(article.description, 3);
-                    
-                    const readMoreLink = document.createElement('a');
-                    readMoreLink.href = `story.html?id=${article.id}`;
-                    readMoreLink.textContent = 'Read More';
-                    readMoreLink.classList.add('read_more_link');
-
-                    storyBox.appendChild(img);
-                    storyBox.appendChild(label);
-                    storyBox.appendChild(p);
-                    storyBox.appendChild(readMoreLink);
-
-                    storiesBoxes.appendChild(storyBox);
-                });
-            }
-
-            function truncateText(text, lines) {
-                const words = text.split(' ');
-                let result = '';
-                let lineCount = 0;
-                for (let i = 0; i < words.length; i++) {
-                    result += words[i] + ' ';
-                    if ((i + 1) % 8 === 0) { // Assuming approximately 10 words per line
-                        lineCount++;
-                    }
-                    if (lineCount >= lines) {
-                        result = result.trim() + '... ';
-                        break;
-                    }
+            fetch(url, {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
                 }
-                return result.trim();
-            }
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.articles) {
+                    const storiesBoxes = document.getElementById('stories_boxes');
+                    data.articles.forEach(article => {
+                        const storyBox = document.createElement('div');
+                        storyBox.classList.add('stories_box');
 
-            function setupPagination(totalPages) {
-                console.log(`Total pages: ${totalPages}`);
-                const pagination = document.getElementById('pagination');
-                pagination.innerHTML = '';
+                        const img = document.createElement('img');
+                        img.src = `http://64.112.124.78/data/images/${article.image}`;
+                        img.alt = "";
 
-                for (let i = 1; i <= totalPages; i++) {
-                    const li = document.createElement('li');
-                    const a = document.createElement('a');
-                    a.textContent = i;
-                    a.href = '#';
-                    a.dataset.page = i;
-                    if (i === currentPage) {
-                        a.classList.add('active');
-                    }
-                    a.addEventListener('click', function(event) {
-                        event.preventDefault();
-                        currentPage = parseInt(this.dataset.page);
-                        console.log(`Navigating to page: ${currentPage}`);
-                        fetchStories(currentPage);
+                        const label = document.createElement('label');
+                        label.textContent = article.headline;
+
+                        const p = document.createElement('p');
+                        p.textContent = article.description;
+
+                        storyBox.appendChild(img);
+                        storyBox.appendChild(label);
+                        storyBox.appendChild(p);
+
+                        storiesBoxes.appendChild(storyBox);
                     });
-
-                    li.appendChild(a);
-                    pagination.appendChild(li);
+                } else {
+                    console.error('Error decoding JSON: articles not found in response');
                 }
-            }
-
-            fetchStories(currentPage);
+            })
+            .catch(error => console.error('Error fetching data:', error));
         });
     </script>
 </body>
