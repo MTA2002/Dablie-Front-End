@@ -197,7 +197,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 306px;
-    height: 184px;
+    height: 200px;
     margin-top: 10%;
     /* margin: auto auto; */
     margin-left: 5rem;
@@ -428,3 +428,11 @@ content: '';
   color: #004346;
 } */
 
+/* .more{
+    text-align: right;
+    margin-right: 10%;
+    font-size: 1rem;
+}
+.more a{
+    text-decoration: none;
+} */
