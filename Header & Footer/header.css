@@ -156,8 +156,8 @@ header {
 .icon-2 {
   display: flex;
   margin-left: 4px;
-  width: 8px;
-  height: 8px;
+  width: 13px;
+  height: 13px;
 }
 
 .donate-button a:hover {
@@ -367,7 +367,6 @@ header {
     padding: 5px 14px 5px 18px;
     border-radius: 10.9px;
     font-family: Montserrat;
-    font-size: 9.3px;
     font-weight: normal;
     font-stretch: normal;
     text-align: left;
@@ -469,8 +468,8 @@ header {
     
     .icon {
     margin-left: 2px;
-    width: 12px;
-    height: 12px;
+    width: 16px;
+    height: 16px;
     }
     
     .join-us-button a:hover {
@@ -493,7 +492,6 @@ header {
     padding: 4px 8.1px 5px 12px;
     border-radius: 10.9px;
     font-family: Montserrat;
-    font-size: 9.3px;
     font-weight: normal;
     font-stretch: normal;
     text-align: left;

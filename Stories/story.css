@@ -61,89 +61,81 @@ body {
     line-height: 1.6;
 }
 
-.updates {
-    background-color: #E4EBEF;
-    padding: 2rem;
-}
-
-.updates_title {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.updates_grid {
+.stories_boxes {
     display: flex;
-    justify-content: space-around;
-    gap: 1rem;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    position: relative;
+    flex-direction: row;
+    align-content: space-around;
 }
 
-.update_card {
-    background-color: #ACBCC3;
-    border: 1px solid #ccc;
-    width: 25%;
-    text-align: left;
+.stories_box {
+    width: 30%;
+    margin-bottom: 40px;
+    border: 1px solid #e0e0e0;
+    /* padding: 10px; */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     box-sizing: border-box;
-    margin-bottom: 1rem;
-    
+    background-color: #e3ebef;
 }
 
-.update_card img {
+.stories_box img {
     width: 100%;
     height: auto;
-    margin-bottom: 1rem;
 }
 
-.update_card h4 {
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-    padding-left: 10px;
-    padding-right: 10px;
+.stories_box label {
+    font-size: 14px;
     font-weight: 500;
+    display: block;
+    margin: 10px 0 5px 0;
+    text-align: left;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
-.update_card p {
-    font-size: 0.8rem;
-    line-height: 1.4;
-    padding-left: 10px;
-    padding-right: 10px;
+.stories_box p {
+    font-size: 12px;
+    text-align: left;
+    color: #504f4f;
+    margin-bottom: 5px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.read_more_link {
+    font-size: 12px;
+    color: #508991;
+    text-decoration: none;
+    display: block;
+    text-align: left; /* Align the link to the left */
+    position: relative; /* Needed for the arrow */
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: 2%;
+}
+
+.read_more_link::after {
+    content: '→'; /* Unicode arrow */
+    position: absolute;
+    top: 1px;
+    color: #508991; /* Same color as the link */
+}
+
+.read_more_link:hover {
+    text-decoration: underline;
 }
 
 .thick-hr {
     height: 8px;
     background-color: #000000;
     border: none;
-    margin: 1rem 0;
+    margin: 1rem 2%;
+    width: 95%;
 }
-
 .updates h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #000;
-    text-align: left;
-    padding-left: 2%;
-}
-
-/* Read More Link Styles */
-.read_more_link {
-    font-size: 12px;
-    color: #508991;
-    text-decoration: none;
-    display: inline; /* Changed from block to inline to display correctly within the paragraph */
-    text-align: left;
-    position: relative;
-}
-
-.read_more_link::after {
-    content: '→';
-    position: absolute;
-    top: 0; /* Adjusted position */
-    right: -15px; /* Adjusted position */
-    color: #508991;
-}
-
-.read_more_link:hover {
-    text-decoration: underline;
+    padding-left: 3%;
 }
 
 /* Media Queries for Responsiveness */
@@ -179,13 +171,21 @@ body {
 
     .update_card {
         width: 100%;
+    }    
+}
+@media (max-width: 600px) {
+    .stories_boxes {
+        flex-direction: column;
+        justify-content: center;
     }
-
+    .stories_box{
+        width: 80%;
+    }
     .updates h1 {
         font-size: 1.5rem;
+        padding-left: 5%;
     }
 }
-
 @media (max-width: 480px) {
     #story_container {
         padding: 1rem;
@@ -217,4 +217,5 @@ body {
     .updates h1 {
         font-size: 1.2rem;
     }
+    
 }
