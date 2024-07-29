@@ -137,14 +137,14 @@
             }
 
             function displayStory(article) {
-                const headlineContainer = document.getElementById('headline_container').querySelector('h1');
-                const descriptionContainer = document.getElementById('description_container');
-                const imageContainer = document.getElementById('image_container');
+    const headlineContainer = document.getElementById('headline_container').querySelector('h1');
+    const descriptionContainer = document.getElementById('description_container');
+    const imageContainer = document.getElementById('image_container');
 
-                headlineContainer.textContent = article.headline;
-                descriptionContainer.innerHTML = `<p>${article.description}</p>`;
-                imageContainer.innerHTML = `<img src="http://64.112.124.78/data/images/${article.image}" alt="${article.headline}">`;
-            }
+    headlineContainer.textContent = article.headline;
+    descriptionContainer.innerHTML = article.description.split('\n').map(paragraph => `<p>${paragraph}</p>`).join('');
+    imageContainer.innerHTML = `<img src="http://64.112.124.78/data/images/${article.image}" alt="${article.headline}">`;
+}
 
             function fetchLatestNews() {
                 const url = 'http://64.112.124.78:8000/news?page=1&pagination=3';
@@ -182,7 +182,7 @@
         updateCard.innerHTML = `
             <img src="http://64.112.124.78/data/images/${article.image}" alt="${article.headline}">
             <h4>${article.headline}</h4>
-            <p>${truncateText(article.description, 3)}...<a href="Stories/stories.html?id=${article.id}" class="read_more_link">Read More</a></p>
+            <p>${truncateText(article.description, 3)}...<a href="story.html?id=${article.id}" class="read_more_link">Read More</a></p>
         `;
         updatesGrid.appendChild(updateCard);
     });
