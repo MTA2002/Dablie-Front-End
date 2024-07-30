@@ -127,20 +127,20 @@ button {
 }
 
 button:hover {
-    background-color: #003538;
+    background-color: #16909d;
 }
 
 .clear-btn {
-    background-color: #fff;
-    color: #dc3545;
-    border: 2px solid #dc3545;
+    background-color: #d2e6f0;
+    color: #004346;
+    border: 2px solid #004346;
 }
 
-.clear-btn:hover {
+/* .clear-btn:hover {
     background-color: #fff;
     color: #c82333;
     border: 2px solid #c82333;
-}
+} */
 
 .radio-group {
     display: flex;

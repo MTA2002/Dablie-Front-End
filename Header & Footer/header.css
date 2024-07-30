@@ -35,7 +35,9 @@ header {
 .logo2 {
   display: none;
 }
-
+.logo2 img {
+  max-height: 64px; /* Adjusted for better fit */
+}
 .navbar {
   flex: 1;
   display: flex;
@@ -437,8 +439,16 @@ header {
     .donate-button {
     display: inline-flex !important; /* Ensure it is displayed on larger screens */
     }
+
     }
-    
+    @media (max-width: 600px) {
+    .logo{
+      display: none;
+    }
+    .logo2{
+      display: block;
+    }
+    }
     /* Styles for the Join Us button */
     .join-us-button {
     order: 2; /* Ensure it appears next to the donate button */
