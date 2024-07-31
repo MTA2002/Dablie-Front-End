@@ -30,6 +30,7 @@ header {
 
 .logo img {
   max-height: 64px; /* Adjusted for better fit */
+  padding-top: 5px;
 }
 
 .logo2 {

@@ -22,7 +22,7 @@
         <nav class="navbar">
             <ul>
                 <li><a href="../About_us/about_us.html">About</a></li>
-                <li><a href="#">Our Program <i class="fa fa-chevron-down"></i></a>
+                <li><a href="#">Programs <i class="fa fa-chevron-down"></i></a>
                     <ul class="dropdown">
                         <li><a href="../Leadership/Leadership.html">Leadership Program</a></li>
                         <li><a href="../Scholarship/Scholarship.html">Scholarship Program</a></li>
@@ -53,7 +53,7 @@
     <nav class="menu-overlay">
         <ul class="main-menu">
             <li><a href="../About_us/about_us.html">About</a></li>
-            <li><a href="#" class="submenu-toggle">Our Programs<span class="icon-container marginit"><i class="fa-solid fa-chevron-right "></i></span></a></li>
+            <li><a href="#" class="submenu-toggle">Programs<span class="icon-container marginit"><i class="fa-solid fa-chevron-right "></i></span></a></li>
             <li><a href="../Events/events.html">Events</a></li>
             <li><a href="../Stories/stories.html">Stories</a></li>
             <li class="buttons-container">
@@ -97,31 +97,12 @@
         </section>
     
         <section class="updates">
-            <h3>News & Updates</h3>
-            <h1>See our work in action</h1>
-            <div class="updates_grid">
-                <div class="update_card">
-                    <img src="./HomePage/images/news_01.png" alt="Update 1">
-                    <h4>Dablie Foundation Holds Successful Youth Leadership Workshop</h4>
-                    <h5>The Dablie Foundation's Youth Empowerment Program, a free summer program for teenagers aged 16+,
-                        concluded with a
-                        succes...<a href="Stories/stories.html">Read More</a></h5>
-                </div>
-                <div class="update_card">
-                    <img src="./HomePage/images/photo_2024-07-29 22.05.30.jpeg" alt="Update 2">
-                    <h4>Dablie Foundation Wraps Up Successful Summer Program for Kids</h4>
-                    <h5>The Dablie Foundation recently concluded Cohort 1 of its Summer Program 2023, a workshop designed to
-                        equip young people...<a href="Stories/stories.html">Read More</a></h5>
-                </div>
-                <div class="update_card">
-                    <img src="./HomePage/images/news_img3_edited.png" alt="Update 3">
-                    <h4>Dablie Foundation Summer Internship Open</h4>
-                    <h5>The Dablie Foundation has announced the opening of its summer internship program. The program offers
-                        students and rece
-                        ...<a href="Stories/stories.html">Read More</a></h5>
-                </div>
+            <div class="updates_title">
+                <h1>More Stories</h1>
             </div>
-            <!-- <h5 class="more"><a href="Stories/stories.html" >More Stories</a></h5> -->
+            <div class="stories_boxes" id="stories_container">
+            </div>
+            <h5 class="more"><a href="./Stories/stories.html" >More Stories</a></h5>
         </section>
     
         <section class="programs">
@@ -257,6 +238,7 @@
     
     <script src="./Header & Footer/include.js"></script>
     <script src="./Header & Footer/header.js"></script>
+    <script src="./HomePage/home.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var toggleButton = document.getElementById('toggle-more');
@@ -325,6 +307,7 @@
             document.querySelector('.submenu').classList.remove('open');
             document.querySelector('.main-menu').classList.remove('hidden');
         });
-    </script>    
+    </script>
+    
 </body>
 </html>

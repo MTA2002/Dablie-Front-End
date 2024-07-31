@@ -136,11 +136,10 @@ button:hover {
     border: 2px solid #004346;
 }
 
-/* .clear-btn:hover {
-    background-color: #fff;
-    color: #c82333;
-    border: 2px solid #c82333;
-} */
+.clear-btn:hover {
+    background-color: #9eb1b2;
+    color: #004346;
+}
 
 .radio-group {
     display: flex;

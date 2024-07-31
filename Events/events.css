@@ -125,7 +125,7 @@ body {
 }
 .ready_picture img{
     margin-top: 1rem;
-    width: 300px;
+    width: 100%;
 }
 .ready_box2{
     margin:1rem;
@@ -149,6 +149,7 @@ body {
     text-align: center;
     font-weight: bolder;
     color: #508991;
+    width: 500%;
 }
 .points{
     color: #333;
@@ -221,7 +222,7 @@ body {
 }
 .youth_reserve{
     background-color:#F5F9FF ;
-    padding: 2rem;
+    /* padding: 6rem; */
     height: 230px;
     justify-content: center;
     align-items: center;
@@ -230,7 +231,7 @@ body {
 .youth_reserve p{
     font-size: 1.15rem;
     /* margin-left: 10%; */
-    margin-bottom: 6rem;
+    /* margin-bottom: 6rem; */
     /* max-width: 80vw; */
     /* margin-left: 5%; */
     width: 100%;
@@ -280,6 +281,7 @@ body {
     .ready_written{
         text-align: center;
         padding: 5%;
+        width: auto;
     }
     .modules h1{
         margin-left: 3rem;
@@ -291,7 +293,7 @@ body {
         color: #508991;
     }
     .youth_reserve{
-        padding-bottom: 5rem;
+        padding-bottom: 8rem;
     }
     .youth_reserve p{
         font-size: 1.15rem;
@@ -312,18 +314,18 @@ body {
 }
 @media (max-width: 1400px){
     .ready_box{
-     width: 70%;
+     width: 80%;
      /* margin-left:12% ; */
     }
     .ready_box2{
-     width: 70%;  
+     width: 80%;  
      /* margin-left: 12%; */
  
     }
 }
 @media (max-width: 730px){
     .ready_picture img{
-        width: 80%;
+        width: 95%;
         /* margin-left: 10%; */
     }
     .Ready{
@@ -346,12 +348,15 @@ body {
 @media (max-width: 450px){
     .Ready{
         background-color: #F5F9FF;
-        padding: 5rem 1rem;
+        padding-top:5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 0%;
     }
 
 .ready_picture img{
     margin: 0 !important;
-    margin-top: 20px !important;
+    margin-top: 10px !important;
 
 }
 .youth_reserve p{
@@ -359,7 +364,7 @@ body {
     margin-bottom: 1rem;  
 }
 .youth_reserve{
-    padding-bottom: 10rem;
+    padding-bottom: 15rem;
     margin: 0%;
 }
 .ready_box{
@@ -376,4 +381,9 @@ body {
 .second_p {
     margin:30px 0 ;
 }
+}
+@media (max-width: 630px){
+  .youth_reserve{
+        margin-bottom: 6rem;
+    }  
 }
