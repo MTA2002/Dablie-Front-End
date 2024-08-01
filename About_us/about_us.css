@@ -120,7 +120,7 @@ body {
     display: flex; /* Use flexbox */
     flex-wrap: wrap;
     justify-content: center; /* Center items horizontally */
-    gap: 2.5rem; /* Gap between items */
+    gap: 1rem; /* Gap between items */
     margin-top: 20px; /* Space above container */
     padding: 5%;
 }
@@ -223,7 +223,7 @@ body {
     /* padding-right: 2rem;
     padding-left: 2rem; */
     gap: 5rem;
-    width: 1216px;
+    width: 80%;
     justify-content: space-evenly;
     /* margin-left: 55px; */
 }
@@ -401,6 +401,7 @@ span{
 margin-top: 0 !important  ;
 }
 }
+
 @media (max-width:1000px) {
     .headtext{
         width: auto;
