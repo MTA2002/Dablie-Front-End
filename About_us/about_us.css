@@ -492,3 +492,35 @@ margin-top: 0 !important  ;
 .marginit{
     margin-right: 5%;
 }
+.donate-button-ab a {
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 31px;
+    background-color: #16909d;
+    color:#F3F3F3;
+    border: solid 1px #16909d;
+    padding: 8px 14px 8px 18px;
+    border-radius: 10.9px;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    text-align: left;
+    cursor: pointer;
+    width: 85px;
+    margin-top: 20%;
+  }
+  
+  .icon-2 {
+    display: flex;
+    margin-left: 4px;
+    width: 13px;
+    height: 13px;
+  }
+  
+  .donate-button a:hover {
+    background-color: #002d2e; /* Darker shade on hover */
+  }
