@@ -311,36 +311,25 @@
                         <span>First name </span>
                         <span class="span">*</span>
                       </div>
-                      <input
-                        class="text-block"
-                        placeholder="Text"
-                        type="text"
-                      />
+                      <input id="first-name" class="text-block" placeholder="Text" type="text" />
                     </div>
                     <div class="text-input">
                       <div class="div">
                         <span>Email </span>
                         <span class="span1">*</span>
                       </div>
-                      <input
-                        class="text-block"
-                        placeholder="Text"
-                        type="text"
-                      />
+                      <input id="email" class="text-block" placeholder="Text" type="text" />
                     </div>
                   </div>
                   <div class="text-area">
                     <div class="div2">Message</div>
                     <div class="text-block2">
                       <div class="hint-text">
-                        <p class="office-hours">Text</p>
-                        <p class="office-hours">&nbsp;</p>
-                        <p class="blank-line5">&nbsp;</p>
-                        <p class="blank-line5">&nbsp;</p>
+                        <textarea id="message" class="office-hours" placeholder="Text"></textarea>
                       </div>
                     </div>
                   </div>
-                  <button class="donate-button4">
+                  <button id="submit-button" class="donate-button4">
                     <div class="submit">Submit</div>
                   </button>
                 </div>
@@ -363,24 +352,6 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="for-urgent-inquiries-container">
-              <p class="office-hours">
-                Due to occasional events or holidays, these hours may be subject
-                to change. We recommend checking our website or social media
-                pages for any updates.
-              </p>
-              <p class="office-hours">
-                For urgent inquiries outside of regular operating hours, please
-                leave a message or email us, and we will respond as soon as
-                possible.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    </div>
     <footer class="footer">
       <div class="footer-section">
           <p class="title">The Foundation<p>
@@ -425,74 +396,37 @@
   <script src="./Header & Footer/include.js"></script>
   <script src="./Header & Footer/header.js"></script>
   <script>
-      document.addEventListener('DOMContentLoaded', function() {
-          var toggleButton = document.getElementById('toggle-more');
-  
-          if (toggleButton) {
-              toggleButton.addEventListener('click', function(event) {
-                  event.preventDefault();
-  
-                  var hiddenCards = document.querySelectorAll('.program_card.hidden');
-                  
-                  // Show hidden cards
-                  hiddenCards.forEach(function(card) {
-                      card.classList.remove('hidden');
-                  });
-  
-                  // Hide 'See more' button
-                  this.style.display = 'none';
-  
-                  // Display 'See less' button
-                  var seeLessButton = document.getElementById('see-less');
-                  if (seeLessButton) {
-                      seeLessButton.style.display = 'inline-block';
-                  }
-              });
-          }
-  
-          // Adding 'See less' functionality
-          var seeLessButton = document.createElement('a');
-          seeLessButton.setAttribute('href', '#');
-          seeLessButton.setAttribute('id', 'see-less');
-          seeLessButton.innerHTML = 'See less programs <i class="fa-solid fa-angle-up"></i>';
-          seeLessButton.style.display = 'none'; // Initially hide the 'See less' button
-          toggleButton.parentNode.insertBefore(seeLessButton, toggleButton.nextSibling);
-  
-          seeLessButton.addEventListener('click', function(event) {
-              event.preventDefault();
-  
-              var shownCards = document.querySelectorAll('.program_card:not(.hidden):not(:nth-child(-n+4))'); // Selects the cards that were initially hidden
-  
-              // Hide visible cards that were initially hidden
-              shownCards.forEach(function(card) {
-                  card.classList.add('hidden');
-              });
-  
-              // Show 'See more' button
-              toggleButton.style.display = 'inline-block';
-  
-              // Hide 'See less' button
-              this.style.display = 'none';
-          });
-      });
-      document.querySelector('.menu-icon__cheeckbox').addEventListener('change', function() {
-          document.querySelector('.menu-overlay').classList.toggle('open');
-      });
+    document.getElementById('submit-button').addEventListener('click', function(event) {
+      event.preventDefault();
       
-      document.querySelectorAll('.submenu-toggle').forEach(function(toggle) {
-          toggle.addEventListener('click', function(e) {
-              e.preventDefault();
-              document.querySelector('.submenu').classList.toggle('open');
-              document.querySelector('.main-menu').classList.toggle('hidden');
-          });
+      const firstName = document.getElementById('first-name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+    
+      const data = {
+        firstName: firstName,
+        email: email,
+        message: message
+      };
+    
+      fetch('https://your-backend-url.com/endpoint', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Success:', data);
+        alert('submitted successfully!');
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        alert('submission failed.');
       });
-      
-      document.querySelector('.back-to-main-menu').addEventListener('click', function(e) {
-          e.preventDefault();
-          document.querySelector('.submenu').classList.remove('open');
-          document.querySelector('.main-menu').classList.remove('hidden');
-      });
-  </script>    
+    });
+    </script>    
 
   </body>
 </html>
