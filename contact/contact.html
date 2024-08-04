@@ -388,7 +388,7 @@
                 const email = document.getElementById('email').value;
                 const message = document.getElementById('message').value;
     
-                const response = await fetch('http://64.112.124.78/send_email', {
+                const response = await fetch('http://64.112.124.78:8000/send_email', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
