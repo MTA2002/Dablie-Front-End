@@ -435,6 +435,7 @@ content: '';
 }
 .more a{
     text-decoration: none;
+    color: #004346;
 }
 .more:hover{
     text-decoration: underline; 
