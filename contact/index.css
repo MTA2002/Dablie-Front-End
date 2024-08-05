@@ -275,7 +275,7 @@
   align-self: stretch;
   position: relative;
   font-size: inherit;
-  font-weight: 400;
+  font-weight: 550;
   font-family: inherit;
   z-index: 1;
 }
@@ -306,10 +306,11 @@
   align-items: flex-start;
 }
 .head-text-group {
+  margin-top: 30px;
   width: 208px;
   flex-direction: column;
   justify-content: flex-start;
-  gap: var(--gap-58xl);
+  gap:40px;
 }
 .hero-left {
   width: 928px;
@@ -338,8 +339,8 @@
   flex: 1;
   flex-direction: column;
   align-items: center;
-  padding: var(--padding-127xl) var(--padding-xl) 230px;
-  gap: var(--gap-93xl);
+  padding: 120px var(--padding-xl) 300px var(--padding-xl)  ;
+  gap: 40px;
   background-image: url(./public/9-1@2x.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -444,7 +445,7 @@
   padding: var(--padding-26xl) var(--padding-6xl) 36px var(--padding-7xl);
   box-sizing: border-box;
   font-size: 16.5px;
-  font-family: var(--font-segoe-ui);
+  font-family: var(--font-ibm-plex-sans);
 }
 .options-left {
   flex: 1;
@@ -839,11 +840,12 @@
   max-width: 100%;
 }
 .for-urgent-inquiries-container {
-  width: 1185px;
+  
   position: relative;
-  font-family: var(--font-segoe-ui);
+  font-family: var(--heading-4);
   display: inline-block;
   max-width: 100%;
+  font-size: 16px !important;
 }
 .contact-options {
   align-self: stretch;
@@ -1188,7 +1190,7 @@
   font-family: var(--heading-4);
 }
 .contact-us1 {
-  width: 1440px;
+  /* width: 1440px; */
   background-color: var(--color-white);
   align-items: flex-end;
   line-height: normal;
@@ -1301,10 +1303,12 @@
     gap: var(--gap-6xl);
   }
   .head-text1 {
-    font-size: var(--font-size-3xl);
+    font-size: inherit;
+    margin-top: 36px !important;
   }
   .the-dablie-foundation2 {
     font-size: var(--paragraph-1-size);
+    padding: 20px 10px !important;
   }
   .hero-wrapper {
     padding-bottom: var(--padding-10xl);
@@ -1351,4 +1355,28 @@
   .footer-columns {
     flex-wrap: wrap;
   }
+}
+@media screen and (max-width: 600px) {
+
+
+}
+.color-change{
+  color: #508991;
+}
+
+.youth_icons img{
+  width: 25px;
+  height: 25px;
+  border: 0.25px solid #333;
+  border-radius: 21px;
+  padding: 10px;
+  margin: 3rem 0.5rem;
+  margin-top: 36px;
+  background-color: #f3f3f3;
+}
+.youth_icons img:hover{
+  cursor: pointer;
+  background: rgb(156, 156, 156);
+  color: #0072c6;
+  transition: ease-in 0.2s;
 }
