@@ -1400,3 +1400,7 @@
   color: #0072c6;
   transition: ease-in 0.2s;
 }
+.social-links-three a{
+  text-decoration: none;
+  color: #000;
+}
