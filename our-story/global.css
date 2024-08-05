@@ -1,0 +1,26 @@
+
+:root {
+  /* fonts */
+  --paragraph-1: Montserrat;
+
+  /* font sizes */
+  --paragraph-1-size: 16px;
+  --font-size-xl: 20px;
+
+  /* Colors */
+  --color-aliceblue: #f0f7fa;
+  --color-black: #000;
+
+  /* Gaps */
+  --gap-xl: 20px;
+  --gap-mid: 17px;
+
+  /* Paddings */
+  --padding-xl: 20px;
+  --padding-11xl: 30px;
+  --padding-smi: 13px;
+  --padding-54xl: 73px;
+
+  /* Border radiuses */
+  --br-mini: 15px;
+}
