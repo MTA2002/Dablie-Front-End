@@ -456,6 +456,8 @@ content: '';
     box-sizing: border-box;
     background-color: #e3ebef;
     transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin: 10px; /* Add margin to separate the boxes */
+    /* padding: 10px; Add padding inside the boxes */
 }
 
 .stories_box:hover {
@@ -464,8 +466,9 @@ content: '';
 }
 
 .stories_box img {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Set the width to 100% to fit the container */
+    height: 230px; /* Set a fixed height */
+    object-fit: cover; /* Maintain aspect ratio and fill the container */
 }
 
 .stories_box label {
@@ -547,7 +550,7 @@ content: '';
 
     .update_card {
         width: 100%;
-    }    
+    }
 }
 @media (max-width: 600px) {
     .stories_boxes {
@@ -593,5 +596,4 @@ content: '';
     .updates h1 {
         font-size: 1.2rem;
     }
-    
 }
