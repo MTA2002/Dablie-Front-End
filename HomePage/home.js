@@ -168,3 +168,71 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    var toggleButton = document.getElementById('toggle-more');
+    var menuIconCheckbox = document.querySelector('.menu-icon__cheeckbox');
+    var submenuToggles = document.querySelectorAll('.submenu-toggle');
+    var backToMainMenu = document.querySelector('.back-to-main-menu');
+
+    if (toggleButton) {
+        toggleButton.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            var hiddenCards = document.querySelectorAll('.program_card.hidden');
+
+            hiddenCards.forEach(function (card) {
+                card.classList.remove('hidden');
+            });
+
+            this.style.display = 'none';
+
+            var seeLessButton = document.getElementById('see-less');
+            if (seeLessButton) {
+                seeLessButton.style.display = 'inline-block';
+            }
+        });
+    }
+
+    var seeLessButton = document.createElement('a');
+    seeLessButton.setAttribute('href', '#');
+    seeLessButton.setAttribute('id', 'see-less');
+    seeLessButton.innerHTML = 'See less programs <i class="fa-solid fa-angle-up"></i>';
+    seeLessButton.style.display = 'none';
+    toggleButton.parentNode.insertBefore(seeLessButton, toggleButton.nextSibling);
+
+    seeLessButton.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        var shownCards = document.querySelectorAll('.program_card:not(.hidden):not(:nth-child(-n+4))');
+
+        shownCards.forEach(function (card) {
+            card.classList.add('hidden');
+        });
+
+        toggleButton.style.display = 'inline-block';
+        this.style.display = 'none';
+    });
+
+    if (menuIconCheckbox) {
+        menuIconCheckbox.addEventListener('change', function () {
+            document.querySelector('.menu-overlay').classList.toggle('open');
+        });
+    }
+
+    submenuToggles.forEach(function (toggle) {
+        toggle.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector('.submenu').classList.toggle('open');
+            document.querySelector('.main-menu').classList.toggle('hidden');
+        });
+    });
+
+    if (backToMainMenu) {
+        backToMainMenu.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector('.submenu').classList.remove('open');
+            document.querySelector('.main-menu').classList.remove('hidden');
+        });
+    }
+});
