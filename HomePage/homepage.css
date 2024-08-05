@@ -555,8 +555,14 @@ content: '';
         justify-content: center;
     }
     .stories_box{
-        width: 80%;
+        width: 90%;
+        margin-bottom: 32px;
     }
+    .more a {
+    text-decoration: none;
+    color: #004346;
+    margin-right: 4%;
+}
     .updates h1 {
         font-size: 1.5rem;
         padding-left: 5%;
