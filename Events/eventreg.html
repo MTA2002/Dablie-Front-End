@@ -86,124 +86,70 @@
       <!-- Events will be dynamically inserted here -->
     </div>
   </div>
+  <div id="events"></div>
 
-  <!-- Reservation Modal -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Reserve a Spot</h2>
-      <form id="reservationForm">
-        <input type="hidden" id="eventId" name="eventId">
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required>
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <button type="submit">Reserve</button>
-      </form>
-    </div>
+  <div id="modal" style="display:none;">
+      <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2 id="modalTitle"></h2>
+          <p id="modalDate"></p>
+          <p id="modalLocation"></p>
+          <p id="modalDescription"></p>
+          <input type="hidden" id="eventRegistrationLink">
+          <button id="reservationLink">Register</button>
+      </div>
   </div>
-
-  <!-- Ticket Modal -->
-  <div id="ticketModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Your Ticket</h2>
-      <div id="ticketDetails"></div>
-      <div id="qrcode"></div>
-    </div>
-  </div>
+  
 
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const events = [
-        { id: 2, name: 'Art Exhibition', date: '2024-08-05', location: 'City Gallery', description: 'Experience the latest contemporary art from local and international artists.' },
-        { id: 3, name: 'Tech Conference', date: '2024-08-10', location: 'Convention Center', description: 'A full-day event featuring keynote speakers, workshops, and networking opportunities.' }
-      ];
-
-      const eventsContainer = document.getElementById('events');
-
-      events.forEach(event => {
-        const eventElement = document.createElement('div');
-        eventElement.className = 'event';
-        eventElement.innerHTML = `
-          <h2>${event.name}</h2>
-          <p>Date: ${event.date}</p>
-          <p>Location: ${event.location}</p>
-          <p>${event.description}</p>
-          <button onclick="openModal(${event.id})">Reserve</button>
-        `;
-        eventsContainer.appendChild(eventElement);
-      });
-
-      const modal = document.getElementById('modal');
-      const ticketModal = document.getElementById('ticketModal');
-      const closeBtns = document.querySelectorAll('.close');
-      const reservationForm = document.getElementById('reservationForm');
-      const ticketDetails = document.getElementById('ticketDetails');
-      const qrcode = document.getElementById('qrcode');
-
-      closeBtns.forEach(btn => {
-        btn.onclick = () => {
-          modal.style.display = 'none';
-          ticketModal.style.display = 'none';
-        };
-      });
-
-      window.onclick = event => {
-        if (event.target === modal || event.target === ticketModal) {
-          modal.style.display = 'none';
-          ticketModal.style.display = 'none';
+    document.addEventListener("DOMContentLoaded", function() {
+        function fetchEvents() {
+            const url = 'http://64.112.124.78:8000/events';
+            console.log(`Fetching events from: ${url}`);
+            fetch(url, {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Received data:', data);
+                if (data.length === 0) {
+                    console.error('Invalid data structure:', data);
+                    throw new Error('Invalid data structure');
+                }
+                displayEvents(data.events);
+            })
+            .catch(error => console.error('Error fetching data:', error));
         }
-      };
 
-      reservationForm.onsubmit = event => {
-        event.preventDefault();
-        const eventId = document.getElementById('eventId').value;
-        const name = document.getElementById('name').value;
-        const phone = document.getElementById('phone').value;
-        const email = document.getElementById('email').value;
+        function displayEvents(events) {
+            const eventsContainer = document.getElementById('events');
+            eventsContainer.innerHTML = '';
+            events.forEach(event => {
+                const eventElement = document.createElement('div');
+                eventElement.classList.add('event');
+                eventElement.innerHTML = `
+                    <h2>${event.title}</h2>
+                    <p>Date: ${new Date(event.starts_on * 1000).toISOString().split('T')[0]}</p>
+                    <p>Location: ${event.location ? event.location : 'Location not specified'}</p>
+                    <p>${event.description}</p>
+                    <button onclick="window.open('${event.event_registration_link}', '_blank')">Register</button>
+                `;
+                eventsContainer.appendChild(eventElement);
+            });
+        }
 
-        const selectedEvent = events.find(event => event.id == eventId);
-        
-        const ticketInfo = `
-          Event: ${selectedEvent.name}<br>
-          Date: ${selectedEvent.date}<br>
-          Location: ${selectedEvent.location}<br>
-          Name: ${name}<br>
-          Phone: ${phone}<br>
-          Email: ${email}
-        `;
-
-        ticketDetails.innerHTML = ticketInfo;
-        
-        // Generate QR code
-        qrcode.innerHTML = '';
-        QRCode.toCanvas(document.createElement('canvas'), ticketInfo, function (error, canvas) {
-          if (error) console.error(error)
-          qrcode.appendChild(canvas);
-        });
-
-        modal.style.display = 'none';
-        ticketModal.style.display = 'flex';
-
-        // Ideally, send ticket via email here
-        // Example: sendEmail(name, email, ticketInfo);
-      };
+        fetchEvents();
     });
-
-    function openModal(eventId) {
-      const modal = document.getElementById('modal');
-      document.getElementById('eventId').value = eventId;
-      modal.style.display = 'flex';
-    }
-
-    // Example function to send an email (requires a backend service)
-    function sendEmail(name, email, ticketInfo) {
-      // Implement email sending logic here
-    }
-  </script>
+</script>
 
 </body>
 </html>
