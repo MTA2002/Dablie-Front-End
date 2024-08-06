@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     fetchLatestNews();
 
     function fetchLatestNews() {
-        const url = 'http://64.112.124.78:8000/news?page=1&pagination=3';
+        const url = 'https://api.dablie.org/news?page=1&pagination=3';
         fetch(url, {
             method: 'GET',
             headers: {
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const storyBox = document.createElement('div');
             storyBox.classList.add('stories_box');
             storyBox.innerHTML = `
-                <img src="http://64.112.124.78/data/images/${article.image}" alt="${article.headline}">
+                <img src="${article.image}" alt="${article.headline}">
                 <label>${article.headline}</label>
                 <p>${truncateText(article.description, 3)}</p>
                 <a href="./Stories/story.html?id=${article.id}" class="read_more_link">Read More</a>

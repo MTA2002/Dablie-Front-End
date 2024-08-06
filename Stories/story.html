@@ -116,9 +116,9 @@
     fetchLatestNews();
 
     function fetchStory(id) {
-        const url = `http://64.112.124.78:8000/news/${id}`;
+        const url = `https://api.dablie.org/news/${id}`;
         fetch(url, {
-            method: 'PUT',
+            method: 'GET',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
@@ -131,26 +131,29 @@
             return response.json();
         })
         .then(data => {
-            displayStory(data);
+            if (data.status !== 'success') {
+                throw new Error('Error fetching story: ' + data.message);
+            }
+            displayStory(data.article);
         })
         .catch(error => {
             console.error('Error fetching data:', error);
             document.getElementById('headline_container').textContent = 'Error fetching story.';
         });
     }
-
+    
     function displayStory(article) {
         const headlineContainer = document.getElementById('headline_container').querySelector('h1');
         const descriptionContainer = document.getElementById('description_container');
         const imageContainer = document.getElementById('image_container');
-
+    
         headlineContainer.textContent = article.headline;
         descriptionContainer.innerHTML = article.description.split('\n').map(paragraph => `<p>${paragraph}</p>`).join('');
-        imageContainer.innerHTML = `<img src="http://64.112.124.78/data/images/${article.image}" alt="${article.headline}">`;
+        imageContainer.innerHTML = `<img src="${article.image}" alt="${article.headline}">`;
     }
 
     function fetchLatestNews() {
-        const url = 'http://64.112.124.78:8000/news?page=1&pagination=3';
+        const url = 'https://api.dablie.org/news?page=1&pagination=3';
         fetch(url, {
             method: 'GET',
             headers: {
@@ -183,7 +186,7 @@
             const storyBox = document.createElement('div');
             storyBox.classList.add('stories_box');
             storyBox.innerHTML = `
-                <img src="http://64.112.124.78/data/images/${article.image}" alt="${article.headline}">
+                <img src="${article.image}" alt="${article.headline}">
                 <label>${article.headline}</label>
                 <p>${truncateText(article.description, 3)}</p>
                 <a href="story.html?id=${article.id}" class="read_more_link">Read More</a>

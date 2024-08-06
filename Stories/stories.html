@@ -98,7 +98,7 @@
             const paginationLimit = 6;
 
             function fetchStories(page) {
-                const url = `http://64.112.124.78:8000/news?page=${page}&pagination=${paginationLimit}`;
+                const url = `https://api.dablie.org/news?page=${page}&pagination=${paginationLimit}`;
                 console.log(`Fetching stories from: ${url}`);
                 fetch(url, {
                     method: 'GET',
@@ -133,7 +133,7 @@
                     storyBox.classList.add('stories_box');
 
                     const img = document.createElement('img');
-                    img.src = `http://64.112.124.78/data/images/${article.image}`;
+                    img.src = `${article.image}`;
                     img.alt = "";
 
                     const label = document.createElement('label');
