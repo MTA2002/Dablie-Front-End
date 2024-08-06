@@ -30,7 +30,7 @@ header {
 
 .logo img {
   max-height: 64px; /* Adjusted for better fit */
-  padding-top: 5px;
+  padding-top: 2%;
 }
 
 .logo2 {
@@ -38,6 +38,7 @@ header {
 }
 .logo2 img {
   max-height: 64px; /* Adjusted for better fit */
+  padding-top: 2%;
 }
 .navbar {
   flex: 1;
@@ -342,7 +343,7 @@ header {
 }
 
 /* Responsive Styles */
-@media (max-width: 830px) {
+@media (max-width: 950px) {
   .navbar {
     display: none; /* Hidden on smaller screens */
   }
@@ -428,20 +429,20 @@ header {
     }
     }
     
-    @media (min-width: 831px) {
+    /* @media (min-width: 911px) {
     .hamburger-menu-container {
-    display: none; /* Hidden on larger screens */
+    display: none; 
     }
     
     .navbar {
-    display: flex !important; /* Ensure it is displayed on larger screens */
+    display: flex !important;
     }
     
     .donate-button {
-    display: inline-flex !important; /* Ensure it is displayed on larger screens */
-    }
+    display: inline-flex !important;
 
     }
+  } */
     @media (max-width: 600px) {
     .logo{
       display: none;
