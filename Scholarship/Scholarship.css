@@ -125,9 +125,12 @@ body {
     text-align: center;
     
 }
-.ready_picture img{
-    margin-top: 1rem;
-    width: 300px;
+.ready_picture img {
+    width: 100%; /* Adjust width to fit the container */
+    max-width: 600px; /* Set a maximum width for larger screens */
+    height: 80%; /* Maintain aspect ratio */
+    display: block;
+    margin-top: 5%;
 }
 .ready_box2{
     margin:1rem;
@@ -144,9 +147,7 @@ body {
     width: 1216px;
     /* margin-left: 55px; */
 }
-.ready2_picture img{
-    width: 300px;
-}
+
 .ready_written{
     text-align: center;
     font-weight: bolder;
@@ -298,12 +299,9 @@ body {
         gap: 0rem;
         /* padding: 10px; */
     }
-    /* .ready_picture img{
-    width: 340px;
-    align-items: center;
-    margin-top: 1rem;
-    margin-bottom: -1.5rem;
-    } */
+    .ready_picture img{
+        margin-top: 0;
+    }
     .ready_written{
         text-align: center;
         padding: 5%;
@@ -350,10 +348,6 @@ body {
 }
 @media (max-width: 730px){
 
-    .ready_picture img{
-        width: 80%;
-        /* margin-left: 10%; */
-    }
     .Ready{
         gap: 0px;
     }
@@ -379,7 +373,7 @@ body {
     }
     .ready_picture img{
     margin: 0 !important;
-    margin-top: 20px !important;
+    margin-top: 0px !important;
 
 }
 .youth_reserve p{

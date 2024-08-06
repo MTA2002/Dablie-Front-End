@@ -51,8 +51,9 @@ body {
     
 }
 .stories_box img {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Set the width to 100% to fit the container */
+    height: 230px; /* Set a fixed height */
+    object-fit: cover; /* Maintain aspect ratio and fill the container */
 }
 .stories_box label {
     font-size: 14px;

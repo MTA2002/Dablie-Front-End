@@ -155,10 +155,17 @@ body {
 }
 /* Styles for links within update cards */
 .update_card a {
-    color: #508991; /* Link color */
+    color: black; /* Link color */
     text-decoration: none; /* Remove underline */
     padding-left: 0.75rem;
 }
+   .non-clickable {
+            color: black; /* Change to your desired text color */
+            text-decoration: none; /* Remove underline */
+            pointer-events: none; /* Disable clicking */
+            cursor: default; /* Change cursor to default arrow */
+        }
+        
 .Ready{
     display: flex;
     flex-direction: column;
