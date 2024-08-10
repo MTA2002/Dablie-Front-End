@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" id="meta-description" content="">
+    <meta name="og:title" id="meta-og-title" content="">
+    <meta name="og:description" id="meta-og-description" content="">
+    <meta name="og:image" id="meta-og-image" content="">
+    <meta name="twitter:title" id="meta-twitter-title" content="">
+    <meta name="twitter:description" id="meta-twitter-description" content="">
+    <meta name="twitter:image" id="meta-twitter-image" content="">
     <title>Story</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -142,6 +149,15 @@
         });
     }
     
+    function setMetaTags(article) {
+        document.getElementById('meta-og-title').setAttribute('content', article.headline);
+        document.getElementById('meta-og-description').setAttribute('content', truncateText(article.description, 3));
+        document.getElementById('meta-og-image').setAttribute('content', article.image);
+        document.getElementById('meta-twitter-title').setAttribute('content', article.headline);
+        document.getElementById('meta-twitter-description').setAttribute('content', truncateText(article.description, 3));
+        document.getElementById('meta-twitter-image').setAttribute('content', article.image);
+    }
+    
     function displayStory(article) {
         const headlineContainer = document.getElementById('headline_container').querySelector('h1');
         const descriptionContainer = document.getElementById('description_container');
@@ -150,7 +166,9 @@
         headlineContainer.textContent = article.headline;
         descriptionContainer.innerHTML = article.description.split('\n').map(paragraph => `<p>${paragraph}</p>`).join('');
         imageContainer.innerHTML = `<img src="${article.image}" alt="${article.headline}">`;
+        setMetaTags(article);
     }
+
 
     function fetchLatestNews() {
         const url = 'https://api.dablie.org/news?page=1&pagination=3';
