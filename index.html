@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="Header & Footer/header.css">
     <link rel="stylesheet" href="Header & Footer/footer.css">
     <link rel="stylesheet" href="HomePage/homepage.css">
+    <link rel="stylesheet" href="./Donatation/style.css">
     <link rel="icon" type="image/x-icon" href="HomePage/images/Dablie_logo.png">
 </head>
 <body>
@@ -39,7 +40,13 @@
         </div>
         <nav class="navbar">
             <ul>
-                <li><a href="../About_us/about_us.html">About</a></li>
+                <li><a href="#">About <i class="fa fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="../About_us/about_us.html">About us</a></li>
+                        <li><a href="../our-mission/ourmission.html">Our mission</a>
+                        <li><a href="../our-story/ourstory.html">Our story</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">Our Program <i class="fa fa-chevron-down"></i></a>
                     <ul class="dropdown">
                         <li><a href="../Leadership/Leadership.html">Leadership Program</a></li>
@@ -59,10 +66,20 @@
             <a href="../Membership/membership.html">Join <img src="../HomePage/images/hands.png" alt="Hand Icon"
                     class="icon"> </a>
         </div>
-        <div class="donate-button">
-            <a href="https://chapa.link/donation/view/DN-VH06Xca2dDRW">Donate <img src="../HomePage/images/heart.png"
-                    alt="heart Icon" class="icon-2"></a>
-        </div>
+        <!-- Donate Button -->
+<div class="donate-button">
+    <a href="#" id="openModalBtn">Donate <img src="../HomePage/images/heart.png" alt="heart Icon" class="icon-2"></a>
+</div>
+
+<!-- The Modal -->
+<div id="donationModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div id="modalBody">Loading...</div>
+  </div>
+</div>
+
         <div class="hamburger-menu-container">
             <div class="menu-wrapper">
                 <p class="menu-btn"></p>
@@ -255,7 +272,7 @@
             <a class="subtitle" href="./ways to give/waysToGive.html">Ways to Give </a>
             <a class="subtitle" href="https://chapa.link/donation/view/DN-VH06Xca2dDRW">Donate</a>
             <a class="subtitle" href="./contact/contact.html">Contact us</a>
-            
+            <a class="subtitle" href="./work_with_us/work_with_us.html">Work with us</a>
         </div>
         <div class="footer-bottom">
             <div class="hl-left"></div>
@@ -274,6 +291,7 @@
     <script src="./Header & Footer/include.js"></script>
     <script src="./Header & Footer/header.js"></script>
     <script src="./HomePage/home.js"></script>
+    <!-- <script src="./Donatation/script.js"></script> -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var toggleButton = document.getElementById('toggle-more');
@@ -342,6 +360,8 @@
             document.querySelector('.submenu').classList.remove('open');
             document.querySelector('.main-menu').classList.remove('hidden');
         });
+
+        
     </script>
 
 </body>

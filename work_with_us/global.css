@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    line-height: normal;
+  }
+  
+  :root {
+    /* fonts */
+    --heading-2: Montserrat;
+  
+    /* font sizes */
+    --font-size-xl: 20px;
+    --font-size-base: 16px;
+    --heading-2-size: 32px;
+    --font-size-7xl: 26px;
+    --font-size-lgi: 19px;
+  
+    /* Colors */
+    --color-black: #000;
+  
+    /* Gaps */
+    --gap-18xl: 37px;
+    --gap-lg: 18px;
+    --gap-47xl: 66px;
+    --gap-14xl: 33px;
+    --gap-base: 16px;
+    --gap-5xl: 24px;
+  
+    /* Paddings */
+    --padding-xl: 20px;
+    --padding-11xs: 2px;
+  }
+ 
+  
+  :root {
+    /* fonts */
+    --heading-2: Montserrat;
+  
+    /* font sizes */
+    --heading-2-size: 2rem;
+  
+    /* Colors */
+    --color-black: #000;
+  
+    /* Paddings */
+    --padding-19xl: 2.375rem;
+  }
