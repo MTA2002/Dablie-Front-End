@@ -38,15 +38,15 @@
                 <li><a href="#">Our Program <i class="fa fa-chevron-down"></i></a>
                     <ul class="dropdown">
                         <li><a href="../Leadership/Leadership.html">Leadership Program</a></li>
-                        <li><a href="../Scholarship/Scholarship.html">Scholarship Program</a></li>
+                        <li><a href="../Scholarship/ ">Scholarship Program</a></li>
                         <li><a href="../Economic_Empowerment/economic.html">Economic Empowerment</a></li>
                         <li><a href="../Business/business.html">Dablie Business Forum</a></li>
-                        <li><a href="../YouthPage/YouthPage.html">Youth Program</a></li>
+                        <li><a href="../YouthPage/">Youth Program</a></li>
                         <li><a href="../Other/other.html">Other Programs</a></li>
                     </ul>
                 </li>
                 <li><a href="../Events/events.html">Events</a></li>
-                <li><a href="../Stories/stories.html">Stories</a></li>
+                <li><a href="../Stories/">Stories</a></li>
             </ul>
         </nav>
         <div class="join-us-button">
@@ -67,7 +67,7 @@
             <li><a href="../About_us/about_us.html">About</a></li>
             <li><a href="#" class="submenu-toggle">Our Programs<span class="icon-container marginit"><i class="fa-solid fa-chevron-right "></i></span></a></li>
             <li><a href="../Events/events.html">Events</a></li>
-            <li><a href="../Stories/stories.html">Stories</a></li>
+            <li><a href="../Stories/">Stories</a></li>
             <li class="buttons-container">
                 <div class="join-us-button1"><a href="../Membership/membership.html">Join <img src="../HomePage/images/hands.png" alt="Hand Icon" class="icon"></a></div>
                 <div class="button"><a href="https://chapa.link/donation/view/DN-VH06Xca2dDRW">Donate <img src="../HomePage/images/heart.png" alt="heart Icon" class="icon-2"> </a></div>
@@ -76,10 +76,10 @@
         <ul class="submenu">
             <li><a href="#" class="back-to-main-menu"><i class="fa-solid fa-chevron-left style"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Our Programs</a></li>
             <li><a href="../Leadership/Leadership.html">Leadership Program</a></li>
-            <li><a href="../Scholarship/Scholarship.html">Scholarship Program</a></li>
+            <li><a href="../Scholarship/ ">Scholarship Program</a></li>
             <li><a href="../Economic_Empowerment/economic.html">Economic Empowerment</a></li>
             <li><a href="../Business/business.html">Dablie Business Forum</a></li>
-            <li><a href="../YouthPage/YouthPage.html">Youth Program</a></li>
+            <li><a href="../YouthPage/">Youth Program</a></li>
             <li><a href="../Other/other.html">Other Programs</a></li>
         </ul>
         <div class="social-media">
@@ -95,6 +95,15 @@
             <div id="headline_container">
                 <div class="headline_line"></div>
                 <h1></h1>
+                <div class="share-buttons">
+                    <button id="shareBtn">
+                        <i class="fa fa-share"></i> Share
+                    </button>
+                    <a id="linkedin-link" href=""><button><i class="fa-brands fa-linkedin-in"></i></button></a>
+                    <a id="twitter-link" href=""><button><i class="fa-brands fa-x-twitter"></i></button></a>
+                    <a id="copy-link"><button><i class="fa fa-link"></i></button></a>
+                </div>
+                 
             </div>
             <div id="image_container">
             </div>
@@ -120,14 +129,15 @@
     const urlParams = new URLSearchParams(window.location.search);
     const storyId = urlParams.get('id');
 
+    
     if (storyId) {
         fetchStory(storyId);
     } else {
         document.getElementById('headline_container').textContent = 'Story not found.';
     }
-
+    
     fetchLatestNews();
-
+    
     function fetchStory(id) {
         const url = `https://api.dablie.org/news/${id}`;
         fetch(url, {
@@ -163,6 +173,34 @@
         document.getElementById('meta-twitter-description').setAttribute('content', truncateText(article.description, 3));
         document.getElementById('meta-twitter-image').setAttribute('content', article.image);
     }
+ 
+    function shareLinks(article) {
+        const currentUrl = `https://dablie.org/stories/story.html?id=${storyId}`
+        const twitterLink = `https://twitter.com/intent/tweet?text=${article.headline}&url=${currentUrl}`;
+        const linkedinLink = `https://www.linkedin.com/shareArticle?mini=true&url=${currentUrl}&title=${article.headline}`;
+        
+        
+        document.getElementById('shareBtn').addEventListener('click', () => {
+            if (navigator.share) {
+                navigator.share({
+                    title: article.headline,
+                    text: article.description,
+                    url: currentUrl
+                });
+            }
+        });
+        document.getElementById('twitter-link').setAttribute('href', twitterLink);
+        document.getElementById('linkedin-link').setAttribute('href', linkedinLink);
+        document.getElementById('copy-link').addEventListener('click', () => {
+            navigator.clipboard.writeText(currentUrl);
+            
+            const copyButton = document.getElementById('copy-link').querySelector('button');
+            copyButton.innerHTML = '<i class="fa fa-check"></i>';
+            setTimeout(() => {
+                copyButton.innerHTML = '<i class="fa fa-link"></i>';
+            }, 2000);
+        });
+    };
     
     function displayStory(article) {
         const headlineContainer = document.getElementById('headline_container').querySelector('h1');
@@ -172,6 +210,7 @@
         headlineContainer.textContent = article.headline;
         descriptionContainer.innerHTML = article.description.split('\n').map(paragraph => `<p>${paragraph}</p>`).join('');
         imageContainer.innerHTML = `<img src="${article.image}" alt="${article.headline}">`;
+        shareLinks(article);
         setMetaTags(article);
     }
 

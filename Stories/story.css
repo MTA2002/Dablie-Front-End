@@ -145,6 +145,21 @@ body {
     padding-left: 3%;
 }
 
+button {
+    background-color: #508991;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #3d6e7f;
+}
+
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     #story_container {
@@ -224,4 +239,14 @@ body {
     .updates h1 {
         font-size: 1.2rem;
     }
+
+    /* .share-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem 0;
+    }
+    button {
+        margin: 0 1px;
+    } */
 }
