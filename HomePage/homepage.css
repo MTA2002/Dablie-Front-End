@@ -609,33 +609,44 @@ content: '';
     position: fixed;
     z-index: 6000;
     left: 0;
-    top: -100px;
+    top: -150px;
     width: 100%;
     height: 200vh;
     overflow: auto;
     background-color: rgba(0,0,0,0.4);
   }
   /* Modal Content/Box */
-  .modal-content {
+  /* Modal Content/Box */
+.modal-content {
+    display: flex;
+    justify-content: center;
     background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-  }
-  
-  /* The Close Button */
-  .close {
+    position: relative; /* Make the content container the reference for positioning */
+}
+
+/* The Close Button */
+.close {
     color: #aaa;
-    float: right;
     font-size: 28px;
     font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
+    position: absolute;
+    right: 20px; /* Aligns with the right edge of the modal */
+    top: 20px;   /* Aligns with the top edge of the modal */
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
     color: black;
     text-decoration: none;
-    cursor: pointer;
+}
+
+  @media(max-width:1000px){
+    .modal{
+        top:0;
+    }
   }
-  
