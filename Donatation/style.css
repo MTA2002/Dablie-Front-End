@@ -245,6 +245,7 @@ body {
     }
     .image img {
         width: 100%;
+        margin: 0;
     }
     .donation-form {
        padding: 0px;
@@ -276,7 +277,9 @@ body {
      margin-top: 600px;
      width: 95%;
     }
-
+    .sub{
+    margin-left: 3%;
+    }
 }
 @media (max-width: 725px){
     .title{
