@@ -274,12 +274,14 @@ body {
     }
     .title{
      margin-top: 600px;
+     width: 95%;
     }
 
 }
 @media (max-width: 725px){
     .title{
         margin-top: 500px;
+        width: 95%;
        } 
 }
 @media (max-width: 432px){
@@ -291,5 +293,6 @@ body {
     }
     .title{
         margin-top: 500px;
+        width: 95%;
        } 
 }
