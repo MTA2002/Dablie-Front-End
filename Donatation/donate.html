@@ -5,8 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate Page</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../Header & Footer/header.css">
+    <link rel="icon" type="image/x-icon" href="HomePage/images/Dablie_logo.png">
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <a href="../index.html"><img src="../leadership page/assests/images/logo.png" alt="Dablie Foundation Logo"></a>
+        </div>
+        <div class="logo2">
+            <a href="../index.html"><img src="./leadership page/assests/images/logo2.png" alt="Dablie Foundation Logo"></a>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">About <i class="fa fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="../About_us/about_us.html">About us</a></li>
+                        <li><a href="../our-mission/ourmission.html">Our mission</a>
+                        <li><a href="../our-story/ourstory.html">Our story</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Our Program <i class="fa fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="../Leadership/Leadership.html">Leadership Program</a></li>
+                        <li><a href="../Scholarship/Scholarship.html">Scholarship Program</a></li>
+                        <li><a href="../Economic_Empowerment/economic.html">Economic Empowerment</a></li>
+                        <li><a href="../Business/business.html">Dablie Business Forum</a></li>
+                        <!-- <li><a href="../Partners_Directory/partners.html">Partners Directory</a></li> -->
+                        <li><a href="../YouthPage/YouthPage.html">Youth Program</a></li>
+                        <li><a href="../Other/other.html">Other Programs</a></li>
+                    </ul>
+                </li>
+                <li><a href="../Events/events.html">Events</a></li>
+                <li><a href="../Stories/stories.html">Stories</a></li>
+            </ul>
+        </nav>
+        <div class="join-us-button">
+            <a href="../Membership/membership.html">Join <img src="../HomePage/images/hands.png" alt="Hand Icon" class="icon"> </a>
+        </div>
+        <div class="donate-button">
+            <a href="./Donatation/donate.html">Donate <img src="../HomePage/images/heart.png" alt="heart Icon" class="icon-2"></a>
+        </div>
+        <div class="hamburger-menu-container">
+            <div class="menu-wrapper">
+                <p class="menu-btn"></p>
+                <p class="menu-btn-middle"></p> <!-- Added middle line -->
+            </div>
+        </div>
+    </header>
+    <nav class="menu-overlay">
+        <ul class="main-menu">
+            <li><a href="../About_us/about_us.html">About</a></li>
+            <li><a href="#" class="submenu-toggle">Programs<span class="icon-container marginit"><i class="fa-solid fa-chevron-right "></i></span></a></li>
+            <li><a href="../Events/events.html">Events</a></li>
+            <li><a href="../Stories/stories.html">Stories</a></li>
+            <li class="buttons-container">
+                <div class="join-us-button1"><a href="../Membership/membership.html">Join <img src="../HomePage/images/hands.png" alt="Hand Icon" class="icon"></a></div>
+                <div class="button"><a href="https://chapa.link/donation/view/DN-VH06Xca2dDRW">Donate <img src="../HomePage/images/heart.png" alt="heart Icon" class="icon-2"> </a></div>
+            </li>
+        </ul>
+        <ul class="submenu">
+            <li><a href="#" class="back-to-main-menu"><i class="fa-solid fa-chevron-left style"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Our Programs</a></li>
+            <li><a href="../Leadership/Leadership.html">Leadership Program</a></li>
+            <li><a href="../Scholarship/Scholarship.html">Scholarship Program</a></li>
+            <li><a href="../Economic_Empowerment/economic.html">Economic Empowerment</a></li>
+            <li><a href="../Business/business.html">Dablie Business Forum</a></li>
+            <!-- <li><a href="../Partners_Directory/partners.html">Partners Directory</a></li> -->
+            <li><a href="../YouthPage/YouthPage.html">Youth Program</a></li>
+            <li><a href="../Other/other.html">Other Programs</a></li>
+        </ul>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/company/dablie-foundation/?viewAsMember=true"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://x.com/dablieofficial"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://tiktok.com/@DablieFoundation"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.facebook.com/people/Dablie-Foundation/61563937820025/"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://t.me/dabliefoundation"><i class="fa-brands fa-telegram"></i></a>
+        </div>
+    </nav>
     <div class="title">
         <h1>Donate!</h1>
         <p>Your gift today will empower, inspire, and connect the next generation of changemakers. Let’s never stop moving toward the world we want. Make your gift today!</p>
@@ -18,21 +95,28 @@
                 <img src="images/image.png" alt="Donate Image">
             </div>
             <div class="text">
-                    <h2>Donate!</h2>
-                    <p>Your gift today will empower, inspire, and connect the next generation of changemakers. Let’s never stop moving toward the world we want. Make your gift today!</p>
+                <h2>Donate!</h2>
+                <p>Your gift today will empower, inspire, and connect the next generation of changemakers. Let’s never stop moving toward the world we want. Make your gift today!</p>
             </div>
             <div class="contact">
                 <a href="#">Questions</a> 
                 <a href="#">Contact us by Email</a>
             </div>
-
         </div>
         <div class="donation-form">
             <div>
-                <h2>Secure Donation</h2>
+                <h2 class="title2">Secure Donation</h2>
                 <div class="donation-type">
-                    <button>Donate Once</button>
+                    <button class="once">Donate Once</button>
                     <button class="active">Monthly</button>
+                </div>
+                <div class="amount-once" style="display: none;">
+                    <button>2,400</button>
+                    <button>10,000</button>
+                    <button>30,000</button>
+                    <button>60,000</button>
+                    <button>70,000</button>
+                    <button>80,000</button>
                 </div>
                 <div class="amount-options">
                     <button>1,200</button>
@@ -47,7 +131,7 @@
                 </div>
             </div>
             <div class="button">
-                <button class="donate-button">Donate Monthly</button>
+                <button class="donate3-button">Donate Monthly</button>
             </div>
         </div>
     </div>

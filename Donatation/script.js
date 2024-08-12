@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const donateOnceButton = document.querySelector('.donation-type button:first-child');
+    const donateOnceButton = document.querySelector('.donation-type button.once');
     const monthlyButton = document.querySelector('.donation-type button:last-child');
-    const amountButtons = document.querySelectorAll('.amount-options button');
-    const customAmountInput = document.querySelector('.custom-amount input');
+    const amountOnceContainer = document.querySelector('.amount-once');
     const amountOptionsContainer = document.querySelector('.amount-options');
+    const customAmountInput = document.querySelector('.custom-amount input');
 
     // Function to toggle active class
     function toggleActiveButton(buttonToActivate, buttonToDeactivate) {
@@ -11,23 +11,23 @@ document.addEventListener('DOMContentLoaded', function() {
         buttonToDeactivate.classList.remove('active');
     }
 
-    // Hide amount buttons when "Donate Once" is clicked and change button color
+    // Hide amount buttons when "Donate Once" is clicked and show the "amount-once" options
     donateOnceButton.addEventListener('click', function() {
-        amountOptionsContainer.classList.remove('show');
-        setTimeout(() => amountOptionsContainer.style.display = 'none', 500); // Delayed hiding to allow fade-out
+        amountOptionsContainer.style.display = 'none';
+        amountOnceContainer.style.display = 'grid';
         customAmountInput.value = '';
         toggleActiveButton(donateOnceButton, monthlyButton);
     });
 
-    // Show amount buttons when "Monthly" is clicked and change button color
+    // Hide "amount-once" options and show "amount-options" buttons when "Monthly" is clicked
     monthlyButton.addEventListener('click', function() {
-        amountOptionsContainer.style.display = 'grid'; // Ensure it uses the grid layout
-        setTimeout(() => amountOptionsContainer.classList.add('show'), 10); // Delayed show to allow fade-in
+        amountOnceContainer.style.display = 'none';
+        amountOptionsContainer.style.display = 'grid';
         toggleActiveButton(monthlyButton, donateOnceButton);
     });
 
     // Update the custom amount input when an amount button is clicked
-    amountButtons.forEach(function(button) {
+    document.querySelectorAll('.amount-once button, .amount-options button').forEach(function(button) {
         button.addEventListener('click', function() {
             customAmountInput.value = this.textContent;
         });
