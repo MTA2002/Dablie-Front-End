@@ -416,7 +416,9 @@ margin-top: 0 !important  ;
     }
     .update_card img {
         width: 100%; /* Image width */
-        /* border-radius: 10px; Border radius */
+        /* border-radius: 10px;  */
+        float: left;
+        margin-bottom: 20px;
     }
     .points{
         text-align: center;
@@ -493,7 +495,7 @@ margin-top: 0 !important  ;
 }
 @media (max-width:600px){
     .update_card{
-        width: 80%;
+        width: 100%;
     }
 }
 
