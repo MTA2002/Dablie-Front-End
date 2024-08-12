@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
@@ -8,16 +8,17 @@ body {
     align-items: center;
     height: 100vh;
     flex-direction: column;
-}
+} */
 
-.title{
+.title5{
     background-color: #000000;
     color: #fff;
     padding: 10px;
     border-radius: 10px;
-    max-width: 945px;
+    max-width: 950px;
     /* width: 100%; */
-    margin-top: 5%;
+    margin-top: 2%;
+    margin-left: 3%;
 }
 
 .contact{
@@ -75,7 +76,7 @@ body {
     background-color: #f8f8f8;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
-    height: 87%;
+    /* height: 87%; */
     flex-direction: column;
     align-items: center;
     width: 100%;

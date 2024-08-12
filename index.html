@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="Header & Footer/header.css">
     <link rel="stylesheet" href="Header & Footer/footer.css">
     <link rel="stylesheet" href="HomePage/homepage.css">
+    <link rel="stylesheet" href="./Donatation/style.css">
     <link rel="icon" type="image/x-icon" href="HomePage/images/Dablie_logo.png">
 </head>
 <body>
@@ -46,9 +47,20 @@
         <div class="join-us-button">
             <a href="../Membership/membership.html">Join <img src="../HomePage/images/hands.png" alt="Hand Icon" class="icon"> </a>
         </div>
-        <div class="donate-button">
-            <a href="./Donatation/donate.html">Donate <img src="../HomePage/images/heart.png" alt="heart Icon" class="icon-2"></a>
-        </div>
+        <!-- Donate Button -->
+<div class="donate-button">
+    <a href="#" id="openModalBtn">Donate <img src="../HomePage/images/heart.png" alt="heart Icon" class="icon-2"></a>
+</div>
+
+<!-- The Modal -->
+<div id="donationModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div id="modalBody">Loading...</div>
+  </div>
+</div>
+
         <div class="hamburger-menu-container">
             <div class="menu-wrapper">
                 <p class="menu-btn"></p>
@@ -248,6 +260,7 @@
     <script src="./Header & Footer/include.js"></script>
     <script src="./Header & Footer/header.js"></script>
     <script src="./HomePage/home.js"></script>
+    <!-- <script src="./Donatation/script.js"></script> -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var toggleButton = document.getElementById('toggle-more');
@@ -316,6 +329,8 @@
             document.querySelector('.submenu').classList.remove('open');
             document.querySelector('.main-menu').classList.remove('hidden');
         });
+
+        
     </script>
     
 </body>
