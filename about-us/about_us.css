@@ -1,0 +1,534 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif; 
+    background-color: #ffffff;
+    color: #333;
+    text-align: center;
+}
+.youth_hero{
+    background-image: url(./about_us_assets/9.jpg);
+    width:auto ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:726px;
+    padding: 2rem;
+}
+.hero_header p{
+    color: #508991;
+    font-size: 1.05rem;
+}
+.headtext{
+    width: 928px;
+    text-align: left !important;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    color: #213B49;
+    margin: 0 auto;
+    margin-top: 36px;
+}
+.youth_hero h1{
+    font-size: 2.5rem;
+    font-weight: light;
+    margin-top: 36px;
+}
+.youth_hero span{
+    color:#508991 ;
+}
+.youth_icons img{
+    width: 25px;
+    height: 25px;
+    border: 0.25px solid #333;
+    border-radius: 21px;
+    padding: 10px;
+    margin: 3rem 0.5rem;
+    margin-top: 36px;
+    background-color: #f3f3f3;
+}
+.youth_icons img:hover{
+    cursor: pointer;
+    background: rgb(156, 156, 156);
+    color: #0072c6;
+    transition: ease-in 0.2s;
+}
+/* .youth_hero button{
+    background-color: #508991;
+    border-radius: 5px;
+    width: 120px;
+    height: 30px;
+} */
+.donate_button {
+    order: 2; /* Ensure it appears second in flex order */
+    margin-left: 98%; /* Pushes the donate button to the far right */
+}
+
+.donate_button a {
+    text-decoration: none;
+    background-color: #004346;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.625rem;
+    font-weight: normal;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    transform: rotate(270deg);
+}
+
+.donate_button a:hover {
+    background-color: #002d2e; /* Darker shade on hover */
+}
+
+
+.youth_hero p{
+    text-align: center;
+    /* width: 50rem; */
+    margin: 2rem auto;
+}
+.title2{
+    color: #5E6161;
+    font-family: 'Montserrat';
+    font-size: 1.5rem;
+    font-weight: lighter;
+    margin: 2rem;
+    text-align: center;
+}
+/* Styles for the updates section */
+.updates {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #fff; /* Background color */
+    padding: 40px 20px; /* Padding for content */
+    margin-bottom:2rem ;
+}
+
+/* Styles for headings within the updates section */
+.updates h3 {
+    color: #333; /* Text color */
+    font-weight: 400;
+
+}
+.updates h1 {
+    color: #333; /* Text color */
+    font-size: 35px;
+    /* font-weight: 500; */
+    margin-bottom: 4rem;
+}
+/* Styles for the container of update cards */
+.updates_grid {
+    display: flex; /* Use flexbox */
+    flex-wrap: wrap;
+    justify-content: center; /* Center items horizontally */
+    gap: 1rem; /* Gap between items */
+    margin-top: 20px; /* Space above container */
+    padding: 5%;
+}
+
+/* Styles for individual update cards */
+.update_card {
+    background: #fff; /* Background color */
+    /* border-radius: 12px; Border radius */
+    /* padding: 15px; Padding */
+    width: 30%; /* Card width */
+    /* height: 420px; */
+    text-align: center; /* Text alignment */
+}
+
+/* Styles for images within update cards */
+.update_card img {
+    width: 80%; /* Image width */
+    /* border-radius: 10px; Border radius */
+}
+
+/* Styles for paragraphs within update cards */
+.update_card h4 {
+    font-size: 1.15rem; /* Font size */
+    font-weight: 700;
+    margin: 10px 10px auto 10px; /* Margin */
+}
+
+.update_card h5{
+    font-size: 0.95rem; /* Font size */
+    margin: 25px 10px;
+    font-weight: 500;
+}
+/* Styles for links within update cards */
+.update_card a {
+    color: black; /* Link color */
+    text-decoration: none; /* Remove underline */
+    padding-left: 0.75rem;
+}
+   .non-clickable {
+            color: black; /* Change to your desired text color */
+            text-decoration: none; /* Remove underline */
+            pointer-events: none; /* Disable clicking */
+            cursor: default; /* Change cursor to default arrow */
+        }
+        
+.Ready{
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFF;
+    padding: 2.5rem 1.5rem;
+    gap: 2rem;
+    align-items: center;
+}
+.Ready a{
+    color: #508991;
+    text-decoration: none;
+    /* border: 1px solid #508991;
+    background-color: #508991; */
+}
+.Ready a:hover{
+    border: 1px solid #508991;
+    background-color: #508991;
+    border-radius: 12px;
+    padding: 5px;
+    color: #ffff;
+    transition: ease-in 0.5s;
+    cursor: pointer;
+}
+.ready_box{
+    background-color: #fff;
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* margin-top: 2rem; */
+    /* margin: 3rem 2rem; */
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    /* padding-right: 2rem;
+    padding-left: 2rem; */
+    /* gap: 4rem; */
+    width: 80%;
+    align-items: center;
+    justify-content: space-evenly;
+    /* margin-left: 55px; */
+}
+
+.subtitle2{
+    color: #5E6161;
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    font-weight:bolder;
+    margin: 1rem;
+    text-align: center;
+    
+}
+.ready_picture img{
+    width: 350px;
+}
+.ready_box2{
+    margin:1rem;
+    background-color: #fff;
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* margin-top: 2rem; */
+    /* margin: 3rem 2rem; */
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    /* padding-right: 2rem;
+    padding-left: 2rem; */
+    gap: 5rem;
+    width: 80%;
+    justify-content: space-evenly;
+    /* margin-left: 55px; */
+}
+.ready2_picture img{
+    width: 350px;
+
+}
+.ready_written{
+    text-align: center;
+    font-weight: bolder;
+    color: #508991;
+}
+.points{
+    color: #333;
+    font-weight: lighter;
+    text-align: left;
+    /* margin-top: 15%; */
+}
+.points span{
+    color: #508991;
+    font-weight: bolder;
+}
+.point2{
+margin-top: 15% !important  ;
+}
+
+.features{
+    padding: 1rem;
+}
+.features_header p{
+    font-size: 1.5rem;
+    margin: 5rem auto;
+}
+.features_box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+.features_content{
+    /* border: 1px solid #333; */
+    width: 18rem;
+    height: 21rem;
+    padding: 1.2rem;
+    text-align: center;
+    margin:1rem;
+}
+.features_content img{
+    margin: 0.5rem;
+    width: 7.5rem;
+}
+.features_content h1{
+    color: #508991;
+    font-size: large;
+    font-weight: lighter;
+}
+.features_content p{
+    font-size:medium;
+}
+.modules{
+    background-color:#f3f3f3;
+    text-align: left;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.modules h1{
+    margin-left: 7rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+.bullets p{
+    margin-left: 7rem;
+    color: #508991;
+}
+.second_p {
+    margin:25px 0 ;
+}
+.youth_reserve_parent{
+    height:auto;
+    width: 100%;
+    background-color:#F5F9FF ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.youth_reserve{
+    background-color:#F5F9FF ;
+    padding: 2rem;
+    height: 230px;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+.youth_reserve p{
+    font-size: 1.15rem;
+    /* margin-left: 10%; */
+    margin-bottom: 6rem;
+    /* max-width: 80vw; */
+    /* margin-left: 5%; */
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    /* padding-right: 2rem;
+    padding-left: 2rem; */
+   
+}
+.youth_reserve a{
+    color: #508991;
+    text-decoration: none;
+}
+.youth_reserve a:hover{
+    border: 1px solid #508991;
+    background-color: #508991;
+    border-radius: 12px;
+    padding: 5px;
+    color: #ffff;
+    transition: ease-in 0.5s;
+}
+span{
+    font-weight: 700;
+    color: #508991;
+}
+@media (max-width: 960px){
+    .Ready{
+        /* background-color: #F5F9FF; */
+        padding: 5rem 1rem;
+    }
+    .ready_box{
+        /* background-color: #E4EBEF; */
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 0rem;
+        /* padding: 10px; */
+    }
+    .ready_box2{
+        /* background-color: #DBEAF2; */
+        display: flex;
+        flex-direction: column;
+        gap: 0rem;
+        /* padding: 10px; */
+    }
+    /* .ready_picture img{
+    width: 340px;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: -1.5rem;
+    } */
+    .ready_written{
+        text-align: center;
+        /* padding: 5%; */
+    }
+    .modules h1{
+        margin-left: 3rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+    .bullets p{
+        margin-left: 5rem;
+        color: #508991;
+    }
+    .youth_reserve{
+        padding-bottom: 5rem;
+    }
+    .youth_reserve p{
+        font-size: 1.15rem;
+        text-align: left;
+        /* margin-left: 10%; */
+        margin-bottom: 5rem;
+    }
+    .youth_hero{
+        height: fit-content;
+        background-image: url(./about_us_assets/9.jpg);
+    }
+    .point2{
+margin-top: 0 !important  ;
+}
+}
+
+@media (max-width:1000px) {
+    .headtext{
+        width: auto;
+        text-align: justify;
+    }
+    .update_card img {
+        width: 100%; /* Image width */
+        /* border-radius: 10px; Border radius */
+    }
+    .points{
+        text-align: center;
+    }
+}
+@media (max-width: 1400px){
+    .ready_box{
+     width: 80%;
+     /* margin-left:12% ; */
+    }
+    .ready_box2{
+     width: 80%;  
+     /* margin-left: 12%; */
+ 
+    }
+}
+@media (max-width: 730px){
+
+    .ready_picture img{
+        width: 80%;
+        /* margin-left: 10%; */
+    }
+    .Ready{
+        gap: 0px;
+    }
+    .title2{
+        margin-top: 0px;
+    }
+    .youth_reserve p{
+        margin-bottom: 1rem;
+    }
+    .features_box{
+        gap: 0rem;
+    }
+    .features_content{
+        height:auto;
+    }
+    
+}
+
+@media (max-width: 450px){
+
+    .Ready{
+        /* background-color: #F5F9FF; */
+        padding: 5rem 0.85rem;
+    }
+    .ready_picture img{
+    margin: 0 !important;
+    margin-top: 20px !important;
+
+}
+.youth_reserve p{
+    margin: 0%;
+    margin-bottom: 1rem;  
+}
+.youth_reserve{
+    padding-bottom: 10rem;
+    margin: 0%;
+}
+.ready_box{
+    padding: 0;
+    width: fit-content;
+}
+.ready_box2{
+    padding: 0;
+    width: fit-content;
+    margin: 0;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+.second_p {
+    margin:30px 0 ;
+}
+}
+@media (max-width:600px){
+    .update_card{
+        width: 80%;
+    }
+}
+
+.marginit{
+    margin-right: 5%;
+}
+.donate-button-ab a {
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 31px;
+    background-color: #16909d;
+    color:#F3F3F3;
+    border: solid 1px #16909d;
+    padding: 8px 14px 8px 18px;
+    border-radius: 10.9px;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    text-align: left;
+    cursor: pointer;
+    width: 85px;
+    margin-top: 20%;
+  }
+  
+  .icon-2 {
+    display: flex;
+    margin-left: 4px;
+    width: 13px;
+    height: 13px;
+  }
+  
+  .donate-button a:hover {
+    background-color: #002d2e; /* Darker shade on hover */
+  }
