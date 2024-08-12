@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <img src="${article.image}" alt="${article.headline}">
                 <label>${article.headline}</label>
                 <p>${truncateText(article.description, 3)}</p>
-                <a href="./Stories/story.html?id=${article.id}" class="read_more_link">Read More</a>
+                <a href="./ stories/story.html?id=${article.id}" class="read_more_link">Read More</a>
             `;
             storiesContainer.appendChild(storyBox);
         });
@@ -78,7 +78,7 @@ btn.onclick = function(event) {
 
     // Load the content from the donation page
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', './Donatation/donate.html', true);
+    xhr.open('GET', './ donate', true);
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
             document.getElementById("modalBody").innerHTML = xhr.responseText;
