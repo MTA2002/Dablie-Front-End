@@ -1,13 +1,14 @@
-/* body {
-    font-family: Arial, sans-serif;
+ /* body {
+    /* /* font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
-    padding: 0;
-    display: flex;
+    padding: 0; */
+    /* display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+     height: 100vh;
     flex-direction: column;
+    overflow-y: auto;
 } */
 
 .title5{
@@ -15,33 +16,39 @@
     color: #fff;
     padding: 10px;
     border-radius: 10px;
-    max-width: 950px;
-    /* width: 100%; */
+    max-width: 900px;
+    width: 100%;
     margin-top: 2%;
-    margin-left: 3%;
+    margin-left: 20px;
+    height: 131px;
 }
 
 .contact{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
-    margin-top: 30px;
-    margin-bottom: 20px;
+    margin-top: 40px;
+    margin-bottom: 22px;
+    gap: 10px;
 }
 
 .container {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    margin: 10px;
+    margin: 0px;
     width: 100%;
     max-width: 1000px;
     border-radius: 10px;
+    /* gap:10px; */
 }
 
 .content {
-    padding: 10px;
-    margin: 20px;
+    background-color:#F0F7FA;
+    /* padding: 10px; */
+    max-width: 516px;
+    margin: 20px 23px 20px 20px;
     width: 100%;
     height: 87%;
     text-align: left;
@@ -52,13 +59,13 @@
 .image img {
     width: 100%;
     height: auto;
-    margin: 10px 0;
+    margin: 0px 0px 10px 0px;
     border-radius: 10px;
 }
 
 .contact a {
     margin-top: 30px;
-    color: #727272;
+    color: #000000;
     font-size: 14px;
 }
 
@@ -67,13 +74,14 @@
 }
 
 .donation-form div{
-    width: 90%;
+    width: 100%;
     padding: 10px;
 }
 
 .donation-form {
-    margin: 20px;
-    background-color: #f8f8f8;
+    margin: 20px 20px 20px 0px;
+    background-color:#F0F7FA;
+    max-width: 360px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     /* height: 87%; */
@@ -85,38 +93,47 @@
 }
 
 .button{
-    margin-top:30px ;
+    margin-top:120px ;
 }
 
-.donation-type{
+.donation-type {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     padding-left: 20px;
+    position: relative;
 }
 
 .donation-type button {
     background-color: white;
     color: black;
-    border: 2px solid #ccc;
+    border: none; /* Remove the black border from unselected buttons */
     padding: 10px 20px;
     margin: 5px;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-    width: 100%; /* Make buttons full-width */
+    border-radius: 8px;
+    transition: background-color 0.6s ease, color 0.6s ease, border-color 0.1s ease, z-index 0.1s ease;
+    width: calc(50% + 10%);
+    height: 40px;
+    position: relative;
+}
+
+.donation-type button:nth-child(2) {
+    margin-left: -7%;
+    z-index: 1;
 }
 
 .donation-type button.active {
-    background-color:  rgb(22, 144,157);
-    color: white;
-    border-color: lightblue;
+    background-color: rgba(22, 131, 157, 0.24); /* Light blue background for the selected button */
+    border: 0.5px solid #16909D; /* Apply border only to the selected button */
+    z-index: 2; /* Ensure the active button is on top */
+    position: relative;
 }
 
 .amount-options {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 0fr);
     gap: 10px;
     opacity: 1;
     visibility: visible;
@@ -128,33 +145,26 @@
     width: 90px;
     padding: 10px;
     cursor: pointer;
-    background-color: #e7e7e7;
-    border: 2px solid #ccc;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    color: #595959;
     text-align: center;
     border-radius: 5px;
+    /* height: 40px; */
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 /* Hover effect */
 .amount-options button:hover {
-    background-color:  rgb(22, 144,157);
-    color: white;
-    border-color: lightblue;
+    background-color: white;
+    color: rgb(22, 144,157);
 }
 
 
-.amount-options button {
-    padding: 10px;
-    cursor: pointer;
-    background-color: #e7e7e700;
-    border: 1px solid #a1a1a1;
-    color: #a1a1a1;
-    text-align: center;
-    border-radius: 5px;
-}
+
 .amount-once {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 0fr);
     gap: 10px;
     opacity: 1;
     visibility: visible;
@@ -175,128 +185,230 @@
 
 /* Hover effect */
 .amount-once button:hover {
-    background-color:  rgb(22, 144,157);
-    color: white;
-    border-color: lightblue;
+    background-color:  white;
+    color: rgb(22, 144,157);
+    
 }
 
 
 .amount-once button {
     padding: 10px;
     cursor: pointer;
-    background-color: #e7e7e700;
-    border: 1px solid #a1a1a1;
-    color: #a1a1a1;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    color: #595959;
     text-align: center;
     border-radius: 5px;
+    height: 40;
 }
 .custom-amount {
     display: flex;
     align-items: center;
-    margin: 10px 0 0 5px;
+    margin: 10px 0 0 0px;
 }
 
 .custom-amount input {
-    width: 100px;
+    width: 270px;
     padding: 10px;
-    margin-right: 10px;
-    border: 2px solid #ccc;
+    border: 1px solid #000000;
     border-radius: 5px;
     box-sizing: border-box;
+    color: rgb(22, 144,157);
+    height: 40px;
+    margin-left: 10px;
 }
 
 .custom-amount select {
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid #000000;
+    border-radius: 0px 5px 5px 0px;
     background-color: #fff;
     cursor: pointer;
     box-sizing: border-box;
+    height: 40px;
+    border-left: none;
+    color:#666666;
 }
-
+.custom-amount select:nth-child(2) {
+    margin-left: -7%;
+    z-index: 1;
+}
 
 .donate3-button {
     background-color: rgb(22, 144,157);
     color: #fff;
     padding: 10px 20px;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
-    width: 100%;
+    width: 290px;
     text-align: center;
-    margin-top: 10px;
+    height: 40px;
+    margin-left: 10px;
+    
 }
 
 .donate3-button:hover {
-    background-color: #45a049;
+    background-color: rgb(20, 125, 137);
 }
 .donation-form h2{
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-@media (max-width: 800px){
-    .container {
-        flex-direction: column;
+.sub{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+/* The Close Button */
+/* The Close Button */
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 0px;  /* 20px below the top of the box */
+    right: -30px; /* 20px away from the right edge of the box */
+    cursor: pointer;
+    transform-origin: center;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+@media(max-width:1220px){
+    .button {
+        margin-top: 80px;
     }
-    .content {
+}
+@media(max-width:1220px){
+    .title5{
         width: 95%;
-        padding: 0px;
-        padding-bottom: 10px;
-        margin-left: 3%;
     }
-    .image img {
+}
+
+/* Further adjustments for smaller screens */
+@media (max-width: 950px) {
+    .container {
+        position: relative;
+        display: flex;
+        justify-content: center; /* Center content horizontally */
+        align-items: center; /* Center content vertically */
+        flex-direction: column; /* Column layout for smaller screens */
         width: 100%;
-        margin: 0;
+        max-width: 1000px;
+        border-radius: 10px;
+        margin: 0 auto; /* Center the container */
     }
+    /* Fixed width and height for donation form in column layout */
+    .content, .donation-form {
+        width: 360px; /* Fixed width */
+        padding: 0px;
+        margin-left: 5%;
+    }
+
+    /* Fixed height for donation form */
     .donation-form {
-       padding: 0px;
-       width: 95%;
-       margin-left: 3%;
+        height: 500px; /* Adjust based on your need */
+        margin-top: 20px; /* Add some space between the two boxes */
+        max-height: 400px; /* Limit the height to make it scrollable */
     }
-    .donation-form div{
-    margin-left: 2%;
+    
+    .donation-form div {
+        
     }
+    
     .donation-type button {
         width: 100%;
     }
-    .amount-options {
+    
+    .amount-options, .amount-once {
         display: grid;
         justify-items: center;
     }
-    .amount-once {
-        display: grid;
-        justify-items: center;
-    }
+    
     .custom-amount {
         flex-direction: row;
-        justify-content: center;
+    
     }
+    
     .custom-amount input {
-        width: 30%;
+        width: 83%;
     }
-    .title{
-     margin-top: 600px;
-     width: 95%;
+    
+    .title5 {
+        margin-top: 50px;
+        width: 360px;
+        margin-left: 14%;
+        height: 150px;
+        margin: 0 auto; /* Center the container */
+    } 
+    
+    .sub {
+        margin-left: 3%;
     }
-    .sub{
-    margin-left: 3%;
+    .close {
+        position: absolute;
+        top: 0px; /* Adjust the distance from the top of the container */
+        right: 50px; /* Adjust the distance from the right of the container */
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+    .donate3-button {
+        width: 87%;
+        margin-right: 15px;
     }
 }
-@media (max-width: 725px){
-    .title{
-        margin-top: 500px;
-        width: 95%;
-       } 
+
+
+
+.icon-image {
+    width: 25px;
+    height: 25px;
+    margin: 0px 5px 0px 5px;
 }
-@media (max-width: 432px){
-    .amount-options {
-        grid-template-columns: repeat(2, 1fr);
+.title2{
+    color: #000000;
+}
+.icon2-image {
+    width: 15px;
+    height: 15px;
+    margin: -3px 2px;
+}
+.subtitl {
+    text-align: left;
+    /* margin-left: 17px; */
+}
+.subp{
+    text-align: left;
+    margin-top: 1%;
+}
+@media(max-width:450px){
+    .title5{
+        width: 300px;
+        height: 180px;
+    }
+    .content, .donation-form {
+        width: 300px; /* Fixed width */
+        
+    }
+    .amount-options{
+        margin-left: -8px;
+        gap: 5px;
     }
     .amount-once{
-        grid-template-columns: repeat(2, 1fr);
+        margin-left: -8px;
+        gap: 5px;
     }
-    .title{
-        margin-top: 500px;
-        width: 95%;
-       } 
+    .donate3-button {
+        width: 101%;
+        margin-left: -1px;
+    }
+    .custom-amount input {
+        margin-left: -4px;
+        width: 100%;
+        
+    }
 }
