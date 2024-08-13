@@ -9,11 +9,10 @@ body {
 .youth_hero{
     background-image: url(./youth_assets/Dablie\ background\ 34-01.jpg);
     width:auto ;
-    background-repeat: none;
+    background-repeat: no-repeat;
     background-size: cover;
     height:726px;
     padding: 2rem;
-    padding-top: 80px;
 }
 .hero_header p{
     color: #508991;
@@ -44,6 +43,7 @@ body {
     padding: 10px;
     margin: 3rem 0.5rem;
     margin-top: 36px;
+    background-color: #f3f3f3;
 }
 .youth_icons img:hover{
     cursor: pointer;
@@ -75,10 +75,15 @@ body {
     transform: rotate(270deg);
 }
 
+/* .donate_button a:hover {
+    /* background-color: #002d2e;  
+} */
+
+
 .youth_hero p{
     text-align: center;
     /* width: 50rem; */
-    margin: 2rem auto;
+    margin: 4rem auto;
 }
 .title2{
     color: #5E6161;
@@ -110,6 +115,7 @@ body {
     width: 1216px;
     /* margin-left: 55px; */
 }
+
 .subtitle2{
     color: #5E6161;
     font-family: 'Montserrat';
@@ -119,12 +125,15 @@ body {
     text-align: center;
     
 }
-.ready_picture img{
-    margin: 3rem;
-    width: 300px;
+.ready_picture img {
+    width: 100%; /* Adjust width to fit the container */
+    max-width: 600px; /* Set a maximum width for larger screens */
+    height: 80%; /* Maintain aspect ratio */
+    display: block;
+    margin-top: 5%;
 }
 .ready_box2{
-    /* margin:1rem; */
+    margin:1rem;
     background-color: #DBEAF2;
     display: flex;
     /* flex-wrap: wrap; */
@@ -138,9 +147,7 @@ body {
     width: 1216px;
     /* margin-left: 55px; */
 }
-.ready2_picture img{
-    width: 300px;
-}
+
 .ready_written{
     text-align: center;
     font-weight: bolder;
@@ -151,9 +158,6 @@ body {
     font-weight: lighter;
     text-align: left;
     margin-top: 2rem;
-}
-.points p{
-    margin: 25px 0;
 }
 .points span{
     color: #508991;
@@ -194,8 +198,97 @@ body {
 }
 .modules{
     background-color:#f3f3f3;
+    text-align: left;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.modules h1{
+    margin-left: 7rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+.bullets p{
+    margin-left: 7rem;
+    color: #508991;
+}
+.second_p {
+    margin:25px 0 ;
+}
+.youth_reserve_parent{
+    height:auto;
+    width: 100%;
+    background-color:#F5F9FF ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.youth_reserve{
+    background-color:#F5F9FF ;
+    padding: 2rem;
+    height: 230px;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+.youth_reserve p{
+    font-size: 1.15rem;
+    /* margin-left: 10%; */
+    margin-bottom: 6rem;
+    /* max-width: 80vw; */
+    /* margin-left: 5%; */
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    /* padding-right: 2rem;
+    padding-left: 2rem; */
+   
+}
+.youth_reserve a{
+    color: #508991;
+    text-decoration: none;
+}
+.youth_reserve a:hover{
+    border: 1px solid #508991;
+    background-color: #508991;
+    border-radius: 12px;
+    padding: 5px;
+    color: #ffff;
+    transition: ease-in 0.5s;
+}
+.points {
+    color: #333;
+    font-weight: lighter;
+    text-align: left;
+    margin-top: 2rem;
+}
+.points ul {
+    list-style: none;
+    padding: 0;
+}
+.points li {
+    margin-bottom: 1rem;
+    padding-left: 2rem; /* Increase padding for more space */
+    /* text-indent: -1.5rem; */
+    line-height: 1.5;
+    position: relative;
+}
+
+.points span {
+    color: #508991;
+    font-weight: bolder;
+}
+.second_p {
+    margin:25px 0 ;
+}
+
+
+.modules{
+    background-color:#f3f3f3;
     margin: 0 auto;
 }
+
+
+
 .module_contents h1 {
     margin-left: 7rem;
     margin-top: 1rem;
@@ -217,54 +310,12 @@ body {
     margin-left: 7rem;
     color: #508991;
 }
-.youth_reserve_parent{
-    height:auto;
-    width: 100%;
-    background-color:#F5F9FF ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.youth_reserve{
-    background-color:#F5F9FF ;
-    padding: 2rem;
-    height: 230px;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-}
-/* .youth_reserve{
-    background-color:#F5F9FF ;
-    padding: 2rem;
-    height: 230px;
-} */
-.youth_reserve p{
-    font-size: 1.15rem;
-    text-align: center;
-    /* margin-left: 10%; */
-    margin-bottom: 6rem;
-}
-.youth_reserve a{
-    color: #508991;
-    /* margin-left: 70%; */
-    text-decoration: none;
-}
-.youth_reserve a:hover{
-    border: 1px solid #508991;
-    background-color: #508991;
-    border-radius: 12px;
-    padding: 5px;
-    color: #ffff;
-    transition: ease-in 0.5s;
-}
 
-.second_p {
-    margin:25px 0 ;
-}
-@media (max-width: 1150px){
+
+@media (max-width: 960px){
     .Ready{
         background-color: #F5F9FF;
-        padding: 5rem 0rem;
+        padding: 5rem 1rem;
     }
     .ready_box{
         background-color: #E4EBEF;
@@ -280,12 +331,9 @@ body {
         gap: 0rem;
         /* padding: 10px; */
     }
-    /* .ready_picture img{
-    width: 340px;
-    align-items: center;
-    margin-top: 1rem;
-    margin-bottom: -1.5rem;
-    } */
+    .ready_picture img{
+        margin-top: 0;
+    }
     .ready_written{
         text-align: center;
         padding: 5%;
@@ -299,18 +347,32 @@ body {
         margin-left: 5rem;
         color: #508991;
     }
+    .youth_reserve{
+        padding-bottom: 5rem;
+    }
     .youth_reserve p{
         font-size: 1.15rem;
         text-align: left;
         /* margin-left: 10%; */
-        margin-bottom: 8rem;
+        margin-bottom: 5rem;
     }
     .youth_hero{
         height: fit-content;
         background-image:url(./youth_assets/Dablie\ background\ 34-01.jpg);
     }
 }
-
+@media(max-width:1150px) {
+    .modules h1{
+        margin-left: 3rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+ .bullets p{
+        margin-left: 5rem;
+        color: #508991;
+    }
+    
+}
 @media (max-width:1000px) {
     .headtext{
         width: auto;
@@ -329,18 +391,15 @@ body {
     }
 }
 @media (max-width: 730px){
-    .ready_picture img{
-        width: 80%;
-        margin-left: 10%;
-    }
-    /* .Ready{
+
+    .Ready{
         gap: 0px;
-    } */
+    }
     .title2{
         margin-top: 0px;
     }
     .youth_reserve p{
-        margin-bottom: 4rem;
+        margin-bottom: 1rem;
     }
     .features_box{
         gap: 0rem;
@@ -352,15 +411,35 @@ body {
 
 @media (max-width: 450px){
 
-    .ready_box{
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-        }
-        .ready_box2{
-            padding-top: 0.5rem;
-        padding-bottom: 0.5rem; 
-        }
-    .second_p {
-        margin:30px 0 ;
+    .Ready{
+        background-color: #F5F9FF;
+        padding: 5rem 0.85rem;
     }
-    }
+    .ready_picture img{
+    margin: 0 !important;
+    margin-top: 0px !important;
+
+}
+.youth_reserve p{
+    margin: 0%;
+    margin-bottom: 1rem;  
+}
+.youth_reserve{
+    padding-bottom: 10rem;
+    margin: 0%;
+}
+.ready_box{
+    padding: 0;
+    width: fit-content;
+}
+.ready_box2{
+    padding: 0;
+    width: fit-content;
+    margin: 0;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+.second_p {
+    margin:30px 0 ;
+}
+}

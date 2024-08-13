@@ -108,8 +108,8 @@ body {
     /* flex-wrap: wrap; */
     /* margin-top: 2rem; */
     /* margin: 3rem 2rem; */
-    padding-top: 2rem;
-    padding-bottom: 1rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
     padding-right: 2rem;
     padding-left: 2rem;
     gap: 5rem;
@@ -126,9 +126,14 @@ body {
     
 }
 .ready_picture img{
-    margin: 3rem;
+    /* margin: 3rem;
     width: 300px;
-    height: 60%;
+    height: 60%; */
+    width: 100%; /* Adjust width to fit the container */
+    max-width: 600px; /* Set a maximum width for larger screens */
+    height: 80%; /* Maintain aspect ratio */
+    display: block;
+    margin-top: 5%;
 }
 .ready_box2{
     margin:1rem;
@@ -137,8 +142,8 @@ body {
     /* flex-wrap: wrap; */
     /* margin-top: 2rem; */
     /* margin: 3rem 2rem; */
-    padding-top: 2rem;
-    padding-bottom: 1rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
     padding-right: 2rem;
     padding-left: 2rem;
     gap: 5rem;
@@ -260,6 +265,7 @@ body {
     margin-left: 20%;
     margin-bottom: 2rem;
 }
+
 @media (max-width: 1024px){
     .Ready{
         background-color: #F5F9FF;
@@ -327,10 +333,10 @@ body {
     }
 }
 @media (max-width: 730px){
-    .ready_picture img{
+    /* .ready_picture img{
         width: 80%;
         margin-left: 10%;
-    }
+    } */
     .Ready{
         gap: 0px;
     }
@@ -351,6 +357,13 @@ body {
     }
 }
 @media(max-width:1024px){
+    .ready_picture img {
+    width: 100%;
+    max-width: 100%;
+    height: 80%;
+    display: block;
+    margin-top: 5%;
+}
     .youth_written p{
         margin-left: auto;
         padding: 0 1rem;
@@ -362,3 +375,39 @@ body {
         color: #5E6161;
     }
 }
+
+@media (max-width: 500px){
+
+    .Ready{
+        background-color: #F5F9FF;
+        padding: 5rem 0.85rem;
+    }
+    .ready_picture img{
+    margin: 0 !important;
+    margin-top: 0px !important;
+
+}
+
+.ready_box{
+    padding: 0;
+    width: fit-content;
+}
+.ready_box2{
+    padding: 0;
+    width: fit-content;
+    margin: 0;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+.second_p {
+    margin:30px 0 ;
+}
+.mobile-responsive{
+        font-size: 2rem !important;
+    margin-top: 36px;
+}
+
+}
+
+
+
