@@ -9,7 +9,7 @@ body {
 .youth_hero{
     background-image: url(./Leadership_assets/7.jpg);
     width:auto ;
-    background-repeat: no-repeat;
+    background-repeat: none;
     background-size: cover;
     height:726px;
     padding: 2rem;
@@ -75,9 +75,9 @@ body {
     transform: rotate(270deg);
 }
 
-/* .donate_button a:hover {
-    /* background-color: #002d2e;  
-} */
+.donate_button a:hover {
+    /* background-color: #002d2e;  */
+}
 
 
 .youth_hero p{
@@ -115,7 +115,6 @@ body {
     width: 1216px;
     /* margin-left: 55px; */
 }
-
 .subtitle2{
     color: #5E6161;
     font-family: 'Montserrat';
@@ -125,15 +124,12 @@ body {
     text-align: center;
     
 }
-.ready_picture img {
-    width: 100%; /* Adjust width to fit the container */
-    max-width: 600px; /* Set a maximum width for larger screens */
-    height: 80%; /* Maintain aspect ratio */
-    display: block;
-    margin-top: 5%;
+.ready_picture img{
+    margin: 3rem;
+    width: 300px;
 }
 .ready_box2{
-    margin:1rem;
+    /* margin:1rem; */
     background-color: #DBEAF2;
     display: flex;
     /* flex-wrap: wrap; */
@@ -147,7 +143,9 @@ body {
     width: 1216px;
     /* margin-left: 55px; */
 }
-
+.ready2_picture img{
+    width: 300px;
+}
 .ready_written{
     text-align: center;
     font-weight: bolder;
@@ -211,9 +209,6 @@ body {
     margin-left: 7rem;
     color: #508991;
 }
-.second_p {
-    margin:25px 0 ;
-}
 .youth_reserve_parent{
     height:auto;
     width: 100%;
@@ -230,21 +225,20 @@ body {
     align-items: center;
     width: 80%;
 }
+/* .youth_reserve{
+    background-color:#F5F9FF ;
+    padding: 2rem;
+    height: 230px;
+} */
 .youth_reserve p{
     font-size: 1.15rem;
+    text-align: center;
     /* margin-left: 10%; */
     margin-bottom: 6rem;
-    /* max-width: 80vw; */
-    /* margin-left: 5%; */
-    width: 100%;
-    padding-top: 2rem;
-    padding-bottom: 1rem;
-    /* padding-right: 2rem;
-    padding-left: 2rem; */
-   
 }
 .youth_reserve a{
     color: #508991;
+    /* margin-left: 70%; */
     text-decoration: none;
 }
 .youth_reserve a:hover{
@@ -255,35 +249,14 @@ body {
     color: #ffff;
     transition: ease-in 0.5s;
 }
-.points {
-    color: #333;
-    font-weight: lighter;
-    text-align: left;
-    margin-top: 2rem;
-}
-.points ul {
-    list-style: none;
-    padding: 0;
-}
-.points li {
-    margin-bottom: 1rem;
-    padding-left: 2rem; /* Increase padding for more space */
-    /* text-indent: -1.5rem; */
-    line-height: 1.5;
-    position: relative;
-}
 
-.points span {
-    color: #508991;
-    font-weight: bolder;
-}
 .second_p {
     margin:25px 0 ;
 }
-@media (max-width: 960px){
+@media (max-width: 1150px){
     .Ready{
         background-color: #F5F9FF;
-        padding: 5rem 1rem;
+        padding: 5rem 0rem;
     }
     .ready_box{
         background-color: #E4EBEF;
@@ -299,9 +272,12 @@ body {
         gap: 0rem;
         /* padding: 10px; */
     }
-    .ready_picture img{
-        margin-top: 0;
-    }
+    /* .ready_picture img{
+    width: 340px;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: -1.5rem;
+    } */
     .ready_written{
         text-align: center;
         padding: 5%;
@@ -315,20 +291,18 @@ body {
         margin-left: 5rem;
         color: #508991;
     }
-    .youth_reserve{
-        padding-bottom: 5rem;
-    }
     .youth_reserve p{
         font-size: 1.15rem;
         text-align: left;
         /* margin-left: 10%; */
-        margin-bottom: 5rem;
+        margin-bottom: 8rem;
     }
     .youth_hero{
         height: fit-content;
         background-image:url(./Leadership_assets/7.jpg);
     }
 }
+
 @media (max-width:1000px) {
     .headtext{
         width: auto;
@@ -347,10 +321,13 @@ body {
     }
 }
 @media (max-width: 730px){
-
-    .Ready{
-        gap: 0px;
+    .ready_picture img{
+        width: 80%;
+        margin-left: 10%;
     }
+    /* .Ready{
+        gap: 0px;
+    } */
     .title2{
         margin-top: 0px;
     }
@@ -366,36 +343,16 @@ body {
 }
 
 @media (max-width: 450px){
-
-    .Ready{
-        background-color: #F5F9FF;
-        padding: 5rem 0.85rem;
+    .ready_box{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     }
-    .ready_picture img{
-    margin: 0 !important;
-    margin-top: 0px !important;
+    .ready_box2{
+        padding-top: 0.5rem;
+    padding-bottom: 0.5rem; 
+    }
 
-}
-.youth_reserve p{
-    margin: 0%;
-    margin-bottom: 1rem;  
-}
-.youth_reserve{
-    padding-bottom: 10rem;
-    margin: 0%;
-}
-.ready_box{
-    padding: 0;
-    width: fit-content;
-}
-.ready_box2{
-    padding: 0;
-    width: fit-content;
-    margin: 0;
-    margin-top: 10%;
-    margin-bottom: 10%;
-}
-.second_p {
-    margin:30px 0 ;
-}
-}
+    .second_p {
+        margin:30px 0 ;
+    }
+    }
