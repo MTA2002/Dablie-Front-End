@@ -20,7 +20,7 @@ body {
 .stories_container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     position: relative;
     flex-direction: row;
 }
