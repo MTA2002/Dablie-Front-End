@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <img src="${article.image}" alt="${article.headline}">
                 <label>${article.headline}</label>
                 <p>${truncateText(article.description, 3)}</p>
-                <a href="./ stories/story.html?id=${article.id}" class="read_more_link">Read More</a>
+                <a href="./stories/story.html?id=${article.id}" class="read_more_link">Read More</a>
             `;
             storiesContainer.appendChild(storyBox);
         });

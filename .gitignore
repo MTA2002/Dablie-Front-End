@@ -70,3 +70,6 @@ api/node_modules/
 .dataconnect
 
 api/
+
+# Mac files
+.DS_Store
