@@ -78,7 +78,7 @@ btn.onclick = function(event) {
 
     // Load the content from the donation page
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', './ donate', true);
+    xhr.open('GET', './donate', true);
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
             document.getElementById("modalBody").innerHTML = xhr.responseText;
