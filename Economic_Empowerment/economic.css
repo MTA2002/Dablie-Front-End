@@ -411,3 +411,32 @@ body {
 
 
 
+ .newProp img{
+    width: 100%; /* Adjust width to fit the container */
+    max-width: 100% !important;
+    height: 80%; /* Maintain aspect ratio */
+    display: block;
+    margin-top: 15% !important;
+}
+
+@media (max-width: 1400px){
+ .newProp img{
+    width: 100%; /* Adjust width to fit the container */
+    max-width: 100% !important;
+    height: 50% ; /* Maintain aspect ratio */
+    display: block;
+    margin-top: 15% !important;
+}
+  
+}
+
+@media (max-width: 1250px){
+ .newProp img{
+    width: 100%; /* Adjust width to fit the container */
+    max-width: 100% !important;
+    height: 35% ; /* Maintain aspect ratio */
+    display: block;
+    margin-top: 15% !important;
+}
+  
+}
