@@ -240,3 +240,18 @@ button:hover {
         font-size: 1.2rem;
     }
 }
+
+button {
+    background-color: #508991;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #3d6e7f;
+}

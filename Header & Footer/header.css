@@ -388,7 +388,7 @@ header {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 46%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     }
@@ -443,6 +443,12 @@ header {
 
     }
   } */
+   @media (max-height: 632px) {
+    .buttons-container, .social-media {
+      display: none !important;
+    }
+   }
+
     @media (max-width: 600px) {
     .logo{
       display: none;
@@ -525,7 +531,7 @@ header {
       width: 200px; /* Ensure social media icons match button width */
       text-align: center; /* Center the social media icons */
       position: fixed; /* Make the social media icons fixed */
-      bottom: 22%; /* Set the bottom margin to 22% */
+      bottom: 16%; /* Set the bottom margin to 22% */
     }
     
     .social-media a {
@@ -543,3 +549,5 @@ header {
     .social-media.hidden {
       display: none;
     }
+
+    

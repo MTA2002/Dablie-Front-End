@@ -42,13 +42,12 @@ body {
 
 .event button {
     margin-top: 10px;
-    background-color: #508991;
-    color: #ffffff;
+    padding: 10px 15px;
+    background: #16909D;
+    color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
+    border-radius: 40px;
     cursor: pointer;
-    font-size: 14px;
 }
 
 .event button:hover {
@@ -121,4 +120,19 @@ form button {
 
 form button:hover {
     background: #004346;
+}
+
+button {
+    background-color: #508991;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #3d6e7f;
 }
