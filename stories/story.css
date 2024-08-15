@@ -239,14 +239,4 @@ button:hover {
     .updates h1 {
         font-size: 1.2rem;
     }
-
-    /* .share-buttons {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 2rem 0;
-    }
-    button {
-        margin: 0 1px;
-    } */
 }
