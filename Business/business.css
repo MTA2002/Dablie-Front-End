@@ -1208,7 +1208,29 @@ body {
     }
 
 
+ @media (max-width: 960px){
+.ready_picture img {
+    display: flex;
+        width: 100%; /* Adjust width to fit the container */
+        max-width: 663px; /* Set a maximum width for larger screens */
+        height: 80%; /* Maintain aspect ratio */
+        display: block;
+        margin-top: 5%;
+        margin: 0 auto;
+       
+    }
 
+ }
 
+ @media (max-width: 760px){
+.ready_picture img {
+    display: flex;
+        width: 100%; /* Adjust width to fit the container */
+        max-width: 500px; /* Set a maximum width for larger screens */
+        height: 80%; /* Maintain aspect ratio */
+        display: block;
+        margin-top: 5%;
+        margin: 0 auto;
+    }
 
-
+ }
