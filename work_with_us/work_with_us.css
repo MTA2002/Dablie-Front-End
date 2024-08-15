@@ -708,6 +708,7 @@ body {
   gap: 83px;
   line-height: normal;
   letter-spacing: normal;
+  margin: 0 auto;
 }
 @media screen and (max-width: 1200px) {
   .we-envision-a-world-where-indi-wrapper {

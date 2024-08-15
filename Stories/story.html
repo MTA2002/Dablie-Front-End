@@ -154,6 +154,33 @@
             document.getElementById('headline_container').textContent = 'Error fetching story.';
         });
     }
+    
+    function shareLinks(article) {
+        const currentUrl = window.location.href;
+        const twitterLink = `https://twitter.com/intent/tweet?text=${article.headline}&url=${currentUrl}`;
+        const linkedinLink = `https://www.linkedin.com/shareArticle?mini=true&url=${currentUrl}&title=${article.headline}`;
+        
+        document.getElementById('shareBtn').addEventListener('click', () => {
+            if (navigator.share) {
+                navigator.share({
+                    title: article.headline,
+                    url: currentUrl
+                });
+            } 
+        });
+        
+    document.getElementById('twitter-link').setAttribute('href', twitterLink);
+    document.getElementById('linkedin-link').setAttribute('href', linkedinLink);
+    document.getElementById('copy-link').addEventListener('click', () => {
+        navigator.clipboard.writeText(currentUrl);
+    
+        const copyButton = document.getElementById('copy-link').querySelector('button');
+        copyButton.innerHTML = '<i class="fa fa-check"></i>';
+        setTimeout(() => {
+            copyButton.innerHTML = '<i class="fa fa-link"></i>';
+        }, 2000);
+    });
+}
 
     function displayStory(article) {
         const headlineContainer = document.getElementById('headline_container').querySelector('h1');
@@ -163,8 +190,9 @@
         headlineContainer.textContent = article.headline;
         descriptionContainer.innerHTML = article.description.split('\n').map(paragraph => `<p>${paragraph}</p>`).join('');
         imageContainer.innerHTML = `<img src="http://64.112.124.78/data/images/${article.image}" alt="${article.headline}">`;
+        shareLinks(article);
     }
-
+    
     function fetchLatestNews() {
         const url = 'http://64.112.124.78:8000/news?page=1&pagination=3';
         fetch(url, {
@@ -226,25 +254,6 @@
     }
 });
 
-    document.getElementById('shareBtn').addEventListener('click', () => {
-        if (navigator.share) {
-            navigator.share({
-                title: article.headline,
-                url: currentUrl
-            });
-        }
-    });
-    document.getElementById('twitter-link').setAttribute('href', twitterLink);
-    document.getElementById('linkedin-link').setAttribute('href', linkedinLink);
-    document.getElementById('copy-link').addEventListener('click', () => {
-        navigator.clipboard.writeText(currentUrl);
-
-        const copyButton = document.getElementById('copy-link').querySelector('button');
-        copyButton.innerHTML = '<i class="fa fa-check"></i>';
-        setTimeout(() => {
-            copyButton.innerHTML = '<i class="fa fa-link"></i>';
-        }, 2000);
-    });
 
 </script>
 </body>

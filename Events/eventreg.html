@@ -148,10 +148,41 @@
                     <p>Location: ${event.location ? event.location : 'Location not specified'}</p>
                     <p>${event.description}</p>
                     <button onclick="window.open('${event.event_registration_link}', '_blank')">Register</button>
+                    <button id="ShareBtn-${event.id}"><i class="fa-solid fa-share"></i></button>
+                    <button id="copy-link-${event.id}"><i class="fa-solid fa-link"></i></button>
                 `;
                 eventsContainer.appendChild(eventElement);
             });
-        }
+
+            events.forEach(event => {
+                const shareBtn = document.getElementById(`ShareBtn-${event.id}`);
+                shareBtn.addEventListener('click', () => {
+                    const shareData = {
+                        title: event.title,
+                        url: event.event_registration_link
+                    };
+                    navigator.share(shareData)
+                        .then(() => console.log('Shared successfully'))
+                        .catch(error => console.error('Error sharing:', error));
+                });
+
+                const copyLinkBtn = document.getElementById(`copy-link-${event.id}`);
+                copyLinkBtn.addEventListener('click', () => {
+                    copyToClipboard(event.event_registration_link);
+
+                    copyLinkBtn.innerHTML = '<i class="fa-solid fa-check"></i>';
+                    setTimeout(() => {
+                        copyLinkBtn.innerHTML = '<i class="fa-solid fa-link"></i>';
+                    }, 2000);
+                });
+
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text)
+                .then(() => console.log('Copied to clipboard:', text))
+                .catch(error => console.error('Error copying to clipboard:', error));
+            }
+        });
+    }
 
         fetchEvents();
     });
