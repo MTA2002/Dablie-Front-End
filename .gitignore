@@ -71,5 +71,7 @@ api/node_modules/
 
 api/
 
+.vscode/
+
 # Mac files
 .DS_Store
