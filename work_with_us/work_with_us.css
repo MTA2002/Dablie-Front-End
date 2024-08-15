@@ -7,8 +7,12 @@ body {
     text-align: center;
 }
 .youth_hero{
-    background-image: url(#ffffff);
-    width:auto ;
+    background-image: url("./economic_assets/WorkwithusImg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-attachment:scroll;
+    /* width:auto ; */
     background-repeat: none;
     background-size: cover;
     height:726px;
@@ -409,7 +413,7 @@ body {
     }
     .youth_hero{
         height: fit-content;
-        background-image:url(#ffffff);
+        background-image:url("./economic_assets/WorkwithusImg.png");
     }
 }
 @media (max-width:1000px) {

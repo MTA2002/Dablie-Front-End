@@ -88,7 +88,16 @@
             <div id="headline_container">
                 <div class="headline_line"></div>
                 <h1></h1>
+                <div class="share-buttons">
+                    <button id="shareBtn">
+                        <i class="fa fa-share"></i> Share
+                    </button>
+                    <a id="linkedin-link" href=""><button><i class="fa-brands fa-linkedin-in"></i></button></a>
+                    <a id="twitter-link" href=""><button><i class="fa-brands fa-x-twitter"></i></button></a>
+                    <a id="copy-link"><button><i class="fa fa-link"></i></button></a>
+                </div>
             </div>
+            
             <div id="image_container">
             </div>
         </section>
@@ -109,6 +118,7 @@
     <script src="../Header & Footer/header.js"></script>
     <script src="../HomePage/header.js"></script>
     <script>
+
         document.addEventListener("DOMContentLoaded", function() {
     const urlParams = new URLSearchParams(window.location.search);
     const storyId = urlParams.get('id');
@@ -215,6 +225,27 @@
         return result.trim();
     }
 });
+
+    document.getElementById('shareBtn').addEventListener('click', () => {
+        if (navigator.share) {
+            navigator.share({
+                title: article.headline,
+                url: currentUrl
+            });
+        }
+    });
+    document.getElementById('twitter-link').setAttribute('href', twitterLink);
+    document.getElementById('linkedin-link').setAttribute('href', linkedinLink);
+    document.getElementById('copy-link').addEventListener('click', () => {
+        navigator.clipboard.writeText(currentUrl);
+
+        const copyButton = document.getElementById('copy-link').querySelector('button');
+        copyButton.innerHTML = '<i class="fa fa-check"></i>';
+        setTimeout(() => {
+            copyButton.innerHTML = '<i class="fa fa-link"></i>';
+        }, 2000);
+    });
+
 </script>
 </body>
 </html>
