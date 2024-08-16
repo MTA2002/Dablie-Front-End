@@ -48,12 +48,23 @@
             </ul>
         </nav>
         <div class="join-us-button">
-            <a href="../membership">Join <img src="../HomePage/images/hands.png" alt="Hand Icon" class="icon"> </a>
+            <a href="../membership/ ">Join <img src="../HomePage/images/hands.png" alt="Hand Icon"
+                    class="icon"> </a>
         </div>
-        <div class="donate-button">
-            <a href="https://chapa.link/donation/view/DN-VH06Xca2dDRW">Donate <img src="../HomePage/images/heart.png"
-                    alt="heart Icon" class="icon-2"></a>
-        </div>
+        <!-- Donate Button -->
+<div class="donate-button">
+    <a href="#" id="openModalBtn">Donate <img src="../HomePage/images/heart.png" alt="heart Icon" class="icon-2"></a>
+</div>
+
+<!-- The Modal -->
+<!--  
+<div id="donationModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div id="modalBody">Loading...</div>
+  </div>
+</div> -->
+
         <div class="hamburger-menu-container">
             <div class="menu-wrapper">
                 <p class="menu-btn"></p>
@@ -63,9 +74,10 @@
     </header>
     <nav class="menu-overlay">
         <ul class="main-menu">
-            <li><a href="../about-us/">About</a></li>
-            <li><a href="#" class="submenu-toggle">Our Programs<span class="icon-container marginit"><i
-                            class="fa-solid fa-chevron-right "></i></span></a></li>
+            <li><a href="#" class="submenu-toggle about-toggle">About<span class="icon-container marginit"><i 
+                class="fa-solid fa-chevron-right"></i></span></a></li>
+            <li><a href="#" class="submenu-toggle programs-toggle">Programs<span class="icon-container marginit"><i
+                class="fa-solid fa-chevron-right"></i></span></a></li>
             <li><a href="../events/ ">Events</a></li>
             <li><a href="../stories/">Stories</a></li>
             <li class="buttons-container">
@@ -75,16 +87,22 @@
                             src="../HomePage/images/heart.png" alt="heart Icon" class="icon-2"> </a></div>
             </li>
         </ul>
-        <ul class="submenu">
+        <ul class="submenu programs-submenu">
             <li><a href="#" class="back-to-main-menu"><i
-                        class="fa-solid fa-chevron-left style"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Our Programs</a></li>
+                        class="fa-solid fa-chevron-left style"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our Programs</a></li>
             <li><a href="../leadership/ ">Leadership Program</a></li>
             <li><a href="../scholarships/ ">Scholarship Program</a></li>
             <li><a href="../economic-empowerment/ ">Economic Empowerment</a></li>
             <li><a href="../business/">Dablie Business Forum</a></li>
-            <!-- <li><a href="../partners">Partners Directory</a></li> -->
             <li><a href="../youth/">Youth Program</a></li>
             <li><a href="../other/ ">Other Programs</a></li>
+        </ul>
+        <ul class="submenu about-submenu">
+            <li><a href="#" class="back-to-main-menu"><i
+                        class="fa-solid fa-chevron-left style"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About</a></li>
+            <li><a href="../about-us/">About us</a></li>
+            <li><a href="../our-mission/">Our mission</a></li>
+            <li><a href="../our-story/">Our story</a></li>
         </ul>
         <div class="social-media">
             <a href="https://www.linkedin.com/company/dablie-foundation/?viewAsMember=true"><i

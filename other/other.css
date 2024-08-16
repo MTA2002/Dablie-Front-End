@@ -399,3 +399,34 @@ body {
     margin:30px 0 ;
 }
 }
+
+@media (max-width: 450px){
+    .points li {
+        margin-bottom: 1rem;
+        padding-left:0; 
+        line-height: 1.5;
+        position: relative;
+    }
+    .ready_picture img {
+        max-height: 300px;
+        object-fit: cover;
+       object-position: center;
+    }
+    }
+    
+    @media only screen and (min-width: 960px) and (max-width: 1224px) {
+     .ready_picture img {
+        width: 100%;  /* Set a maximum width for larger screens */
+        height: 60%; /* Maintain aspect ratio */
+        display: block;
+        margin-top: 5%;
+       object-fit: cover;
+       object-position: center;
+    }
+    }
+    @media only screen and (min-width: 960px) and (max-width: 2560px) {
+    .ready_picture{
+        max-width: 355px;
+        max-height: 355px;
+    }
+    }
