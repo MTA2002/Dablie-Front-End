@@ -75,3 +75,4 @@ api/
 
 # Mac files
 .DS_Store
+/donate

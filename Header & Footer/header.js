@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const aboutToggle = document.querySelector(".about-toggle");
     const backToMainMenuLinks = document.querySelectorAll(".back-to-main-menu");
     const socialMedia = document.querySelector('.social-media');
+    const openModalBtn = document.querySelector('#open-donation-popup-new'); // Updated to target the correct button
 
     menuWrapper.addEventListener("click", function () {
         menuWrapper.classList.toggle("menu-wrapper-on");
@@ -16,22 +17,22 @@ document.addEventListener("DOMContentLoaded", function () {
         menuOverlay.classList.toggle("open");
     });
 
-    programsToggle.addEventListener("click", function (event) {
+    programsToggle.addEventListener("click", function(event) {
         event.preventDefault();
         mainMenu.classList.add("hidden");
         programsSubmenu.classList.add("open");
         socialMedia.classList.add('hidden');
     });
 
-    aboutToggle.addEventListener("click", function (event) {
+    aboutToggle.addEventListener("click", function(event) {
         event.preventDefault();
         mainMenu.classList.add("hidden");
         aboutSubmenu.classList.add("open");
         socialMedia.classList.add('hidden');
     });
 
-    backToMainMenuLinks.forEach(function (backToMainMenu) {
-        backToMainMenu.addEventListener("click", function (event) {
+    backToMainMenuLinks.forEach(function(backToMainMenu) {
+        backToMainMenu.addEventListener("click", function(event) {
             event.preventDefault();
             mainMenu.classList.remove("hidden");
             programsSubmenu.classList.remove("open");
@@ -40,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    window.addEventListener("click", function (event) {
+    window.addEventListener("click", function(event) {
         if (!menuWrapper.contains(event.target) && !menuOverlay.contains(event.target)) {
             menuWrapper.classList.remove("menu-wrapper-on");
             menuBtn.classList.remove("menu-btn-on");
@@ -50,5 +51,16 @@ document.addEventListener("DOMContentLoaded", function () {
             aboutSubmenu.classList.remove("open");
             socialMedia.classList.remove('hidden');
         }
+    });
+
+    // Close mobile menu when the donate pop-up opens
+    openModalBtn.addEventListener("click", function(event) {
+        menuWrapper.classList.remove("menu-wrapper-on");
+        menuBtn.classList.remove("menu-btn-on");
+        menuOverlay.classList.remove("open");
+        mainMenu.classList.remove("hidden");
+        programsSubmenu.classList.remove("open");
+        aboutSubmenu.classList.remove("open");
+        socialMedia.classList.remove('hidden');
     });
 });
