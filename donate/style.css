@@ -256,7 +256,7 @@
     }
 
     .donation-form {
-        height: 400px;
+        height: auto;
         margin-top: 0px;
         margin-left: 18px;
     }
