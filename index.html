@@ -77,7 +77,6 @@
                 <p class="menu-btn-middle"></p> <!-- Added middle line -->
             </div>
         </div>
-
           <!-- Pop-up Overlay -->
 <div id="donation-popup" class="popup-overlay" style="display: none;">
     <div class="popup-content">
@@ -173,6 +172,7 @@
         </div>
     </div>
 </div>
+
     </header>
     <nav class="menu-overlay">
         <ul class="main-menu">
@@ -468,23 +468,24 @@
         const donorInfoSection = document.querySelector('.donor-info');
         const donationPopup = document.getElementById('donation-popup');
         const popupClose = document.querySelector('.popup-close');
+        const customAmountInput = document.querySelector('.custom-amount input');
+        const currencySelector = document.getElementById('currency-selector');
         var newOpenPopupBtn = document.getElementById('open-donation-popup-new');
 
-    if (newOpenPopupBtn) {
-        newOpenPopupBtn.addEventListener('click', function (event) {
-            event.preventDefault(); // Prevent the default link behavior
-            donationPopup.style.display = 'block'; // Show the popup
-        });
-    }
+        if (newOpenPopupBtn) {
+            newOpenPopupBtn.addEventListener('click', function (event) {
+                event.preventDefault(); // Prevent the default link behavior
+                donationPopup.style.display = 'block'; // Show the popup
+            });
+        }
 
-    if (popupClose) {
-        popupClose.addEventListener('click', function () {
-            donationPopup.style.display = 'none'; // Hide the popup
-        });
-    }
+        if (popupClose) {
+            popupClose.addEventListener('click', function () {
+                donationPopup.style.display = 'none'; // Hide the popup
+            });
+        }
 
         // Update the custom amount input when an amount button is clicked
-        const customAmountInput = document.querySelector('.custom-amount input');
         document.querySelectorAll('.amount-once button, .amount-options button').forEach(function(button) {
             button.addEventListener('click', function() {
                 customAmountInput.value = this.textContent;
@@ -525,9 +526,46 @@
                 donationPopup.style.display = 'none';
             }
         });
+
+        // Handle donation button click
+        donateButton.addEventListener('click', function () {
+            // Get the selected amount
+            let amount = customAmountInput.value.replace(/,/g, ''); // Remove commas for parsing
+            let currency = currencySelector.value;
+
+            // Perform basic validation
+            if (!amount || isNaN(amount) || parseFloat(amount) <= 0) {
+                alert('Please enter a valid donation amount.');
+                return;
+            }
+
+            // Send the donation amount to the backend
+            fetch('http://64.112.124.78:8100/payment?amount=' + amount, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Handle the response from the backend
+                console.log('Success:', data);
+                
+                if (data.status === 'pending' && data.checkout_url) {
+                    // Redirect the user to the provided checkout URL
+                    window.location.href = data.checkout_url;
+                } else if (data.message) {
+                    // Display an error message if present
+                    alert(data.message);
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('An error occurred while processing your donation. Please try again.');
+            });
+        });
     });
 </script>
-
 
 </body>
 
