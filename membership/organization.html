@@ -348,6 +348,7 @@
                     console.log('Form data being sent:', data);
         
                     const apiUrl = 'http://64.112.124.78:8000/organization_membership_form';
+                    const paymentApiUrl = 'http://64.112.124.78:8100/payment?amount=24000&payment_mode=organization_membership'
         
                     fetch(apiUrl, {
                         method: 'POST',
@@ -368,7 +369,32 @@
                     .then(responseData => {
                         console.log(responseData);
                         alert('Form submitted successfully! Thank You!!!');
-                        window.location.href = '../index.html';
+                        // window.location.href = '../index.html';
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert(`Error: ${error.message}`);
+                    });
+                    
+                    fetch(paymentApiUrl, {
+                        method: 'POST',
+                        headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json'
+                        },
+                    })
+                    .then(response => {
+                        if (!response.ok) {
+                            return response.json().then(errorData => {
+                                throw new Error(`Server responded with ${response.status}: ${errorData.message}`);
+                            });
+                        }
+                        return response.json();
+                    })
+                    .then(responseData => {
+                        console.log(responseData);
+                        // alert('Payment Request sent successfully!');
+                        window.location.href = responseData.checkout_url;
                     })
                     .catch(error => {
                         console.error('Error:', error);

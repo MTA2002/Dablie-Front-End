@@ -540,7 +540,7 @@
             }
 
             // Send the donation amount to the backend
-            fetch('http://64.112.124.78:8100/payment?amount=' + amount, {
+            fetch('http://64.112.124.78:8100/payment?amount=' + amount + '&payment_mode=donation', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

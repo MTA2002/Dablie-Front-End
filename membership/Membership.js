@@ -89,7 +89,7 @@ function getQueryParameter(name) {
   // Add the retrieved 'amount' parameter to the data
   data.amount = amount;
 
-  const apiUrl = `http://64.112.124.78:8100/payment?amount=${amount}`; // Use backticks for template literals
+  const apiUrl = `http://64.112.124.78:8100/payment?amount=${amount}&payment_mode=individual_membership`; // Use backticks for template literals
 
   // Send payment initiation request to the backend
   fetch(apiUrl, {
