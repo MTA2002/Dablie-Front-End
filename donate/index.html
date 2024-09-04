@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,16 +11,21 @@
     <link rel="icon" type="image/x-icon" href="HomePage/images/Dablie_logo.png">
 </head>
 <body>
-    
-    <div class="title5">
-        <h1 class="subtitl">Donate!</h1>
-        <p class="subp">Your gift today will empower, inspire, and connect the next generation of changemakers. Let’s never stop moving toward the world we want. Make your gift today!</p>
-    </div>
+     Pop-up Overlay 
+<div id="donation-popup" class="popup-overlay" style="display: none;">
+    <div class="popup-content">
+        <span class="popup-close">&times;</span>
+         Your existing donation page content goes here 
+        <div class="title5">
+            <h1 class="subtitl">Donate!</h1>
+            <p class="subp">Your gift today will empower, inspire, and connect the next generation of changemakers. Let’s never stop moving toward the world we want. Make your gift today!</p>
+        </div>
+        <!-- Rest of your donation page code 
 
     <div class="container">
         <div class="content">
             <div class="image">
-                <img src="../donate/images/image.png" alt="Donate Image">
+                <img src="./images/image.png" alt="Donate Image">
             </div>
             <div class="text">
                 <h3 class="sub" style="margin-top: 15px;">Donate!</h3>
@@ -32,11 +37,11 @@
             </div>
         </div>
         <div class="donation-form">
-            <div>
-                <h2 class="title2"><img src="../donate/images/mdi_security-lock-outline.png" class="icon-image"> Secure Donation</h2>
+            <div class="donation-content">
+                <h2 class="title2"><img src="../images/mdi_security-lock-outline.png" class="icon-image"> Secure Donation</h2>
                 <div class="donation-type">
                     <button class="once">Donate Once</button>
-                    <button class="monthly active"><img src="../donate/images/mdi_heart.png" class="icon2-image">Monthly</button>
+                    <button class="monthly active"><img src="../images/mdi_heart.png" class="icon2-image">Monthly</button>
                 </div>
                 <div class="amount-once" style="display: none;">
                     <button>2,400</button>
@@ -63,14 +68,48 @@
                         <option value="GBP">GBP</option>
                     </select>
                 </div>
-                
+                <div class="button7">
+                    <button class="donate3-button">Donate</button>
+                </div>
             </div>
-            <div class="button7">
-                <button class="donate3-button">Donate</button>
+            
+            <!-- Donor Info Section (Initially Hidden) 
+            <div class="donor-info" style="display: none;">
+                <h2>
+                    <span class="back-arrow"><i class="fa-solid fa-angle-left"></i></span> <!-- This is the back arrow 
+                    Enter your details
+                </h2>
+                <form>
+                    <div class="form-group">
+                        <input type="text" placeholder="First name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Last name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email address" required>
+                    </div>
+                    <div class="form-group phone-group">
+                        <select>
+                            <option value="+251" selected>🇪🇹</option>
+                            <!-- Add more country codes as needed 
+                        </select>
+                        <input type="tel" placeholder="Phone (optional)">
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="checkbox" id="agree" required>
+                        <label for="agree">I agree to the <a href="#">Terms of Service.</a></label>
+                    </div>
+                    <button type="submit" class="submit-donation">Continue</button>
+                </form>
             </div>
         </div>
     </div>
+</div>
+
     
 </body>
 <script src="script.js"></script>
-</html>
+
+</html> -->
