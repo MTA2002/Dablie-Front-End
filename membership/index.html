@@ -144,7 +144,7 @@
                     </ul>
                   </div>
                   <div class="card-footer">
-                    <button class="btn-primary"><a style="font-family: 'Montserrat'; color: azure; text-decoration: none;" href="#" onclick="redirectToNextPage('individual.html', 2400)">Get Started Now</a></button>
+                    <button class="btn-primary"><a style="font-family: 'Montserrat'; color: azure; text-decoration: none;" href="#" onclick="redirectToNextPage('individual.html', 'Individual Standard Member')">Get Started Now</a></button>
                   </div>
                 </div>
               </div>
@@ -160,7 +160,7 @@
                     </ul>
                   </div>
                   <div class="card-footer">
-                    <button class="btn-primary" disabled>🔒 Coming Soon</button>
+                    <button class="btn-primary"><a style="font-family: 'Montserrat'; color: azure; text-decoration: none;" href="#" onclick="redirectToNextPage('individual.html', 'Individual Premium Member')">Get Started Now</a></button>
                   </div>
                 </div>
               </div> -->
@@ -189,7 +189,7 @@
                     </ul>
                   </div>
                   <div class="card-footer">
-                    <button class="btn-primary"><a style="font-family: 'Montserrat'; color: azure; text-decoration: none;" href="#" onclick="redirectToNextPage('organization.html', 24000)">Get Started Now</a></button>
+                    <button class="btn-primary"><a style="font-family: 'Montserrat'; color: azure; text-decoration: none;" href="#" onclick="redirectToNextPage('organization.html', 'Organization Standard Member')">Get Started Now</a></button>
                   </div>
                 </div>
               </div>
@@ -265,16 +265,11 @@
             membershipOptionsText.innerHTML = "If you are an enterprise, you have three membership options. Choose the membership tier that best suits your needs and aspirations";
           }
         }
-      
+        function redirectToNextPage(page, subscriptionType) {
+        sessionStorage.setItem('subscriptionType', subscriptionType);
+        window.location.href = page;
+      }
         document.getElementById("individual").style.display = "block";
-      </script>
-      <script>
-        function redirectToNextPage(page, amount) {
-          // Construct the URL with the query parameter
-          var nextPageUrl = page + '?amount=' + encodeURIComponent(amount);
-          // Redirect to the next page with the amount as a query parameter
-          window.location.href = nextPageUrl;
-        }
       </script>
       
 </body>

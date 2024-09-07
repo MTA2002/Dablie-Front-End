@@ -250,6 +250,11 @@
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 includeHTML();
+        
+                // Retrieve the subscription type from session storage
+                const subscriptionType = sessionStorage.getItem('subscriptionType');
+                
+                // Add event listener for form submission
                 document.querySelector('#organizationalForm').addEventListener('submit', function(event) {
                     event.preventDefault();
         
@@ -319,6 +324,7 @@
                         return;
                     }
         
+                    // Prepare form data for submission
                     const data = {
                         organization_name: formData.get('organization-name'),
                         website_url: formData.get('website-url') || null,
@@ -342,14 +348,15 @@
                         business_activities: formData.get('business-activities') || null,
                         goal_of_partnership: formData.get('partnership-goals') || null,
                         contribute_financially: formData.get('financial-contribution') || null,
-                        level_of_financial_contribution: formData.get('financial-level') || null
+                        level_of_financial_contribution: formData.get('financial-level') || null,
+                        subscription_type: subscriptionType  // Add subscription type to the data
                     };
         
                     console.log('Form data being sent:', data);
         
                     const apiUrl = 'http://64.112.124.78:8000/organization_membership_form';
-                    const paymentApiUrl = 'http://64.112.124.78:8100/payment?amount=24000&payment_mode=organization_membership'
-        
+                    
+                    // Send form data to the backend
                     fetch(apiUrl, {
                         method: 'POST',
                         headers: {
@@ -375,7 +382,10 @@
                         console.error('Error:', error);
                         alert(`Error: ${error.message}`);
                     });
-                    
+        
+                    // Initiate payment
+                    const paymentApiUrl = `http://64.112.124.78:8100/payment?subscription_type=${encodeURIComponent(subscriptionType)}&payment_mode=organization_membership`;
+        
                     fetch(paymentApiUrl, {
                         method: 'POST',
                         headers: {
@@ -393,8 +403,7 @@
                     })
                     .then(responseData => {
                         console.log(responseData);
-                        // alert('Payment Request sent successfully!');
-                        window.location.href = responseData.checkout_url;
+                        window.location.href = responseData.checkout_url; // Redirect to payment page
                     })
                     .catch(error => {
                         console.error('Error:', error);
