@@ -6,9 +6,7 @@ body {
 :root {
   /* fonts */
   --heading-4: Montserrat;
-  --font-exo-2: "Exo 2";
-  --font-segoe-ui: "Segoe UI";
-  --font-ibm-plex-sans: "IBM Plex Sans";
+  
 
   /* font sizes */
   --heading-4-size: 18px;

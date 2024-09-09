@@ -442,10 +442,10 @@
   background-color: var(--dablie-grey-400);
   overflow: hidden;
   flex-direction: row;
-  padding: var(--padding-26xl) var(--padding-6xl) 36px var(--padding-7xl);
+  padding: 36.3px 20px;
   box-sizing: border-box;
-  font-size: 16.5px;
-  font-family: var(--font-ibm-plex-sans);
+  font-size: 15px;
+  font-family: var(--heading-4);
 }
 .options-left {
   flex: 1;
@@ -628,7 +628,7 @@
   border-radius: var(--br-mini);
   background-color: var(--dablie-grey-400);
   flex-direction: column;
-  padding: var(--padding-11xl) var(--padding-10xs) 54.8px 11px;
+  padding: 44px 11px;
   gap: var(--gap-6xl);
 }
 .general-inquiries-parent,
@@ -832,7 +832,7 @@
   border-radius: var(--br-mini);
   background-color: var(--dablie-grey-400);
   flex-direction: column;
-  padding: var(--padding-11xl) var(--padding-smi) 54px;
+  padding:43px 13px;
   gap: var(--gap-5xl);
   font-size: var(--font-size-5xl);
   color: var(--color-black);
@@ -886,6 +886,9 @@
   flex-direction: column;
   justify-content: flex-start;
   gap: 53px;
+}
+.none{
+  display: none;
 }
 .contact-content-wrapper {
   align-self: stretch;
@@ -1322,6 +1325,9 @@
   .header1 {
     gap: var(--gap-6xl);
   }
+  .none{
+  display: block;
+}
   .head-text1 {
     font-size: inherit;
     margin-top: 36px !important;
