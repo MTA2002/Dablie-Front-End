@@ -1,0 +1,257 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+}
+
+#story_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem;
+    background-color: #DBEAF2;
+    height: 60vh;
+    flex-wrap: wrap;
+}
+
+#headline_container {
+    width: 45%;
+    text-align: left;
+    position: relative;
+}
+
+.headline_line {
+    width: 80%;
+    height: 5px;
+    background-color: #000;
+    position: absolute;
+    /* top: -20px; */
+    left: 0;
+}
+
+#headline_container h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+#image_container {
+    width: 50%;
+}
+
+#image_container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10%;
+}
+
+#description_container {
+    background-color: #ffffff;
+    padding: 4rem 25%;
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.stories_boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    position: relative;
+    flex-direction: row;
+    align-content: space-around;
+}
+
+.stories_box {
+    width: 30%;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    background-color: #e3ebef;
+    transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin: 10px; /* Add margin to separate the boxes */
+    /* padding: 10px; Add padding inside the boxes */
+}
+
+.stories_box:hover {
+    transform: scale(1.05); /* Slightly enlarges the box */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adds a deeper shadow */
+}
+
+.stories_box img {
+    width: 100%; /* Set the width to 100% to fit the container */
+    height: 230px; /* Set a fixed height */
+    object-fit: cover; /* Maintain aspect ratio and fill the container */
+}
+
+.stories_box label {
+    font-size: 14px;
+    font-weight: 500;
+    display: block;
+    margin: 10px 0 5px 0;
+    text-align: left;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.stories_box p {
+    font-size: 12px;
+    text-align: left;
+    color: #504f4f;
+    margin-bottom: 5px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.read_more_link {
+    font-size: 12px;
+    color: #508991;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    position: relative;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: 2%;
+}
+
+.read_more_link::after {
+    content: '→'; /* Unicode arrow */
+    position: absolute;
+    top: 1px;
+    color: #508991; /* Same color as the link */
+}
+
+.read_more_link:hover {
+    text-decoration: underline;
+}
+
+.thick-hr {
+    height: 8px;
+    background-color: #000000;
+    border: none;
+    margin: 1rem 2%;
+    width: 95%;
+}
+.updates h1 {
+    padding-left: 3%;
+}
+
+button {
+    background-color: #508991;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #3d6e7f;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    #story_container {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 1.5rem;
+        margin-top: 3%;
+    }
+    #image_container {
+        order: 1;
+        margin-bottom: 2%;
+        margin-top: -10%;
+    }
+    #headline_container {
+        order: 2;
+        margin-top: 5%;
+    }
+    #headline_container, #image_container {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    #headline_container h1 {
+        font-size: 2rem;
+    }
+
+    #description_container {
+        padding: 2rem 10%;
+    }
+
+    .update_card {
+        width: 100%;
+    }
+}
+@media (max-width: 600px) {
+    .stories_boxes {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .stories_box{
+        width: 80%;
+    }
+    .updates h1 {
+        font-size: 1.5rem;
+        padding-left: 5%;
+    }
+}
+@media (max-width: 480px) {
+    #story_container {
+        padding: 1rem;
+        margin-top: 13%;
+    }
+
+    #headline_container h1 {
+        font-size: 1.5rem;
+    }
+
+    #description_container {
+        padding: 1rem 10%;
+        font-size: 1rem;
+    }
+
+    .update_card {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .update_card h4 {
+        font-size: 1rem;
+    }
+
+    .update_card p {
+        font-size: 0.9rem;
+    }
+
+    .updates h1 {
+        font-size: 1.2rem;
+    }
+}
+
+button {
+    background-color: #508991;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #3d6e7f;
+}

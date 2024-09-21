@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Reservation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../Header & Footer/header.css">
+    <link rel="stylesheet" href="../Header & Footer/footer.css">
+    <link rel="stylesheet" href="./eventreg.css">
+    <link rel="icon" type="image/x-icon" href="../HomePage/images/Dablie_logo.png">
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="../index.html"><img src="../leadership page/assests/images/logo.png"
+                    alt="Dablie Foundation Logo"></a>
+        </div>
+        <div class="logo2">
+            <a href="../index.html"><img src="../leadership page/assests/images/logo2.png"
+                    alt="Dablie Foundation Logo"></a>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">About <i class="fa fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="../about-us/">About us</a></li>
+                        <li><a href="../our-mission/ ">Our mission</a>
+                        <li><a href="../our-story/ ">Our story</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Our Program <i class="fa fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="../leadership/ ">Leadership Program</a></li>
+                        <li><a href="../scholarships/ ">Scholarship Program</a></li>
+                        <li><a href="../economic-empowerment/ ">Economic Empowerment</a></li>
+                        <li><a href="../business/">Dablie Business Forum</a></li>
+                        <!-- <li><a href="../partners">Partners Directory</a></li> -->
+                        <li><a href="../youth/">Youth Program</a></li>
+                        <li><a href="../other/ ">Other Programs</a></li>
+                    </ul>
+                </li>
+                <li><a href="../events/ ">Events</a></li>
+                <li><a href="../stories/">Stories</a></li>
+            </ul>
+        </nav>
+        <div class="join-us-button">
+            <a href="../membership/ ">Join <img src="../HomePage/images/hands.png" alt="Hand Icon"
+                    class="icon"> </a>
+        </div>
+        <!-- Donate Button -->
+<div class="donate-button">
+    <a href="#" id="openModalBtn">Donate <img src="../HomePage/images/heart.png" alt="heart Icon" class="icon-2"></a>
+</div>
+
+<!-- The Modal -->
+<!--  
+<div id="donationModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div id="modalBody">Loading...</div>
+  </div>
+</div> -->
+
+        <div class="hamburger-menu-container">
+            <div class="menu-wrapper">
+                <p class="menu-btn"></p>
+                <p class="menu-btn-middle"></p> <!-- Added middle line -->
+            </div>
+        </div>
+    </header>
+    <nav class="menu-overlay">
+        <ul class="main-menu">
+            <li><a href="#" class="submenu-toggle about-toggle">About<span class="icon-container marginit"><i 
+                class="fa-solid fa-chevron-right"></i></span></a></li>
+            <li><a href="#" class="submenu-toggle programs-toggle">Programs<span class="icon-container marginit"><i
+                class="fa-solid fa-chevron-right"></i></span></a></li>
+            <li><a href="../events/ ">Events</a></li>
+            <li><a href="../stories/">Stories</a></li>
+            <li class="buttons-container">
+                <div class="join-us-button1"><a href="../membership/ ">Join <img
+                            src="../HomePage/images/hands.png" alt="Hand Icon" class="icon"></a></div>
+                <div class="button"><a href="https://chapa.link/donation/view/DN-VH06Xca2dDRW">Donate <img
+                            src="../HomePage/images/heart.png" alt="heart Icon" class="icon-2"> </a></div>
+            </li>
+        </ul>
+        <ul class="submenu programs-submenu">
+            <li><a href="#" class="back-to-main-menu"><i
+                        class="fa-solid fa-chevron-left style"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our Programs</a></li>
+            <li><a href="../leadership/ ">Leadership Program</a></li>
+            <li><a href="../scholarships/ ">Scholarship Program</a></li>
+            <li><a href="../economic-empowerment/ ">Economic Empowerment</a></li>
+            <li><a href="../business/">Dablie Business Forum</a></li>
+            <li><a href="../youth/">Youth Program</a></li>
+            <li><a href="../other/ ">Other Programs</a></li>
+        </ul>
+        <ul class="submenu about-submenu">
+            <li><a href="#" class="back-to-main-menu"><i
+                        class="fa-solid fa-chevron-left style"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About</a></li>
+            <li><a href="../about-us/">About us</a></li>
+            <li><a href="../our-mission/">Our mission</a></li>
+            <li><a href="../our-story/">Our story</a></li>
+        </ul>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/company/dablie-foundation/?viewAsMember=true"><i
+                    class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://x.com/dablieofficial"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://tiktok.com/@DablieFoundation"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.facebook.com/people/Dablie-Foundation/61563937820025/"><i
+                    class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://t.me/dabliefoundation"><i class="fa-brands fa-telegram"></i></a>
+        </div>
+    </nav>
+  <div class="container">
+    <h1>Upcoming Events</h1>
+    <div id="events" class="events">
+      <!-- Events will be dynamically inserted here -->
+    </div>
+  </div>
+  <div id="events"></div>
+
+  <div id="modal" style="display:none;">
+      <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2 id="modalTitle"></h2>
+          <p id="modalDate"></p>
+          <p id="modalLocation"></p>
+          <p id="modalDescription"></p>
+          <input type="hidden" id="eventRegistrationLink">
+          <button id="reservationLink">Register</button>
+          <button id="shareLink"><i class="fa-solid fa-share"></i></button>
+          <button id="copy-link"><i class="fa-solid fa-clipboard"></i></button>
+      </div>
+  </div>
+  
+  <script src="../Header & Footer/include.js"></script>
+    <script src="../Header & Footer/header.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        function fetchEvents() {
+            const url = 'https://api.dablie.org/events';
+            console.log(`Fetching events from: ${url}`);
+            fetch(url, {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Received data:', data);
+                if (data.length === 0) {
+                    console.error('Invalid data structure:', data);
+                    throw new Error('Invalid data structure');
+                }
+                displayEvents(data.events);
+            })
+            .catch(error => console.error('Error fetching data:', error));
+        }
+
+        function displayEvents(events) {
+            const eventsContainer = document.getElementById('events');
+            eventsContainer.innerHTML = '';
+            events.forEach(event => {
+                const eventElement = document.createElement('div');
+                eventElement.classList.add('event');
+                eventElement.innerHTML = `
+                    <h2>${event.title}</h2>
+                    <p>Date: ${new Date(event.starts_on * 1000).toISOString().split('T')[0]}</p>
+                    <p>Location: ${event.location ? event.location : 'Location not specified'}</p>
+                    <p>${event.description}</p>
+                    <button onclick="window.open('${event.event_registration_link}', '_blank')">Register</button>
+                    <button id="shareBtn-${event.id}">
+                        <i class="fa-solid fa-share"></i></button>
+                    <button id="copy-link-${event.id}">
+                        <i class="fa-solid fa-link"></i>
+                    </button>
+                `;
+                eventsContainer.appendChild(eventElement);
+            });
+
+            events.forEach(event => {
+                const copyLinkButton = document.getElementById(`copy-link-${event.id}`);
+                const shareButton = document.getElementById(`shareBtn-${event.id}`);
+
+                shareButton.addEventListener('click', () => {
+                    const shareData = {
+                        title: event.title,
+                        url: event.event_registration_link,
+                    };
+                    navigator.share(shareData)
+                    .then(() => console.log('Shared:', shareData))
+                    .catch(error => console.error('Error sharing:', error));
+                });
+
+                
+                copyLinkButton.addEventListener('click', () => {
+                    copyToClipboard(event.event_registration_link);
+                    // change the fa-link to fa-check
+                    copyLinkButton.innerHTML = '<i class="fa-solid fa-check"></i>';
+                    setTimeout(() => {
+                        copyLinkButton.innerHTML = '<i class="fa-solid fa-link"></i>';
+                    }, 2000);
+                });
+            });
+
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text)
+                .then(() => console.log('Copied to clipboard:', text))
+                .catch(error => console.error('Error copying to clipboard:', error));
+            }
+        }
+
+        fetchEvents();
+    });
+</script>
+
+</body>
+</html>

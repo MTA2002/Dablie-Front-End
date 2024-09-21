@@ -1,58 +1,66 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const menuWrapper = document.querySelector(".menu-wrapper");
     const menuBtn = document.querySelector(".menu-btn");
     const menuOverlay = document.querySelector(".menu-overlay");
     const mainMenu = document.querySelector(".main-menu");
-    const submenu = document.querySelector(".submenu");
-    const submenuToggle = document.querySelector(".submenu-toggle");
-    const backToMainMenu = document.querySelector(".back-to-main-menu");
-  
-    menuWrapper.addEventListener("click", function() {
+    const programsSubmenu = document.querySelector(".programs-submenu");
+    const aboutSubmenu = document.querySelector(".about-submenu");
+    const programsToggle = document.querySelector(".programs-toggle");
+    const aboutToggle = document.querySelector(".about-toggle");
+    const backToMainMenuLinks = document.querySelectorAll(".back-to-main-menu");
+    const socialMedia = document.querySelector('.social-media');
+    const openModalBtn = document.querySelector('#open-donation-popup-new'); // Updated to target the correct button
+
+    menuWrapper.addEventListener("click", function () {
         menuWrapper.classList.toggle("menu-wrapper-on");
         menuBtn.classList.toggle("menu-btn-on");
         menuOverlay.classList.toggle("open");
     });
-  
-    submenuToggle.addEventListener("click", function(event) {
+
+    programsToggle.addEventListener("click", function(event) {
         event.preventDefault();
         mainMenu.classList.add("hidden");
-        submenu.classList.add("open");
+        programsSubmenu.classList.add("open");
+        socialMedia.classList.add('hidden');
     });
-  
-    backToMainMenu.addEventListener("click", function(event) {
+
+    aboutToggle.addEventListener("click", function(event) {
         event.preventDefault();
-        mainMenu.classList.remove("hidden");
-        submenu.classList.remove("open");
+        mainMenu.classList.add("hidden");
+        aboutSubmenu.classList.add("open");
+        socialMedia.classList.add('hidden');
     });
-  
+
+    backToMainMenuLinks.forEach(function(backToMainMenu) {
+        backToMainMenu.addEventListener("click", function(event) {
+            event.preventDefault();
+            mainMenu.classList.remove("hidden");
+            programsSubmenu.classList.remove("open");
+            aboutSubmenu.classList.remove("open");
+            socialMedia.classList.remove('hidden');
+        });
+    });
+
     window.addEventListener("click", function(event) {
         if (!menuWrapper.contains(event.target) && !menuOverlay.contains(event.target)) {
             menuWrapper.classList.remove("menu-wrapper-on");
             menuBtn.classList.remove("menu-btn-on");
             menuOverlay.classList.remove("open");
             mainMenu.classList.remove("hidden");
-            submenu.classList.remove("open");
+            programsSubmenu.classList.remove("open");
+            aboutSubmenu.classList.remove("open");
+            socialMedia.classList.remove('hidden');
         }
     });
-  });
-  document.addEventListener("DOMContentLoaded", function () {
-    const submenuToggle = document.querySelector('.submenu-toggle');
-    const backToMainMenu = document.querySelector('.back-to-main-menu');
-    const submenu = document.querySelector('.submenu');
-    const mainMenu = document.querySelector('.main-menu');
-    const socialMedia = document.querySelector('.social-media');
 
-    submenuToggle.addEventListener('click', function (e) {
-        e.preventDefault();
-        submenu.classList.add('open');
-        mainMenu.classList.add('hidden');
-        socialMedia.classList.add('hidden');
-    });
-
-    backToMainMenu.addEventListener('click', function (e) {
-        e.preventDefault();
-        submenu.classList.remove('open');
-        mainMenu.classList.remove('hidden');
+    // Close mobile menu when the donate pop-up opens
+    openModalBtn.addEventListener("click", function(event) {
+        menuWrapper.classList.remove("menu-wrapper-on");
+        menuBtn.classList.remove("menu-btn-on");
+        menuOverlay.classList.remove("open");
+        mainMenu.classList.remove("hidden");
+        programsSubmenu.classList.remove("open");
+        aboutSubmenu.classList.remove("open");
         socialMedia.classList.remove('hidden');
     });
 });

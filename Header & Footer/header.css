@@ -30,12 +30,16 @@ header {
 
 .logo img {
   max-height: 64px; /* Adjusted for better fit */
+  padding-top: 2%;
 }
 
 .logo2 {
   display: none;
 }
-
+.logo2 img {
+  max-height: 64px; /* Adjusted for better fit */
+  padding-top: 2%;
+}
 .navbar {
   flex: 1;
   display: flex;
@@ -145,18 +149,19 @@ header {
   padding: 10px 14px 10px 18px;
   border-radius: 10.9px;
   font-family: Montserrat;
-  font-size: 9.3px;
+  font-size: 12px;
   font-weight: normal;
   font-stretch: normal;
   text-align: left;
   cursor: pointer;
+  width: 85px;
 }
 
 .icon-2 {
   display: flex;
   margin-left: 4px;
-  width: 8px;
-  height: 8px;
+  width: 13px;
+  height: 13px;
 }
 
 .donate-button a:hover {
@@ -338,7 +343,7 @@ header {
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 950px) {
   .navbar {
     display: none; /* Hidden on smaller screens */
   }
@@ -350,7 +355,9 @@ header {
   .donate-button {
     display: none;
   }
-
+  .join-us-button {
+    display: none; /* Hide the button on smaller screens */
+    }
   .button a {
     text-decoration: none;
     transition: background-color 0.3s ease;
@@ -364,7 +371,6 @@ header {
     padding: 5px 14px 5px 18px;
     border-radius: 10.9px;
     font-family: Montserrat;
-    font-size: 9.3px;
     font-weight: normal;
     font-stretch: normal;
     text-align: left;
@@ -382,7 +388,7 @@ header {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 46%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     }
@@ -423,20 +429,34 @@ header {
     }
     }
     
-    @media (min-width: 769px) {
+    /* @media (min-width: 911px) {
     .hamburger-menu-container {
-    display: none; /* Hidden on larger screens */
+    display: none; 
     }
     
     .navbar {
-    display: flex !important; /* Ensure it is displayed on larger screens */
+    display: flex !important;
     }
     
     .donate-button {
-    display: inline-flex !important; /* Ensure it is displayed on larger screens */
+    display: inline-flex !important;
+
+    }
+  } */
+   @media (max-height: 632px) {
+    .buttons-container, .social-media {
+      display: none !important;
+    }
+   }
+
+    @media (max-width: 600px) {
+    .logo{
+      display: none;
+    }
+    .logo2{
+      display: block;
     }
     }
-    
     /* Styles for the Join Us button */
     .join-us-button {
     order: 2; /* Ensure it appears next to the donate button */
@@ -453,7 +473,7 @@ header {
     padding: 4px 8.1px 5px 12px;
     border-radius: 10.9px;
     font-family: Montserrat;
-    font-size: 9.3px;
+    font-size: 12px;
     font-weight: normal;
     font-stretch: normal;
     text-align: left;
@@ -461,23 +481,24 @@ header {
     background-color: #d2e6f0;
     color: #004346;
     border: solid 1px #004346;
+    width: 85px;
     }
     
     .icon {
     margin-left: 2px;
-    width: 12px;
-    height: 12px;
+    width: 16px;
+    height: 16px;
     }
     
     .join-us-button a:hover {
     background-color: #9eb1b2; /* Darker shade on hover */
     }
     
-    @media (max-width: 830px) {
+    /* @media (max-width: 830px) {
     .join-us-button {
-    display: none; /* Hide the button on smaller screens */
+    display: none; Hide the button on smaller screens 
     }
-    }
+    } */
     
     .join-us-button1 a {
     text-decoration: none;
@@ -489,7 +510,6 @@ header {
     padding: 4px 8.1px 5px 12px;
     border-radius: 10.9px;
     font-family: Montserrat;
-    font-size: 9.3px;
     font-weight: normal;
     font-stretch: normal;
     text-align: left;
@@ -497,7 +517,7 @@ header {
     background-color: #d2e6f0;
     color: #004346;
     border: solid 1px #004346;
-    width: 200px; /* Set fixed width */
+    width: 210px; /* Set fixed width */
     }
     
     .marginit {
@@ -511,7 +531,7 @@ header {
       width: 200px; /* Ensure social media icons match button width */
       text-align: center; /* Center the social media icons */
       position: fixed; /* Make the social media icons fixed */
-      bottom: 22%; /* Set the bottom margin to 22% */
+      bottom: 16%; /* Set the bottom margin to 22% */
     }
     
     .social-media a {
@@ -529,3 +549,5 @@ header {
     .social-media.hidden {
       display: none;
     }
+
+    
