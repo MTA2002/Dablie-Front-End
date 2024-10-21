@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const storyBox = document.createElement('div');
             storyBox.classList.add('stories_box');
             storyBox.innerHTML = `
-                <img src="${article.image}" alt="${article.headline}">
+                <img src="../data/images/${article.image}" alt="${article.headline}">
                 <label>${article.headline}</label>
                 <p>${truncateText(article.description, 3)}</p>
                 <a href="./stories/story.html?id=${article.id}" class="read_more_link">Read More</a>

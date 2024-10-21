@@ -172,7 +172,7 @@
     function fetchStory(id) {
         const url = `https://api.dablie.org/news/${id}`;
         fetch(url, {
-            method: 'GET',
+            method: 'PUT',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
