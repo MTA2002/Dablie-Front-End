@@ -185,10 +185,7 @@
             return response.json();
         })
         .then(data => {
-            if (data.status !== 'success') {
-                throw new Error('Error fetching story: ' + data.message);
-            }
-            displayStory(data.article);
+            displayStory(data);
         })
         .catch(error => {
             console.error('Error fetching data:', error);
