@@ -248,7 +248,7 @@
     function fetchLatestNews() {
         const url = 'https://api.dablie.org/news?page=1&pagination=3';
         fetch(url, {
-            method: 'GET',
+            method: 'PUT',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
