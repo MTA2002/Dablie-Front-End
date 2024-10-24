@@ -513,7 +513,7 @@
 .popup-close {
     position: absolute;
     top: 25px;
-    right: 5px;
+    right: 15px;
     font-size: 35px;
     cursor: pointer;
     color: #aaa;
