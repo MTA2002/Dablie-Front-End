@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function initiatePayment(data) {
-        const paymentApiUrl = 'https://api.dablie.org/payment';
+        const paymentApiUrl = 'https://payment.dablie.org/payment';
 
         const paymentData = {
             subscription_type: data.subscription_type,

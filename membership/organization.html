@@ -384,7 +384,7 @@
                     });
         
                     // Initiate payment
-                    const paymentApiUrl = `https://api.dablie.org/payment?subscription_type=${encodeURIComponent(subscriptionType)}&payment_mode=organization_membership`;
+                    const paymentApiUrl = `https://payment.dablie.org/payment?subscription_type=${encodeURIComponent(subscriptionType)}&payment_mode=organization_membership`;
         
                     fetch(paymentApiUrl, {
                         method: 'POST',
