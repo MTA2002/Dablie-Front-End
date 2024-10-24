@@ -354,7 +354,7 @@
         
                     console.log('Form data being sent:', data);
         
-                    const apiUrl = 'http://64.112.124.78:8000/organization_membership_form';
+                    const apiUrl = 'http://api.dablie.org/organization_membership_form';
                     
                     // Send form data to the backend
                     fetch(apiUrl, {
@@ -384,7 +384,7 @@
                     });
         
                     // Initiate payment
-                    const paymentApiUrl = `http://64.112.124.78:8100/payment?subscription_type=${encodeURIComponent(subscriptionType)}&payment_mode=organization_membership`;
+                    const paymentApiUrl = `http://api.dablie.org/payment?subscription_type=${encodeURIComponent(subscriptionType)}&payment_mode=organization_membership`;
         
                     fetch(paymentApiUrl, {
                         method: 'POST',

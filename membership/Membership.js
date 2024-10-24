@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
             subscription_type: formData.get('subscription_type') // Get the subscription type from hidden field
         };
 
-        const apiUrl = 'http://64.112.124.78:8000/individual_membership_form';
+        const apiUrl = 'http://api.dablie.org/individual_membership_form';
 
         fetch(apiUrl, {
             method: 'POST',
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function initiatePayment(data) {
-        const paymentApiUrl = 'http://64.112.124.78:8100/payment';
+        const paymentApiUrl = 'http://api.dablie.org/payment';
 
         const paymentData = {
             subscription_type: data.subscription_type,
