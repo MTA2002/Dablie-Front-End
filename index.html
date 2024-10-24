@@ -538,7 +538,7 @@
         }
 
         // Send the donation amount to the backend
-        fetch('http://api.dablie.org/payment?amount=' + amount + '&payment_mode=donation', {
+        fetch('https://api.dablie.org/payment?amount=' + amount + '&payment_mode=donation', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
