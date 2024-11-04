@@ -66,23 +66,23 @@ document.addEventListener('DOMContentLoaded', function () {
     // Variables for buttons and sections
     const onceButton = document.querySelector('.once');
     const monthlyButton = document.querySelector('.monthly');
-    const amountOnceDiv = document.querySelector('.amount-once');
-    const amountOptionsDiv = document.querySelector('.amount-options');
-    const donateButton = document.querySelector('.donate3-button');
-    const donorInfoSection = document.querySelector('.donor-info');
+    const amountOnceDiv = document.querySelector('.donate-amount-once');
+    const amountOptionsDiv = document.querySelector('.donate-amount-options');
+    const donateButton = document.querySelector('.donate-donate3-button');
+    const donorInfoSection = document.querySelector('.donate-donor-info');
     const donationPopup = document.getElementById('donation-popup');
-    const popupClose = document.querySelector('.popup-close');
-    const customAmountInput = document.querySelector('.custom-amount input');
+    const popupClose = document.querySelector('.donate-popup-close');
+    const customAmountInput = document.querySelector('.donate-custom-amount input');
     const currencySelector = document.getElementById('currency-selector');
 
     // Get buttons to open the donation popup
     const openPopupBtns = [
-    document.getElementById('open-donation-popup-header'),
-    document.getElementById('open-donation-popup-new'),
-    document.getElementById('open-donation-popup-footer')
+        document.getElementById('open-donation-popup-header'),
+        document.getElementById('open-donation-popup-new'),
+        document.getElementById('open-donation-popup-footer')
     ];
 
-    // Add event listeners to both buttons to open the popup
+    // Add event listeners to open the popup
     openPopupBtns.forEach(function(button) {
         if (button) {
             button.addEventListener('click', function (event) {
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Update the custom amount input when an amount button is clicked
-    document.querySelectorAll('.amount-once button, .amount-options button').forEach(function(button) {
+    document.querySelectorAll('.donate-amount-once button, .donate-amount-options button').forEach(function(button) {
         button.addEventListener('click', function() {
             customAmountInput.value = this.textContent;
         });
