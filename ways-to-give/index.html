@@ -246,7 +246,7 @@
             </div>
             <div onclick="redirectToWebsite();" class="donate-button-wrapper">
               <button class="donate-button5">
-                <div class="donate" >Donate</div>
+                <div class="donate"id="open-donation-popup-header">Donate</div>
                 <div class="vector-wrapper">
                   <img class="vector-icon" alt="" src="./public/vector.svg" />
                 </div>
@@ -283,7 +283,7 @@
     <div class="footer-section">
         <p class="title">Get Involved<p>
             <a class="subtitle" href="../ways-to-give/">Ways to Give </a>
-            <a href="#" class="subtitle" id="open-donation-popup-footer">Donate</a>
+            <a href="#" class="subtitle" id="open-donation-popup-header">Donate</a>
             <a class="subtitle" href="../contact/ ">Contact us</a>
             <a class="subtitle" href="../work-with-us/">Work with us</a>
     </div>
@@ -297,16 +297,11 @@
             <a href="https://t.me/dabliefoundation"><i class="fa-brands fa-telegram"></i></a>
         </div>
         <div class="hl-right"></div>
-        <p>©2024 Dablie Foundation, all rights reserved</p>
-    </div>
+<p>©<script>document.write(new Date().getFullYear());</script> Dablie Foundation, all rights reserved</p>
+</div>
 </footer>
   
   <script src="../donate/script.js"></script>
   <script src="../HomePage/home.js"></script>
   <script src="../Header & Footer/header.js"></script>
-  <script>
-    function redirectToWebsite() {
-      window.location.href = 'https://chapa.link/donation/view/DN-VH06Xca2dDRW';
-    }
-  </script>
 </html>
