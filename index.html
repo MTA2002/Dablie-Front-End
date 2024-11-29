@@ -3,17 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- Updated Content Security Policy -->
-    <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';
-        script-src 'self' https://cdnjs.cloudflare.com https://fonts.googleapis.com;
-        style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com;
-        img-src 'self' data: https://dablie.org;
-        font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;
-        connect-src 'self';
-        frame-src 'none';
-        object-src 'none';
-    ">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dablie Foundation | Discovering a bond linking individuals everywhere</title>
     <meta name="title" content="Dablie Foundation | Discovering a bond linking individuals everywhere" />
@@ -31,381 +20,444 @@
     <meta property="twitter:description"
         content="Join us in building a global network of empowered communities working together to create a world of possibility." />
     <meta property="twitter:image" content="https://dablie.org/other/Other_Assets/dablie-banner.png" />
-
-    <!-- External Stylesheets with Corrected CSP -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous">
-
-    <!-- Local Stylesheets -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="Header & Footer/header.css">
     <link rel="stylesheet" href="Header & Footer/footer.css">
     <link rel="stylesheet" href="HomePage/homepage.css">
     <link rel="stylesheet" href="./donate/style.css">
-
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="HomePage/images/Dablie_logo.png">
 </head>
-
 <body>
     <header>
         <div class="logo">
-            <a href="./index.html"><img src="./leadership page/assests/images/logo.png" alt="Dablie Foundation Logo"></a>
+            <a href="./index.html"><img src="./leadership page/assests/images/logo.png"
+                    alt="Dablie Foundation Logo"></a>
         </div>
         <div class="logo2">
-            <a href="./index.html"><img src="./leadership page/assests/images/logo2.png" alt="Dablie Foundation Logo"></a>
+            <a href="./index.html"><img src="./leadership page/assests/images/logo2.png"
+                    alt="Dablie Foundation Logo"></a>
         </div>
         <nav class="navbar">
             <ul>
-                <li><a href="#">About <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                <li><a href="#">About <i class="fa fa-chevron-down"></i></a>
                     <ul class="dropdown">
                         <li><a href="./about-us/">About us</a></li>
-                        <li><a href="./our-mission/">Our mission</a></li>
-                        <li><a href="./our-story/">Our story</a></li>
+                        <li><a href="./our-mission/ ">Our mission</a>
+                        <li><a href="./our-story/ ">Our story</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Our Program <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                <li><a href="#">Our Program <i class="fa fa-chevron-down"></i></a>
                     <ul class="dropdown">
-                        <li><a href="./leadership/">Leadership Program</a></li>
-                        <li><a href="./scholarships/">Scholarship Program</a></li>
-                        <li><a href="./economic-empowerment/">Economic Empowerment</a></li>
+                        <li><a href="./leadership/ ">Leadership Program</a></li>
+                        <li><a href="./scholarships/ ">Scholarship Program</a></li>
+                        <li><a href="./economic-empowerment/ ">Economic Empowerment</a></li>
                         <li><a href="./business/">Dablie Business Forum</a></li>
                         <!-- <li><a href="./partners">Partners Directory</a></li> -->
                         <li><a href="./youth/">Youth Program</a></li>
-                        <li><a href="./other/">Other Programs</a></li>
+                        <li><a href="./other/ ">Other Programs</a></li>
                     </ul>
                 </li>
-                <li><a href="./events/">Events</a></li>
+                <li><a href="./events/ ">Events</a></li>
                 <li><a href="./stories/">Stories</a></li>
             </ul>
         </nav>
         <div class="join-us-button">
-            <a href="./membership/">Join <img src="./HomePage/images/hands.png" alt="Hand Icon" class="icon"> </a>
+            <a href="./membership/ ">Join <img src="./HomePage/images/hands.png" alt="Hand Icon"
+                    class="icon"> </a>
         </div>
-        <!-- Donate Button -->
-        <div class="donate-button">
-            <a href="#" id="open-donation-popup-header">Donate <img src="../HomePage/images/heart.png" alt="heart Icon" class="donate-icon2-image"></a>
+<!-- Donate Button -->
+<div class="donate-button">
+    <a href="#" id="open-donation-popup-header">Donate <img src="../HomePage/images/heart.png" alt="heart Icon" class="donate-icon2-image"></a>
+</div>
+
+<div class="hamburger-menu-container">
+    <div class="menu-wrapper">
+        <p class="menu-btn"></p>
+        <p class="menu-btn-middle"></p> <!-- Added middle line -->
+    </div>
+</div>
+
+<!-- Pop-up Overlay -->
+<div id="donation-popup" class="donate-popup-overlay" style="display: none;">
+    <div class="donate-popup-content">
+        <span class="donate-popup-close">&times;</span>
+        <!-- Your existing donation page content goes here -->
+        <div class="donate-title5">
+            <h1 class="donate-subtitl">Donate!</h1>
         </div>
+        <!-- Rest of your donation page code -->
 
-        <div class="hamburger-menu-container">
-            <div class="menu-wrapper">
-                <p class="menu-btn" aria-hidden="true"></p>
-                <p class="menu-btn-middle" aria-hidden="true"></p> <!-- Added middle line -->
+        <div class="donate-container">
+            <div class="donate-content">
+                <div class="donate-image">
+                    <img src="../donate/images/image.png" alt="Donate Image">
+                </div>
+                <div class="text">
+                    <h3 class="donate-sub" style="margin-top: 15px;">Donate!</h3>
+                    <p class="donate-sub">Your gift today will empower, inspire, and connect the next generation of changemakers. Let’s never stop moving toward the world we want. Make your gift today!</p>
+                </div>
+                <div class="donate-contact">
+                    <a href="#">Questions</a> 
+                    <a href="#">Contact us by Email</a>
+                </div>
+            </div>
+            <div class="donate-donation-form">
+                <div class="donate-donation-content">
+                    <h2 class="donate-title2"><img src="../donate/images/mdi_security-lock-outline.png" class="donate-icon-image"> Secure Donation</h2>
+                    <div class="donate-donation-type">
+                        <button class="once">Donate Once</button>
+                        <button class="monthly active"><img src="../donate/images/mdi_heart.png" class="donate-icon2-image">Monthly</button>
+                    </div>
+                    <div class="donate-amount-once" style="display: none;">
+                        <button>2,400</button>
+                        <button>10,000</button>
+                        <button>30,000</button>
+                        <button>60,000</button>
+                        <button>70,000</button>
+                        <button>80,000</button>
+                    </div>
+                    <div class="donate-amount-options">
+                        <button>1,200</button>
+                        <button>1,500</button>
+                        <button>3,000</button>
+                        <button>6,000</button>
+                        <button>7,000</button>
+                        <button>8,000</button>
+                    </div>
+                    <div class="donate-custom-amount">
+                        <input type="text" value="2,500">
+                        <select id="currency-selector">
+                            <option value="ETB">ETB</option>
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                        </select>
+                    </div>
+                    <div class="donate-button7">
+                        <button class="donate-donate3-button">Donate</button>
+                    </div>
+                </div>
+                
+                <!-- Donor Info Section (Initially Hidden) -->
+                <div class="donate-donor-info" style="display: none;">
+                    <h2>
+                        <span class="donate-back-arrow"><i class="fa-solid fa-angle-left"></i></span> <!-- This is the back arrow -->
+                        Enter your details
+                    </h2>
+                    <form>
+                        <div class="donate-form-group">
+                            <input type="text" placeholder="First name" required>
+                        </div>
+                        <div class="donate-form-group">
+                            <input type="text" placeholder="Last name" required>
+                        </div>
+                        <div class="donate-form-group">
+                            <input type="email" placeholder="Email address (optional)">
+                        </div>
+                        <div class="donate-form-group phone-group">
+                            <select>
+                                <option value="+251" selected>🇪🇹</option>
+                                <!-- Add more country codes as needed -->
+                            </select>
+                            <input type="tel" placeholder="Phone" required>
+                        </div>
+                        <div class="donate-form-group">
+                            <input type="checkbox" id="agree" required>
+                            <label for="agree">I agree to the <a href="#">Terms of Service.</a></label>
+                        </div>
+                        <button type="submit" class="donate-submit-donation">Continue</button>
+                    </form>
+                </div>
             </div>
         </div>
+    </div>
+</div>
+</header>
+<nav class="menu-overlay">
+    <ul class="main-menu">
+        <li><a href="#" class="submenu-toggle about-toggle">About<span class="icon-container marginit"><i 
+            class="fa-solid fa-chevron-right"></i></span></a></li>
+        <li><a href="#" class="submenu-toggle programs-toggle">Programs<span class="icon-container marginit"><i
+            class="fa-solid fa-chevron-right"></i></span></a></li>
+        <li><a href="../events/ ">Events</a></li>
+        <li><a href="../stories/">Stories</a></li>
+        <li class="buttons-container">
+            <div class="join-us-button1"><a href="../membership/ ">Join <img
+                        src="../HomePage/images/hands.png" alt="Hand Icon" class="donate-icon-image"></a></div>
+            <div class="button">
+                <a href="#" id="open-donation-popup-new">Donate <img src="../HomePage/images/heart.png" alt="heart Icon" class="donate-icon2-image"></a>
+            </div>
+        </li>
+        </ul>
+        <ul class="submenu programs-submenu">
+            <li><a href="#" class="back-to-main-menu"><i
+                        class="fa-solid fa-chevron-left style"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our Programs</a></li>
+            <li><a href="./leadership/ ">Leadership Program</a></li>
+            <li><a href="./scholarships/ ">Scholarship Program</a></li>
+            <li><a href="./economic-empowerment/ ">Economic Empowerment</a></li>
+            <li><a href="./business/">Dablie Business Forum</a></li>
+            <li><a href="./youth/">Youth Program</a></li>
+            <li><a href="./other/ ">Other Programs</a></li>
+        </ul>
+        <ul class="submenu about-submenu">
+            <li><a href="#" class="back-to-main-menu"><i
+                        class="fa-solid fa-chevron-left style"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About</a></li>
+            <li><a href="./about-us/">About us</a></li>
+            <li><a href="./our-mission/">Our mission</a></li>
+            <li><a href="./our-story/">Our story</a></li>
+        </ul>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/company/dablie-foundation/?viewAsMember=true"><i
+                    class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://x.com/dablieofficial"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://tiktok.com/@DablieFoundation"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.facebook.com/people/Dablie-Foundation/61563937820025/"><i
+                    class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://t.me/dabliefoundation"><i class="fa-brands fa-telegram"></i></a>
+        </div>
+    </nav>
+    <main>
 
-        <!-- Pop-up Overlay -->
-        <div id="donation-popup" class="donate-popup-overlay" style="display: none;">
-            <div class="donate-popup-content">
-                <span class="donate-popup-close" aria-label="Close Donation Popup">&times;</span>
-                <!-- Donation Page Content -->
-                <div class="donate-title5">
-                    <h1 class="donate-subtitl">Donate!</h1>
+        <section class="hero">
+            <div class="hero_logo">
+                <img src="./HomePage/images/Group 20@2x.png" alt="Logo">
+            </div>
+            <div class="hero_text">
+                <p>Our mission is to inspire, empower, and link individuals where they shape their future</p>
+            </div>
+            <div class="hero_button">
+                <a href=" stories/">See our work in action <i class="fa-solid fa-angle-right"
+                        centerit></i></a>
+            </div>
+        
+        </section>
+
+        <section class="updates">
+            <div class="updates_title">
+                <h1>Latest Stories</h1>
+            </div>
+            <div class="stories_boxes" id="stories_container">
+            </div>
+            <h5 class="more"><a href="./stories/">Read More Stories</a></h5>
+        </section>
+
+        <section class="programs">
+            <h2>The Programs We Offer</h2>
+            <div class="programs_grid">
+                <div class="program_card">
+                    <img src="./HomePage/images/leadership.png" alt="Leadership Program">
+                    <div class="program_text_right">
+                        <h3>Leadership Program</h3>
+                        <p>Learn how we're developing and empowering changemakers to build inclusive and equitable
+                            communities.</p>
+                        <a href="./leadership/ ">Learn More</a>
+                    </div>
                 </div>
-                <!-- Rest of your donation page code -->
 
-                <div class="donate-container">
-                    <div class="donate-content">
-                        <div class="donate-image">
-                            <img src="../donate/images/image.png" alt="Donate Image">
+                <div class="program_card">
+                    <div class="program_card_Two">
+                        <div class="program_text_left">
+                            <h3>Economic Empowerment Program</h3>
+                            <p>We are committed to empowering entrepreneurs and startups by providing mentorship,
+                                training,
+                                and financial support.</p>
+                            <a href="./economic-empowerment/ ">Learn More</a>
                         </div>
-                        <div class="text">
-                            <h3 class="donate-sub" style="margin-top: 15px;">Donate!</h3>
-                            <p class="donate-sub">Your gift today will empower, inspire, and connect the next generation of changemakers. Let’s never stop moving toward the world we want. Make your gift today!</p>
-                        </div>
-                        <div class="donate-contact">
-                            <a href="#">Questions</a> 
-                            <a href="#">Contact us by Email</a>
-                        </div>
+                        <img src="./HomePage/images/moneyOnATree.png" alt="Economic Empowerment Program">
                     </div>
-                    <div class="donate-donation-form">
-                        <div class="donate-donation-content">
-                            <h2 class="donate-title2"><img src="../donate/images/mdi_security-lock-outline.png" class="donate-icon-image" alt="Secure Donation Icon"> Secure Donation</h2>
-                            <div class="donate-donation-type">
-                                <button class="once">Donate Once</button>
-                                <button class="monthly active"><img src="../donate/images/mdi_heart.png" class="donate-icon2-image" alt="Monthly Donation Icon">Monthly</button>
-                            </div>
-                            <div class="donate-amount-once" style="display: none;">
-                                <button>2,400</button>
-                                <button>10,000</button>
-                                <button>30,000</button>
-                                <button>60,000</button>
-                                <button>70,000</button>
-                                <button>80,000</button>
-                            </div>
-                            <div class="donate-amount-options">
-                                <button>1,200</button>
-                                <button>1,500</button>
-                                <button>3,000</button>
-                                <button>6,000</button>
-                                <button>7,000</button>
-                                <button>8,000</button>
-                            </div>
-                            <div class="donate-custom-amount">
-                                <input type="text" value="2,500" aria-label="Custom Donation Amount">
-                                <select id="currency-selector" aria-label="Currency Selector">
-                                    <option value="ETB">ETB</option>
-                                    <option value="USD">USD</option>
-                                    <option value="EUR">EUR</option>
-                                    <option value="GBP">GBP</option>
-                                </select>
-                            </div>
-                            <div class="donate-button7">
-                                <button class="donate-donate3-button">Donate</button>
-                            </div>
-                        </div>
-                        
-                        <!-- Donor Info Section (Initially Hidden) -->
-                        <div class="donate-donor-info" style="display: none;">
-                            <h2>
-                                <span class="donate-back-arrow"><i class="fa-solid fa-angle-left" aria-hidden="true"></i></span> <!-- Back Arrow -->
-                                Enter your details
-                            </h2>
-                            <form>
-                                <div class="donate-form-group">
-                                    <label for="first-name" class="visually-hidden">First Name</label>
-                                    <input type="text" id="first-name" placeholder="First name" required>
-                                </div>
-                                <div class="donate-form-group">
-                                    <label for="last-name" class="visually-hidden">Last Name</label>
-                                    <input type="text" id="last-name" placeholder="Last name" required>
-                                </div>
-                                <div class="donate-form-group">
-                                    <label for="email" class="visually-hidden">Email Address</label>
-                                    <input type="email" id="email" placeholder="Email address (optional)">
-                                </div>
-                                <div class="donate-form-group phone-group">
-                                    <label for="phone" class="visually-hidden">Phone Number</label>
-                                    <select aria-label="Country Code Selector">
-                                        <option value="+251" selected>🇪🇹</option>
-                                        <!-- Add more country codes as needed -->
-                                    </select>
-                                    <input type="tel" id="phone" placeholder="Phone" required>
-                                </div>
-                                <div class="donate-form-group">
-                                    <input type="checkbox" id="agree" required>
-                                    <label for="agree">I agree to the <a href="#">Terms of Service.</a></label>
-                                </div>
-                                <button type="submit" class="donate-submit-donation">Continue</button>
-                            </form>
-                        </div>
+                </div>
+
+                <div class="program_card">
+                    <img src="./HomePage/images/scholarship.png" alt="Scholarship Program">
+                    <div class="program_text_right">
+                        <h3>Scholarship Program</h3>
+                        <p>Recognizing education's transformative power, we provide scholarships and opportunities to
+                            access
+                            quality education, and
+                            empowering individuals.</p>
+                        <a href="./scholarships/ ">Learn More</a>
                     </div>
+                </div>
+
+
+                <div class="program_card">
+                    <div class="program_card_Two">
+                        <div class="program_text_left">
+                            <h3>Youth Club</h3>
+                            <p>Are you a youth seeking to connect, learn, and make a difference? Look no further than
+                                our
+                                vibrant Youth Club!</p>
+                            <a href="./youth/">Learn More</a>
+                        </div>
+                        <img src="./HomePage/images/youth-club.png" alt="Youth Club">
+                    </div>
+                </div>
+
+
+                <!-- <div class="program_card hidden">
+                        <img src="./HomePage/images/handmoney.png" alt="Partners Directory">
+                        <div class="program_text_right">
+                            <h3>Partners Directory</h3>
+                            <p>Join visionary leaders driving positive change. Discover how your organization can contribute
+                                in our Partner Directory.</p>
+                            <a href="./partners">Learn More</a>
+                        </div>
+                    </div> -->
+
+                <div class="program_card hidden">
+                    <img src="./HomePage/images/circleMoney.png" alt="Economic Empowerment Program">
+                    <div class="program_text_right">
+                        <h3>Dablie Business Forum</h3>
+                        <p>Entrepreneurs and business leaders, thrive and contribute to your community's economic
+                            success. </p>
+                        <a href="./business/">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="program_card hidden">
+                    <div class="program_card_Two">
+                        <div class="program_text_left">
+                            <h3>Other Programs</h3>
+                            <p>We offer diverse programs to enrich lives across generations. Explore our "Other
+                                Programs"
+                                for initiatives on elder
+                                engagement, language learning, and more!</p>
+                            <a href="./other/ ">Learn More</a>
+                        </div>
+                        <img src="./HomePage/images/otherPrograms.png" alt="other programs">
+                    </div>
+                </div>
+
+                <div class="see_more">
+                    <a href="#" id="toggle-more">See more programs <span><i
+                                class="fa-solid fa-angle-down"></i></span></a>
                 </div>
             </div>
-        </header>
-        <nav class="menu-overlay">
-            <ul class="main-menu">
-                <li><a href="#" class="submenu-toggle about-toggle">About<span class="icon-container marginit"><i 
-                    class="fa-solid fa-chevron-right" aria-hidden="true"></i></span></a></li>
-                <li><a href="#" class="submenu-toggle programs-toggle">Programs<span class="icon-container marginit"><i
-                    class="fa-solid fa-chevron-right" aria-hidden="true"></i></span></a></li>
-                <li><a href="../events/" rel="noopener noreferrer">Events</a></li>
-                <li><a href="../stories/" rel="noopener noreferrer">Stories</a></li>
-                <li class="buttons-container">
-                    <div class="join-us-button1"><a href="../membership/" rel="noopener noreferrer">Join <img
-                                src="../HomePage/images/hands.png" alt="Hand Icon" class="donate-icon-image"></a></div>
-                    <div class="button">
-                        <a href="#" id="open-donation-popup-new">Donate <img src="../HomePage/images/heart.png" alt="heart Icon" class="donate-icon2-image"></a>
-                    </div>
-                </li>
-            </ul>
-            <ul class="submenu programs-submenu">
-                <li><a href="#" class="back-to-main-menu"><i
-                            class="fa-solid fa-chevron-left style" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our Programs</a></li>
-                <li><a href="./leadership/">Leadership Program</a></li>
-                <li><a href="./scholarships/">Scholarship Program</a></li>
-                <li><a href="./economic-empowerment/">Economic Empowerment</a></li>
-                <li><a href="./business/">Dablie Business Forum</a></li>
-                <li><a href="./youth/">Youth Program</a></li>
-                <li><a href="./other/">Other Programs</a></li>
-            </ul>
-            <ul class="submenu about-submenu">
-                <li><a href="#" class="back-to-main-menu"><i
-                            class="fa-solid fa-chevron-left style" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About</a></li>
-                <li><a href="./about-us/">About us</a></li>
-                <li><a href="./our-mission/">Our mission</a></li>
-                <li><a href="./our-story/">Our story</a></li>
-            </ul>
-            <div class="social-media">
-                <a href="https://www.linkedin.com/company/dablie-foundation/?viewAsMember=true" target="_blank" rel="noopener noreferrer"><i
-                        class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
-                <a href="https://x.com/dablieofficial" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
-                <a href="https://tiktok.com/@DablieFoundation" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
-                <a href="https://www.facebook.com/people/Dablie-Foundation/61563937820025/" target="_blank" rel="noopener noreferrer"><i
-                        class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
-                <a href="https://t.me/dabliefoundation" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-telegram" aria-hidden="true"></i></a>
-            </div>
-        </nav>
-        <main>
+        </section>
+    </main>
 
-            <section class="hero">
-                <div class="hero_logo">
-                    <img src="./HomePage/images/Group 20@2x.png" alt="Logo">
-                </div>
-                <div class="hero_text">
-                    <p>Our mission is to inspire, empower, and link individuals where they shape their future</p>
-                </div>
-                <div class="hero_button">
-                    <a href="stories/" rel="noopener noreferrer">See our work in action <i class="fa-solid fa-angle-right"
-                            aria-hidden="true"></i></a>
-                </div>
-            
-            </section>
-
-            <section class="updates">
-                <div class="updates_title">
-                    <h1>Latest Stories</h1>
-                </div>
-                <div class="stories_boxes" id="stories_container">
-                </div>
-                <h5 class="more"><a href="./stories/" rel="noopener noreferrer">Read More Stories</a></h5>
-            </section>
-
-            <section class="programs">
-                <h2>The Programs We Offer</h2>
-                <div class="programs_grid">
-                    <div class="program_card">
-                        <img src="./HomePage/images/leadership.png" alt="Leadership Program">
-                        <div class="program_text_right">
-                            <h3>Leadership Program</h3>
-                            <p>Learn how we're developing and empowering changemakers to build inclusive and equitable
-                                communities.</p>
-                            <a href="./leadership/" rel="noopener noreferrer">Learn More</a>
-                        </div>
-                    </div>
-
-                    <div class="program_card">
-                        <div class="program_card_Two">
-                            <div class="program_text_left">
-                                <h3>Economic Empowerment Program</h3>
-                                <p>We are committed to empowering entrepreneurs and startups by providing mentorship,
-                                    training,
-                                    and financial support.</p>
-                                <a href="./economic-empowerment/" rel="noopener noreferrer">Learn More</a>
-                            </div>
-                            <img src="./HomePage/images/moneyOnATree.png" alt="Economic Empowerment Program">
-                        </div>
-                    </div>
-
-                    <div class="program_card">
-                        <img src="./HomePage/images/scholarship.png" alt="Scholarship Program">
-                        <div class="program_text_right">
-                            <h3>Scholarship Program</h3>
-                            <p>Recognizing education's transformative power, we provide scholarships and opportunities to
-                                access
-                                quality education, and
-                                empowering individuals.</p>
-                            <a href="./scholarships/" rel="noopener noreferrer">Learn More</a>
-                        </div>
-                    </div>
-
-
-                    <div class="program_card">
-                        <div class="program_card_Two">
-                            <div class="program_text_left">
-                                <h3>Youth Club</h3>
-                                <p>Are you a youth seeking to connect, learn, and make a difference? Look no further than
-                                    our
-                                    vibrant Youth Club!</p>
-                                <a href="./youth/" rel="noopener noreferrer">Learn More</a>
-                            </div>
-                            <img src="./HomePage/images/youth-club.png" alt="Youth Club">
-                        </div>
-                    </div>
-
-
-                    <!-- <div class="program_card hidden">
-                            <img src="./HomePage/images/handmoney.png" alt="Partners Directory">
-                            <div class="program_text_right">
-                                <h3>Partners Directory</h3>
-                                <p>Join visionary leaders driving positive change. Discover how your organization can contribute
-                                    in our Partner Directory.</p>
-                                <a href="./partners">Learn More</a>
-                            </div>
-                        </div> -->
-
-                    <div class="program_card hidden">
-                        <img src="./HomePage/images/circleMoney.png" alt="Dablie Business Forum">
-                        <div class="program_text_right">
-                            <h3>Dablie Business Forum</h3>
-                            <p>Entrepreneurs and business leaders, thrive and contribute to your community's economic
-                                success.</p>
-                            <a href="./business/" rel="noopener noreferrer">Learn More</a>
-                        </div>
-                    </div>
-
-                    <div class="program_card hidden">
-                        <div class="program_card_Two">
-                            <div class="program_text_left">
-                                <h3>Other Programs</h3>
-                                <p>We offer diverse programs to enrich lives across generations. Explore our "Other
-                                    Programs"
-                                    for initiatives on elder
-                                    engagement, language learning, and more!</p>
-                                <a href="./other/" rel="noopener noreferrer">Learn More</a>
-                            </div>
-                            <img src="./HomePage/images/otherPrograms.png" alt="Other Programs">
-                        </div>
-                    </div>
-
-                    <div class="see_more">
-                        <a href="#" id="toggle-more">See more programs <span><i
-                                    class="fa-solid fa-angle-down" aria-hidden="true"></i></span></a>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer class="footer">
-            <div class="footer-section">
-                <p class="title">The Foundation</p>
-                <a class="subtitle" href="./about-us/" rel="noopener noreferrer">About</a>
-                <a class="subtitle" href="./our-mission/" rel="noopener noreferrer">Our mission</a>
-                <a class="subtitle" href="./our-story/" rel="noopener noreferrer">Our story</a>
-            </div>
-            <div class="footer-section">
-                <p class="title">Programs</p>
-                <a class="subtitle" href="leadership/" rel="noopener noreferrer">Leadership Program</a>
-                <a class="subtitle" href="scholarships/" rel="noopener noreferrer">Scholarship Program</a>
-                <a class="subtitle" href="economic-empowerment/" rel="noopener noreferrer">Economic Empowerment</a>
-                <a class="subtitle" href="business/" rel="noopener noreferrer">Dablie Business Forum</a>
+    <footer class="footer">
+        <div class="footer-section">
+            <p class="title">The Foundation<p>
+            <a class="subtitle" href="./about-us/">About</a>
+            <a class="subtitle" href="./our-mission/ ">Our mission</a>
+            <a class="subtitle" href="./our-story/ ">Our story</a>
+        </div>
+        <div class="footer-section">
+            <p class="title">Programs
+            <p>
+                <a class="subtitle" href="leadership/ ">Leadership Program</a>
+                <a class="subtitle" href="scholarships/ ">Scholarship Program</a>
+                <a class="subtitle" href="economic-empowerment/ ">Economic Empowerment</a>
+                <a class="subtitle" href=" business/">Dablie Business Froum</a>
                 <!-- <a class="subtitle" href=" partners">Partners Directory</a> -->
-                <a class="subtitle" href="youth/" rel="noopener noreferrer">Youth Program</a>
-                <a class="subtitle" href="other/" rel="noopener noreferrer">Other Programs</a>
+                <a class="subtitle" href="youth/">Youth Program</a>
+                <a class="subtitle" href="other/ ">Other Programs</a>
+        </div>
+        <div class="vl"></div>
+        <div class="footer-section">
+            <p class="title">Discover
+            <p>
+                <a class="subtitle" href=" stories/">Stories</a>
+                <a class="subtitle" href="events/ ">Events</a>
+        </div>
+        <div class="footer-section">
+            <p class="title">Get Involved<p>
+            <a href="#" class="subtitle" id="open-donation-popup-footer">Donate</a>
+            <a class="subtitle" href="./contact/ ">Contact us</a>
+            <a class="subtitle" href="./work-with-us/">Work with us</a>
+        </div>
+        <div class="footer-bottom">
+            <div class="hl-left"></div>
+            <div class="social-media-icons">
+                <a href="https://www.linkedin.com/company/dablie-foundation/?viewAsMember=true"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://x.com/dablieofficial"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://tiktok.com/@DablieFoundation"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://www.facebook.com/people/Dablie-Foundation/61563937820025/"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://t.me/dabliefoundation"><i class="fa-brands fa-telegram"></i></a>
             </div>
-            <div class="vl"></div>
-            <div class="footer-section">
-                <p class="title">Discover</p>
-                <a class="subtitle" href="stories/" rel="noopener noreferrer">Stories</a>
-                <a class="subtitle" href="events/" rel="noopener noreferrer">Events</a>
-            </div>
-            <div class="footer-section">
-                <p class="title">Get Involved</p>
-                <a href="#" class="subtitle" id="open-donation-popup-footer">Donate</a>
-                <a class="subtitle" href="./contact/" rel="noopener noreferrer">Contact us</a>
-                <a class="subtitle" href="./work-with-us/" rel="noopener noreferrer">Work with us</a>
-            </div>
-            <div class="footer-bottom">
-                <div class="hl-left"></div>
-                <div class="social-media-icons">
-                    <a href="https://www.linkedin.com/company/dablie-foundation/?viewAsMember=true" target="_blank" rel="noopener noreferrer"><i
-                            class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
-                    <a href="https://x.com/dablieofficial" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
-                    <a href="https://tiktok.com/@DablieFoundation" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
-                    <a href="https://www.facebook.com/people/Dablie-Foundation/61563937820025/" target="_blank" rel="noopener noreferrer"><i
-                            class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
-                    <a href="https://t.me/dabliefoundation" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-telegram" aria-hidden="true"></i></a>
-                </div>
-                <div class="hl-right"></div>
-                <p>©<span id="current-year-footer"></span> Dablie Foundation, all rights reserved</p>
-            </div>
-        </footer>
+            <div class="hl-right"></div>
+<p>©<script>document.write(new Date().getFullYear());</script> Dablie Foundation, all rights reserved</p>
+</div>
+    </footer>
 
-        <!-- External Scripts -->
-        <script src="./Header & Footer/header.js" defer></script>
-        <script src="./donate/script.js" defer></script>
-        <!-- New External Script -->
-        <script src="./js/main.js" defer></script>
+    <script src="./Header & Footer/header.js"></script>
+    <script src="./HomePage/home.js"></script>
+    <script src="./donate/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var toggleButton = document.getElementById('toggle-more');
 
-    </body>
+            if (toggleButton) {
+                toggleButton.addEventListener('click', function (event) {
+                    event.preventDefault();
+
+                    var hiddenCards = document.querySelectorAll('.program_card.hidden');
+
+                    // Show hidden cards
+                    hiddenCards.forEach(function (card) {
+                        card.classList.remove('hidden');
+                    });
+
+                    // Hide 'See more' button
+                    this.style.display = 'none';
+
+                    // Display 'See less' button
+                    var seeLessButton = document.getElementById('see-less');
+                    if (seeLessButton) {
+                        seeLessButton.style.display = 'inline-block';
+                    }
+                });
+            }
+
+            // Adding 'See less' functionality
+            var seeLessButton = document.createElement('a');
+            seeLessButton.setAttribute('href', '#');
+            seeLessButton.setAttribute('id', 'see-less');
+            seeLessButton.innerHTML = 'See less programs <i class="fa-solid fa-angle-up"></i>';
+            seeLessButton.style.display = 'none'; // Initially hide the 'See less' button
+            toggleButton.parentNode.insertBefore(seeLessButton, toggleButton.nextSibling);
+
+            seeLessButton.addEventListener('click', function (event) {
+                event.preventDefault();
+
+                var shownCards = document.querySelectorAll('.program_card:not(.hidden):not(:nth-child(-n+4))'); // Selects the cards that were initially hidden
+
+                // Hide visible cards that were initially hidden
+                shownCards.forEach(function (card) {
+                    card.classList.add('hidden');
+                });
+
+                // Show 'See more' button
+                toggleButton.style.display = 'inline-block';
+
+                // Hide 'See less' button
+                this.style.display = 'none';
+            });
+        });
+        document.querySelector('.menu-icon__cheeckbox').addEventListener('change', function () {
+            document.querySelector('.menu-overlay').classList.toggle('open');
+        });
+
+        document.querySelectorAll('.submenu-toggle').forEach(function (toggle) {
+            toggle.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector('.submenu').classList.toggle('open');
+                document.querySelector('.main-menu').classList.toggle('hidden');
+            });
+        });
+
+        document.querySelector('.back-to-main-menu').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector('.submenu').classList.remove('open');
+            document.querySelector('.main-menu').classList.remove('hidden');
+        });
+    </script>
+<script>
+
+</script>
+
+</body>
 
 </html>
