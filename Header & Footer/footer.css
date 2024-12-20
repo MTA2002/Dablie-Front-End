@@ -69,7 +69,7 @@ body {
     font-size: 12px;
     width: 100%;
     text-align: center;
-    margin: 40px 0 0 0;
+    margin: 20px 0 0 0;
 }
 
 .vl {
@@ -85,7 +85,7 @@ body {
     }
 }
 
-@media (max-width: 766px) {
+@media (max-width: 848px) {
     .footer {
         padding: 0;
         width: 100%;
@@ -124,7 +124,7 @@ body {
     }
     .footer-bottom p {
         text-align: center;
-        margin-top: 20px;
+        margin: 20px;
         color: #fff;
     }
     .footer-section .title {
@@ -146,3 +146,25 @@ body {
         color: #fff;
     }
 }
+
+@media(max-width:1100px){
+        .title {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 50px;
+}
+
+.subtitle {
+    text-align: left;
+    font-size: 14px;
+    display: block;
+    color: #005E8A;
+    text-decoration: none;
+    margin-bottom: 5px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+
+    }

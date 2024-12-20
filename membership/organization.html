@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership - Dablie Foundation</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./form.css">
+    <link rel="stylesheet" href="../Header & Footer/header.css">
+    <link rel="stylesheet" href="../Header & Footer/footer.css">
+    <link rel="stylesheet" href="../HomePage/homepage.css">
+    <link rel="stylesheet" href="../donate/style.css">
+    <link rel="icon" type="image/x-icon" href="./HomePage/images/Dablie_logo.png">
+</head>
+<body>
+    <div data-include="../Header & Footer/header.html"></div>
+    <header>
+        <div class="logo">
+            <a href="../index.html"><img src="../leadership page/assests/images/logo.png"
+                    alt="Dablie Foundation Logo"></a>
+        </div>
+        <div class="logo2">
+            <a href="../index.html"><img src="../leadership page/assests/images/logo2.png"
+                    alt="Dablie Foundation Logo"></a>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">About <i class="fa fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="../about-us/">About us</a></li>
+                        <li><a href="../our-mission/ ">Our mission</a>
+                        <li><a href="../our-story/ ">Our story</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Our Program <i class="fa fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="../leadership/ ">Leadership Program</a></li>
+                        <li><a href="../scholarships/ ">Scholarship Program</a></li>
+                        <li><a href="../economic-empowerment/ ">Economic Empowerment</a></li>
+                        <li><a href="../business/">Dablie Business Forum</a></li>
+                        <!-- <li><a href="../partners">Partners Directory</a></li> -->
+                        <li><a href="../youth/">Youth Program</a></li>
+                        <li><a href="../other/ ">Other Programs</a></li>
+                    </ul>
+                </li>
+                <li><a href="../events/ ">Events</a></li>
+                <li><a href="../stories/">Stories</a></li>
+            </ul>
+        </nav>
+        <div class="join-us-button">
+            <a href="../membership/ ">Join <img src="../HomePage/images/hands.png" alt="Hand Icon"
+                    class="icon"> </a>
+        </div>
+        <!-- Donate Button -->
+<div class="donate-button">
+    <a href="#" id="open-donation-popup-header">Donate <img src="../HomePage/images/heart.png" alt="heart Icon" class="donate-icon2-image"></a>
+</div>
+
+<div class="hamburger-menu-container">
+    <div class="menu-wrapper">
+        <p class="menu-btn"></p>
+        <p class="menu-btn-middle"></p> <!-- Added middle line -->
+    </div>
+</div>
+
+<!-- Pop-up Overlay -->
+<div id="donation-popup" class="donate-popup-overlay" style="display: none;">
+    <div class="donate-popup-content">
+        <span class="donate-popup-close">&times;</span>
+        <!-- Your existing donation page content goes here -->
+        <div class="donate-title5">
+            <h1 class="donate-subtitl">Donate!</h1>
+        </div>
+        <!-- Rest of your donation page code -->
+
+        <div class="donate-container">
+            <div class="donate-content">
+                <div class="donate-image">
+                    <img src="../donate/images/image.png" alt="Donate Image">
+                </div>
+                <div class="text">
+                    <h3 class="donate-sub" style="margin-top: 15px;">Donate!</h3>
+                    <p class="donate-sub">Your gift today will empower, inspire, and connect the next generation of changemakers. Let’s never stop moving toward the world we want. Make your gift today!</p>
+                </div>
+                <div class="donate-contact">
+                    <a href="#">Questions</a> 
+                    <a href="#">Contact us by Email</a>
+                </div>
+            </div>
+            <div class="donate-donation-form">
+                <div class="donate-donation-content">
+                    <h2 class="donate-title2"><img src="../donate/images/mdi_security-lock-outline.png" class="donate-icon-image"> Secure Donation</h2>
+                    <div class="donate-donation-type">
+                        <button class="once">Donate Once</button>
+                        <button class="monthly active"><img src="../donate/images/mdi_heart.png" class="donate-icon2-image">Monthly</button>
+                    </div>
+                    <div class="donate-amount-once" style="display: none;">
+                        <button>2,400</button>
+                        <button>10,000</button>
+                        <button>30,000</button>
+                        <button>60,000</button>
+                        <button>70,000</button>
+                        <button>80,000</button>
+                    </div>
+                    <div class="donate-amount-options">
+                        <button>1,200</button>
+                        <button>1,500</button>
+                        <button>3,000</button>
+                        <button>6,000</button>
+                        <button>7,000</button>
+                        <button>8,000</button>
+                    </div>
+                    <div class="donate-custom-amount">
+                        <input type="text" value="2,500">
+                        <select id="currency-selector">
+                            <option value="ETB">ETB</option>
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                        </select>
+                    </div>
+                    <div class="donate-button7">
+                        <button class="donate-donate3-button">Donate</button>
+                    </div>
+                </div>
+                
+                <!-- Donor Info Section (Initially Hidden) -->
+                <div class="donate-donor-info" style="display: none;">
+                    <h2>
+                        <span class="donate-back-arrow"><i class="fa-solid fa-angle-left"></i></span> <!-- This is the back arrow -->
+                        Enter your details
+                    </h2>
+                    <form>
+                        <div class="donate-form-group">
+                            <input type="text" placeholder="First name" required>
+                        </div>
+                        <div class="donate-form-group">
+                            <input type="text" placeholder="Last name" required>
+                        </div>
+                        <div class="donate-form-group">
+                            <input type="email" placeholder="Email address (optional)">
+                        </div>
+                        <div class="donate-form-group phone-group">
+                            <select>
+                                <option value="+251" selected>🇪🇹</option>
+                                <!-- Add more country codes as needed -->
+                            </select>
+                            <input type="tel" placeholder="Phone" required>
+                        </div>
+                        <div class="donate-form-group">
+                            <input type="checkbox" id="agree" required>
+                            <label for="agree">I agree to the <a href="#">Terms of Service.</a></label>
+                        </div>
+                        <button type="submit" class="donate-submit-donation">Continue</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</header>
+<nav class="menu-overlay">
+    <ul class="main-menu">
+        <li><a href="#" class="submenu-toggle about-toggle">About<span class="icon-container marginit"><i 
+            class="fa-solid fa-chevron-right"></i></span></a></li>
+        <li><a href="#" class="submenu-toggle programs-toggle">Programs<span class="icon-container marginit"><i
+            class="fa-solid fa-chevron-right"></i></span></a></li>
+        <li><a href="../events/ ">Events</a></li>
+        <li><a href="../stories/">Stories</a></li>
+        <li class="buttons-container">
+            <div class="join-us-button1"><a href="../membership/ ">Join <img
+                        src="../HomePage/images/hands.png" alt="Hand Icon" class="donate-icon-image"></a></div>
+            <div class="button">
+                <a href="#" id="open-donation-popup-new">Donate <img src="../HomePage/images/heart.png" alt="heart Icon" class="donate-icon2-image"></a>
+            </div>
+        </li>
+        </ul>
+        <ul class="submenu programs-submenu">
+            <li><a href="#" class="back-to-main-menu"><i
+                        class="fa-solid fa-chevron-left style"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our Programs</a></li>
+            <li><a href="../leadership/ ">Leadership Program</a></li>
+            <li><a href="../scholarships/ ">Scholarship Program</a></li>
+            <li><a href="../economic-empowerment/ ">Economic Empowerment</a></li>
+            <li><a href="../business/">Dablie Business Forum</a></li>
+            <li><a href="../youth/">Youth Program</a></li>
+            <li><a href="../other/ ">Other Programs</a></li>
+        </ul>
+        <ul class="submenu about-submenu">
+            <li><a href="#" class="back-to-main-menu"><i
+                        class="fa-solid fa-chevron-left style"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About</a></li>
+            <li><a href="../about-us/">About us</a></li>
+            <li><a href="../our-mission/">Our mission</a></li>
+            <li><a href="../our-story/">Our story</a></li>
+        </ul>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/company/dablie-foundation/?viewAsMember=true"><i
+                    class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://x.com/dablieofficial"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://tiktok.com/@DablieFoundation"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.facebook.com/people/Dablie-Foundation/61563937820025/"><i
+                    class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://t.me/dabliefoundation"><i class="fa-brands fa-telegram"></i></a>
+        </div>
+    </nav>
+    <main>
+        <section id="organizationFormSection" class="membership-form-section">
+            <h2>Organizational Membership Form</h2>
+            <form id="organizationalForm" method="post" novalidate>
+                <label for="organization-name">Organization name <span class="required">*</span></label>
+                <input type="text" id="organization-name" name="organization-name" required>
+                <div class="error-message" id="organization-name-error"></div>
+                <label for="website-url">Website URL</label>
+                <input type="url" id="website-url" name="website-url" pattern="https?://.+">
+                <div class="error-message" id="website-url-error"></div>
+                <label for="phone-number">Phone Number <span class="required">*</span></label>
+                <div class="phone-input-container" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <select id="primary-area-code" name="primary-area-code" required>
+                        <option value="">Select Area Code</option>
+                        <option value="+1">+1 (USA, Canada)</option>
+                        <option value="+44">+44 (UK)</option>
+                        <option value="+61">+61 (Australia)</option>
+                        <option value="+81">+81 (Japan)</option>
+                        <option value="+91">+91 (India)</option>
+                        <option value="+251">+251 (Ethiopia)</option>
+                        <!-- Add more area codes as needed -->
+                    </select>
+                    <input type="tel" id="phone-number" name="phone-number" required pattern="[0-9]{9}">
+                </div>
+                <div class="error-message" id="phone-number-error"></div>
+                <label for="address">Address <span class="required">*</span></label>
+                <input type="text" id="address" name="address" required>
+                <div class="error-message" id="address-error"></div>
+                <label for="city">City <span class="required">*</span></label>
+                <input type="text" id="city" name="city" required>
+                <div class="error-message" id="city-error"></div>
+                <label for="state">State/Region <span class="required">*</span></label>
+                <input type="text" id="state" name="state" required>
+                <div class="error-message" id="state-error"></div>
+                <label for="country">Country <span class="required">*</span></label>
+                <input type="text" id="country" name="country" required>
+                <div class="error-message" id="country-error"></div>
+                <label for="primary-contact">Primary Contact Person <span class="required">*</span></label>
+                <input type="text" id="primary-contact" name="primary-contact" required>
+                <div class="error-message" id="primary-contact-error"></div>
+                <label for="primary-email">Primary Contact Email <span class="required">*</span></label>
+                <input type="email" id="primary-email" name="primary-email" required>
+                <div class="error-message" id="primary-email-error"></div>
+                <label for="primary-phone">Primary Contact Phone Number <span class="required">*</span></label>
+                <div class="phone-input-container" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <select id="primary-area-code" name="primary-area-code" required>
+                        <option value="">Select Area Code</option>
+                        <option value="+1">+1 (USA, Canada)</option>
+                        <option value="+44">+44 (UK)</option>
+                        <option value="+61">+61 (Australia)</option>
+                        <option value="+81">+81 (Japan)</option>
+                        <option value="+91">+91 (India)</option>
+                        <option value="+251">+251 (Ethiopia)</option>
+                        <!-- Add more area codes as needed -->
+                    </select>
+                    <input type="tel" id="phone-number" name="phone-number" required pattern="[0-9]{9}">
+                </div>
+                <div class="error-message" id="primary-phone-error"></div>
+                <label for="organization-type">Organization Type <span class="required">*</span></label>
+                <select id="organization-type" name="organization-type" required>
+                    <option value="">Select Type</option>
+                    <option value="non-profit">Non-Profit</option>
+                    <option value="for-profit">For-Profit</option>
+                    <option value="government">Government</option>
+                    <option value="other">Other</option>
+                </select>
+                <div class="error-message" id="organization-type-error"></div>
+                <label for="organization-size">What is the size of your organization? <span class="required">*</span></label>
+                <select id="organization-size" name="organization-size" required>
+                    <option value="">Select Size (Revenue)</option>
+                    <option value="small"> < 10 million ETB</option>
+                    <option value="medium"> 10 - 50 million ETB</option>
+                    <option value="large"> > 50 million ETB</option>
+                </select>
+                <div class="error-message" id="organization-size-error"></div>
+                <label for="number-of-employees">Number of Employees</label>
+                <input type="number" id="number-of-employees" name="number-of-employees">
+                <div class="error-message" id="number-of-employees-error"></div>
+                <label for="industry">Industry <span class="required">*</span></label>
+                <input type="text" id="industry" name="industry" required>
+                <div class="error-message" id="industry-error"></div>
+                <label for="mission-description">Briefly describe your organization's mission and activities</label>
+                <textarea id="mission-description" name="mission-description"></textarea>
+                <div class="error-message" id="mission-description-error"></div>
+                <label for="empowerment-contribution">How does your organization contribute to the empowerment of the community?</label>
+                <textarea id="empowerment-contribution" name="empowerment-contribution"></textarea>
+                <div class="error-message" id="empowerment-contribution-error"></div>
+                <label for="joining-reason">Why are you interested in joining the Dabile Foundation?</label>
+                <textarea id="joining-reason" name="joining-reason"></textarea>
+                <div class="error-message" id="joining-reason-error"></div>
+                <label for="business-forum">Are you interested in applying for the Business Forum Membership option? (Yes/No)</label>
+                <div class="radio-group">
+                    <input type="radio" id="business-forum-yes" name="business-forum" value="yes" required>
+                    <label for="business-forum-yes" class="radio-label">Yes</label>
+                    <input type="radio" id="business-forum-no" name="business-forum" value="no">
+                    <label for="business-forum-no" class="radio-label">No</label>
+                </div>
+                <div class="error-message" id="business-forum-error"></div>
+                <label for="business-activities">Briefly describe your organization's business activities:</label>
+                <textarea id="business-activities" name="business-activities"></textarea>
+                <div class="error-message" id="business-activities-error"></div>
+                <label for="partnership-goals">What are your organization's goals in partnering with the Dabile Foundation?</label>
+                <textarea id="partnership-goals" name="partnership-goals"></textarea>
+                <div class="error-message" id="partnership-goals-error"></div>
+                <label for="financial-contribution">Are you willing to contribute financially to the Foundation's work? (Yes/No)</label>
+                <div class="radio-group">
+                    <input type="radio" id="financial-contribution-yes" name="financial-contribution" value="yes" required>
+                    <label for="financial-contribution-yes" class="radio-label">Yes</label>
+                    <input type="radio" id="financial-contribution-no" name="financial-contribution" value="no">
+                    <label for="financial-contribution-no" class="radio-label">No</label>
+                </div>
+                <div class="error-message" id="financial-contribution-error”>
+                    <label for="financial-level">If yes, please indicate your preferred level of financial contribution</label>
+                    <textarea id="financial-level" name="financial-level"></textarea>
+        
+                    <div class="agreement">
+                        By submitting this form, you agree to abide by the Dabile Foundation’s terms and conditions of membership. You also acknowledge that we may use your contact information to keep you informed about our activities and events.
+                        Please review your application carefully before submitting it. You can click “Clear” to start over or “Submit” to send your application. Thank you for your interest in the Dabile Foundation!
+                    </div>
+                    <div class="buttons">
+                        <button type="reset" class="clear-btn">Clear</button>
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+        
+        <footer class="footer">
+            <div class="footer-section">
+                <p class="title">The Foundation<p>
+                <a class="subtitle" href="../about-us/">About</a>
+                <a class="subtitle" href="../our-mission/ ">Our mission</a>
+                <a class="subtitle" href="../our-story/ ">Our story</a>
+            </div>
+            <div class="footer-section">
+                <p class="title">Programs<p>
+                <a class="subtitle" href="../leadership/ " >Leadership Program</a>
+                <a class="subtitle" href="../scholarships/ ">Scholarship Program</a>
+                <a class="subtitle" href="../economic-empowerment/ ">Economic Empowerment</a>
+                <a class="subtitle" href="../business/">Dablie Business Forum</a>
+                <!-- <a class="subtitle" href="../partners">Partners Directory</a> -->
+                <a class="subtitle" href="../youth/">Youth Program</a>
+                <a class="subtitle" href="../other/ ">Other Programs</a>
+            </div>
+            <div class="vl"></div>
+            <div class="footer-section">
+                <p class="title">Discover<p>
+                <a class="subtitle" href="../stories/">Stories</a>
+                <a class="subtitle" href="../events/ ">Events</a>
+            </div>
+            <div class="footer-section">
+                <p class="title">Get Involved<p>
+                    <a href="#" class="subtitle" id="open-donation-popup-footer">Donate</a>
+                    <a class="subtitle" href="../contact/ ">Contact us</a>
+                    <a class="subtitle" href="../work-with-us/">Work with us</a>
+            </div>
+            <div class="footer-bottom">
+                <div class="hl-left"></div>
+                <div class="social-media-icons">
+                    <a href="https://www.linkedin.com/company/dablie-foundation/?viewAsMember=true"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://x.com/dablieofficial"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://tiktok.com/@DablieFoundation"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://www.facebook.com/people/Dablie-Foundation/61563937820025/"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://t.me/dabliefoundation"><i class="fa-brands fa-telegram"></i></a>
+                </div>
+                <div class="hl-right"></div>
+                <p>©2024 Dablie Foundation, all rights reserved</p>
+            </div>
+        </footer>
+    <script src="../donate/script.js"></script>
+    <script src="../HomePage/home.js"></script>
+    <script src="../Header & Footer/header.js"></script>
+        <!-- <script src="./Membership.js"></script> -->
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                includeHTML();
+        
+                // Retrieve the subscription type from session storage
+                const subscriptionType = sessionStorage.getItem('subscriptionType');
+                
+                // Add event listener for form submission
+                document.querySelector('#organizationalForm').addEventListener('submit', function(event) {
+                    event.preventDefault();
+        
+                    // Validate form
+                    const form = event.target;
+                    const formData = new FormData(form);
+                    let isValid = true;
+        
+                    // Clear previous error messages
+                    document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+        
+                    // Custom validation logic
+                    if (!formData.get('organization-name')) {
+                        document.getElementById('organization-name-error').textContent = 'Organization name is required.';
+                        isValid = false;
+                    }
+                    if (!formData.get('primary-area-code')) {
+                        document.getElementById('phone-number-error').textContent = 'Area code is required.';
+                        isValid = false;
+                    }
+                    if (!formData.get('phone-number')) {
+                        document.getElementById('phone-number-error').textContent = 'Phone number is required.';
+                        isValid = false;
+                    }
+                    if (!formData.get('address')) {
+                        document.getElementById('address-error').textContent = 'Address is required.';
+                        isValid = false;
+                    }
+                    if (!formData.get('city')) {
+                        document.getElementById('city-error').textContent = 'City is required.';
+                        isValid = false;
+                    }
+                    if (!formData.get('state')) {
+                        document.getElementById('state-error').textContent = 'State/Region is required.';
+                        isValid = false;
+                    }
+                    if (!formData.get('country')) {
+                        document.getElementById('country-error').textContent = 'Country is required.';
+                        isValid = false;
+                    }
+                    if (!formData.get('primary-contact')) {
+                        document.getElementById('primary-contact-error').textContent = 'Primary contact person is required.';
+                        isValid = false;
+                    }
+                    if (!formData.get('primary-email')) {
+                        document.getElementById('primary-email-error').textContent = 'Primary contact email is required.';
+                        isValid = false;
+                    }
+                    if (!formData.get('primary-area-code') || !formData.get('phone-number')) {
+                        document.getElementById('primary-phone-error').textContent = 'Primary contact phone number is required.';
+                        isValid = false;
+                    }
+                    if (!formData.get('organization-type')) {
+                        document.getElementById('organization-type-error').textContent = 'Organization type is required.';
+                        isValid = false;
+                    }
+                    if (!formData.get('organization-size')) {
+                        document.getElementById('organization-size-error').textContent = 'Organization size is required.';
+                        isValid = false;
+                    }
+                    if (!formData.get('industry')) {
+                        document.getElementById('industry-error').textContent = 'Industry is required.';
+                        isValid = false;
+                    }
+        
+                    if (!isValid) {
+                        return;
+                    }
+        
+                    // Prepare form data for submission
+                    const data = {
+                        organization_name: formData.get('organization-name'),
+                        website_url: formData.get('website-url') || null,
+                        area_code: formData.get('primary-area-code'),
+                        phone: formData.get('phone-number'),
+                        address: formData.get('address'),
+                        city: formData.get('city'),
+                        state: formData.get('state'),
+                        country: formData.get('country'),
+                        primary_contact_person: formData.get('primary-contact'),
+                        primary_contact_email: formData.get('primary-email'),
+                        primary_contact_phone: formData.get('phone-number'),
+                        organization_type: formData.get('organization-type'),
+                        size_of_organization: formData.get('organization-size'),
+                        number_of_employees: formData.get('number-of-employees') || null,
+                        industry: formData.get('industry'),
+                        mission_and_activities: formData.get('mission-description') || null,
+                        contribute_to_empowerment: formData.get('empowerment-contribution') || null,
+                        interest_in_joining: formData.get('joining-reason') || null,
+                        interest_in_business_forum: formData.get('business-forum') || null,
+                        business_activities: formData.get('business-activities') || null,
+                        goal_of_partnership: formData.get('partnership-goals') || null,
+                        contribute_financially: formData.get('financial-contribution') || null,
+                        level_of_financial_contribution: formData.get('financial-level') || null,
+                        subscription_type: subscriptionType  // Add subscription type to the data
+                    };
+        
+                    console.log('Form data being sent:', data);
+        
+                    const apiUrl = 'https://api.dablie.org/organization_membership_form';
+                    
+                    // Send form data to the backend
+                    fetch(apiUrl, {
+                        method: 'POST',
+                        headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    })
+                    .then(response => {
+                        if (!response.ok) {
+                            return response.json().then(errorData => {
+                                throw new Error(`Server responded with ${response.status}: ${errorData.message}`);
+                            });
+                        }
+                        return response.json();
+                    })
+                    .then(responseData => {
+                        console.log(responseData);
+                        alert('Form submitted successfully! Thank You!!!');
+                        // window.location.href = '../index.html';
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert(`Error: ${error.message}`);
+                    });
+        
+                    // Initiate payment
+                    const paymentApiUrl = `https://payment.dablie.org/payment?subscription_type=${encodeURIComponent(subscriptionType)}&payment_mode=organization_membership`;
+        
+                    fetch(paymentApiUrl, {
+                        method: 'POST',
+                        headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json'
+                        },
+                    })
+                    .then(response => {
+                        if (!response.ok) {
+                            return response.json().then(errorData => {
+                                throw new Error(`Server responded with ${response.status}: ${errorData.message}`);
+                            });
+                        }
+                        return response.json();
+                    })
+                    .then(responseData => {
+                        console.log(responseData);
+                        window.location.href = responseData.checkout_url; // Redirect to payment page
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert(`Error: ${error.message}`);
+                    });
+                });
+            });
+        </script>
+        
+        </body>
+        </html>

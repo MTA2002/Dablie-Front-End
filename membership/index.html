@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Membership.css">
+    <link rel="stylesheet" href="../Header & Footer/header.css">
+    <link rel="stylesheet" href="../Header & Footer/footer.css">
+    <link rel="stylesheet" href="../HomePage/homepage.css">
+    <link rel="stylesheet" href="../donate/style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <a href="../index.html"><img src="../leadership page/assests/images/logo.png"
+                alt="Dablie Foundation Logo"></a>
+    </div>
+    <div class="logo2">
+        <a href="../index.html"><img src="../leadership page/assests/images/logo2.png"
+                alt="Dablie Foundation Logo"></a>
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">About <i class="fa fa-chevron-down"></i></a>
+                <ul class="dropdown">
+                    <li><a href="../about-us/">About us</a></li>
+                    <li><a href="../our-mission/ ">Our mission</a>
+                    <li><a href="../our-story/ ">Our story</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Our Program <i class="fa fa-chevron-down"></i></a>
+                <ul class="dropdown">
+                    <li><a href="../leadership/ ">Leadership Program</a></li>
+                    <li><a href="../scholarships/ ">Scholarship Program</a></li>
+                    <li><a href="../economic-empowerment/ ">Economic Empowerment</a></li>
+                    <li><a href="../business/">Dablie Business Forum</a></li>
+                    <!-- <li><a href="../partners">Partners Directory</a></li> -->
+                    <li><a href="../youth/">Youth Program</a></li>
+                    <li><a href="../other/ ">Other Programs</a></li>
+                </ul>
+            </li>
+            <li><a href="../events/ ">Events</a></li>
+            <li><a href="../stories/">Stories</a></li>
+        </ul>
+    </nav>
+    <div class="join-us-button">
+        <a href="../membership/ ">Join <img src="../HomePage/images/hands.png" alt="Hand Icon"
+                class="icon"> </a>
+    </div>
+<!-- Donate Button -->
+<div class="donate-button">
+  <a href="#" id="open-donation-popup-header">Donate <img src="../HomePage/images/heart.png" alt="heart Icon" class="donate-icon2-image"></a>
+</div>
+
+<div class="hamburger-menu-container">
+  <div class="menu-wrapper">
+      <p class="menu-btn"></p>
+      <p class="menu-btn-middle"></p> <!-- Added middle line -->
+  </div>
+</div>
+
+<!-- Pop-up Overlay -->
+<div id="donation-popup" class="donate-popup-overlay" style="display: none;">
+  <div class="donate-popup-content">
+      <span class="donate-popup-close">&times;</span>
+      <!-- Your existing donation page content goes here -->
+      <div class="donate-title5">
+          <h1 class="donate-subtitl">Donate!</h1>
+      </div>
+      <!-- Rest of your donation page code -->
+
+      <div class="donate-container">
+          <div class="donate-content">
+              <div class="donate-image">
+                  <img src="../donate/images/image.png" alt="Donate Image">
+              </div>
+              <div class="text">
+                  <h3 class="donate-sub" style="margin-top: 15px;">Donate!</h3>
+                  <p class="donate-sub">Your gift today will empower, inspire, and connect the next generation of changemakers. Let’s never stop moving toward the world we want. Make your gift today!</p>
+              </div>
+              <div class="donate-contact">
+                  <a href="#">Questions</a> 
+                  <a href="#">Contact us by Email</a>
+              </div>
+          </div>
+          <div class="donate-donation-form">
+              <div class="donate-donation-content">
+                  <h2 class="donate-title2"><img src="../donate/images/mdi_security-lock-outline.png" class="donate-icon-image"> Secure Donation</h2>
+                  <div class="donate-donation-type">
+                      <button class="once">Donate Once</button>
+                      <button class="monthly active"><img src="../donate/images/mdi_heart.png" class="donate-icon2-image">Monthly</button>
+                  </div>
+                  <div class="donate-amount-once" style="display: none;">
+                      <button>2,400</button>
+                      <button>10,000</button>
+                      <button>30,000</button>
+                      <button>60,000</button>
+                      <button>70,000</button>
+                      <button>80,000</button>
+                  </div>
+                  <div class="donate-amount-options">
+                      <button>1,200</button>
+                      <button>1,500</button>
+                      <button>3,000</button>
+                      <button>6,000</button>
+                      <button>7,000</button>
+                      <button>8,000</button>
+                  </div>
+                  <div class="donate-custom-amount">
+                      <input type="text" value="2,500">
+                      <select id="currency-selector">
+                          <option value="ETB">ETB</option>
+                          <option value="USD">USD</option>
+                          <option value="EUR">EUR</option>
+                          <option value="GBP">GBP</option>
+                      </select>
+                  </div>
+                  <div class="donate-button7">
+                      <button class="donate-donate3-button">Donate</button>
+                  </div>
+              </div>
+              
+              <!-- Donor Info Section (Initially Hidden) -->
+              <div class="donate-donor-info" style="display: none;">
+                  <h2>
+                      <span class="donate-back-arrow"><i class="fa-solid fa-angle-left"></i></span> <!-- This is the back arrow -->
+                      Enter your details
+                  </h2>
+                  <form>
+                      <div class="donate-form-group">
+                          <input type="text" placeholder="First name" required>
+                      </div>
+                      <div class="donate-form-group">
+                          <input type="text" placeholder="Last name" required>
+                      </div>
+                      <div class="donate-form-group">
+                          <input type="email" placeholder="Email address (optional)">
+                      </div>
+                      <div class="donate-form-group phone-group">
+                          <select>
+                              <option value="+251" selected>🇪🇹</option>
+                              <!-- Add more country codes as needed -->
+                          </select>
+                          <input type="tel" placeholder="Phone" required>
+                      </div>
+                      <div class="donate-form-group">
+                          <input type="checkbox" id="agree" required>
+                          <label for="agree">I agree to the <a href="#">Terms of Service.</a></label>
+                      </div>
+                      <button type="submit" class="donate-submit-donation">Continue</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+</header>
+<nav class="menu-overlay">
+  <ul class="main-menu">
+      <li><a href="#" class="submenu-toggle about-toggle">About<span class="icon-container marginit"><i 
+          class="fa-solid fa-chevron-right"></i></span></a></li>
+      <li><a href="#" class="submenu-toggle programs-toggle">Programs<span class="icon-container marginit"><i
+          class="fa-solid fa-chevron-right"></i></span></a></li>
+      <li><a href="../events/ ">Events</a></li>
+      <li><a href="../stories/">Stories</a></li>
+      <li class="buttons-container">
+          <div class="join-us-button1"><a href="../membership/ ">Join <img
+                      src="../HomePage/images/hands.png" alt="Hand Icon" class="donate-icon-image"></a></div>
+          <div class="button">
+              <a href="#" id="open-donation-popup-new">Donate <img src="../HomePage/images/heart.png" alt="heart Icon" class="donate-icon2-image"></a>
+          </div>
+      </li>
+    </ul>
+    <ul class="submenu programs-submenu">
+        <li><a href="#" class="back-to-main-menu"><i
+                    class="fa-solid fa-chevron-left style"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our Programs</a></li>
+        <li><a href="../leadership/ ">Leadership Program</a></li>
+        <li><a href="../scholarships/ ">Scholarship Program</a></li>
+        <li><a href="../economic-empowerment/ ">Economic Empowerment</a></li>
+        <li><a href="../business/">Dablie Business Forum</a></li>
+        <li><a href="../youth/">Youth Program</a></li>
+        <li><a href="../other/ ">Other Programs</a></li>
+    </ul>
+    <ul class="submenu about-submenu">
+        <li><a href="#" class="back-to-main-menu"><i
+                    class="fa-solid fa-chevron-left style"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About</a></li>
+        <li><a href="../about-us/">About us</a></li>
+        <li><a href="../our-mission/">Our mission</a></li>
+        <li><a href="../our-story/">Our story</a></li>
+    </ul>
+    <div class="social-media">
+        <a href="https://www.linkedin.com/company/dablie-foundation/?viewAsMember=true"><i
+                class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://x.com/dablieofficial"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://tiktok.com/@DablieFoundation"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://www.facebook.com/people/Dablie-Foundation/61563937820025/"><i
+                class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://t.me/dabliefoundation"><i class="fa-brands fa-telegram"></i></a>
+    </div>
+</nav>
+
+    <section id="join-us" class="membership-section">
+        <div class="container">
+          <p style="font-size: large;"><b>Join Us</b></p>
+          <p>Membership</p>
+          <p id="membership-text" style="font-size: large;"><b>Membership is open to both individuals and businesses.</b></p>
+          <p id="membership-options-text">If you are an individual, you have one membership option</p>
+          
+          <div class="membership-tabs">
+            <button class="tab-button active" onclick="openTab(event, 'individual')">Individual</button>
+            <button class="tab-button" onclick="openTab(event, 'organization')">Organization</button>
+          </div>
+          
+          <div id="individual" class="tab-content active">
+            <div class="membership-options">
+              <div class="membership-option">
+                <div class="card">
+                  <div class="card-header">
+                    <h3>Standard Member</h3>
+                    <p class="price">ETB <span>1,800</span>/year</p>
+                  </div>
+                  <div class="card-body">
+                    <ul class="benefits">
+                      <li>Connect with fellow members and experts at exclusive networking events, building valuable connections and friendships.</li>
+                      <li>Access workshops on entrepreneurship, career development, and more.</li>
+                      <li>Gain knowledge and expertise through entrepreneurship workshops, designed to help you thrive in your chosen field.</li>
+                      <li>Get the support you need to turn your ideas into reality with Dablie-hosted programs, including business competitions and mentorship opportunities.</li>
+                      <li>Access resources and partnerships with financial and non-financial institutions, opening doors to new possibilities.</li>
+                      <li>Get regular updates on Foundation initiatives and events.</li>
+                      <li>Volunteer your time and talents to make a difference.</li>
+                      <li>Connect with like-minded individuals and build a strong support network.</li>
+                    </ul>
+                  </div>
+                  <div class="card-footer">
+                    <button class="btn-primary"><a style="font-family: 'Montserrat'; color: azure; text-decoration: none;" href="#" onclick="redirectToNextPage('individual.html', 'Individual Standard Member')">Get Started Now</a></button>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="membership-option locked">
+                <div class="card">
+                  <div class="card-header">
+                    <h3>Member Plus</h3>
+                    <p class="price">ETB <span>5000</span>/year</p>
+                  </div>
+                  <div class="card-body">
+                    <ul class="benefits">
+                      <li></li>
+                    </ul>
+                  </div>
+                  <div class="card-footer">
+                    <button class="btn-primary"><a style="font-family: 'Montserrat'; color: azure; text-decoration: none;" href="#" onclick="redirectToNextPage('individual.html', 'Individual Premium Member')">Get Started Now</a></button>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+      
+          <div id="organization" class="tab-content">
+            <div class="membership-options">
+              <div class="membership-option">
+                <div class="card">
+                  <div class="card-header">
+                    <h3>Standard Member</h3>
+                    <p class="price">ETB <span>24,000</span>/year</p>
+                  </div>
+                  <div class="card-body">
+                    <ul class="benefits">
+                      <li>Expand your network through exclusive networking events with like-minded businesses and industry leaders.</li>
+                      <li>Gain valuable insights with access to all educational workshops on entrepreneurship, enhancing your team's knowledge and skills.</li>
+                      <li>Participate in Dablie-hosted business competitions and support programs, gaining valuable feedback and potential funding opportunities.</li>
+                      <li>Access business development support programs, tailored to guide your organization towards sustainable growth and positive community impact.</li>
+                      <li>Receive information and assistance in accessing funding sources aligned with your business goals.</li>
+                      <li>Engage and connect with industry experts for guidance and consultations, propelling your organization forward.</li>
+                      <li>Regular updates on Dablie Foundation initiatives and events.</li>
+                      <li>Opportunities to volunteer and contribute to meaningful projects.</li>
+                      <li>A sense of belonging to a supportive and impactful community.</li>
+                    </ul>
+                  </div>
+                  <div class="card-footer">
+                    <button class="btn-primary"><a style="font-family: 'Montserrat'; color: azure; text-decoration: none;" href="#" onclick="redirectToNextPage('organization.html', 'Organization Standard Member')">Get Started Now</a></button>
+                  </div>
+                </div>
+              </div>
+              <div class="membership-option locked">
+                <div class="card">
+                  <div class="card-header">
+                    <h3>Premium Member<br> (all Standard benefits +)</h3>
+                    <!-- <p class="price">ETB <span>20,000</span>/year</p> -->
+                  </div>
+                  <div class="card-body">
+                    <ul class="benefits">
+                      <li>Exclusive networking: Build strategic partnerships through networking events with large corporations and Dablie's extensive network.</li>
+                      <li>Tailored support: Benefit from personalized guidance and assistance from Dablie experts to navigate challenges and achieve your goals.</li>
+                      <li>Enhanced visibility: Gain representation and advocacy for your organization's interests, amplifying your voice within the community.</li>
+                      <li>Employee development: Equip your team with training programs designed to enhance their skills and contribute to your organization's success.</li>
+                    </ul>
+                  </div>
+                  <div class="card-footer">
+                    <button class="btn-primary" disabled>🔒 Coming Soon</button>
+                  </div>
+                </div>
+              </div>
+              <div class="membership-option locked">
+                <div class="card">
+                  <div class="card-header">
+                    <h3>Corporate Partner<br> (all Premium benefits +)</h3>
+                    <!-- <p class="price">ETB <span>50,000</span>/year</p> -->
+                  </div>
+                  <div class="card-body">
+                    <ul class="benefits">
+                      <li>Executive-level engagement: Participate in exclusive advisory boards and leadership forums to shape the future of the Muslim community.</li>
+                      <li>Brand recognition: Gain prominent sponsorship opportunities at Dablie events and initiatives, increasing your brand visibility.</li>
+                      <li>Social impact: Make a significant impact by supporting Dablie's mission through strategic partnerships and collaborative projects.</li>
+                      <li>Access tailored training programs and workshops designed specifically for your organization's needs.</li>
+                      <li>Collaborate on strategic partnerships with the Dablie Foundation and its partners, driving impactful initiatives that benefit the community and your organization.</li>
+                      <li>Receive personalized guidance and assistance from dedicated Dablie Foundation experts, tailored to your organization's unique needs and aspirations.</li>
+                      <li>Enjoy priority registration and discounted rates for premium events like the Business Forum, gaining deeper insights and fostering stronger connections.</li>
+                    </ul>
+                  </div>
+                  <div class="card-footer">
+                    <button class="btn-primary" disabled>🔒 Coming Soon</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="footer-section">
+            <p class="title">The Foundation<p>
+            <a class="subtitle" href="../about-us/">About</a>
+            <a class="subtitle" href="../our-mission/ ">Our mission</a>
+            <a class="subtitle" href="../our-story/ ">Our story</a>
+        </div>
+        <div class="footer-section">
+            <p class="title">Programs<p>
+            <a class="subtitle" href="../leadership/ " >Leadership Program</a>
+            <a class="subtitle" href="../scholarships/ ">Scholarship Program</a>
+            <a class="subtitle" href="../economic-empowerment/ ">Economic Empowerment</a>
+            <a class="subtitle" href="../business/">Dablie Business Forum</a>
+            <!-- <a class="subtitle" href="../partners">Partners Directory</a> -->
+            <a class="subtitle" href="../youth/">Youth Program</a>
+            <a class="subtitle" href="../other/ ">Other Programs</a>
+        </div>
+        <div class="vl"></div>
+        <div class="footer-section">
+            <p class="title">Discover<p>
+            <a class="subtitle" href="../stories/">Stories</a>
+            <a class="subtitle" href="../events/ ">Events</a>
+        </div>
+        <div class="footer-section">
+            <p class="title">Get Involved<p>
+                <a href="#" class="subtitle" id="open-donation-popup-footer">Donate</a>
+                <a class="subtitle" href="../contact/ ">Contact us</a>
+                <a class="subtitle" href="../work-with-us/">Work with us</a>
+        </div>
+        <div class="footer-bottom">
+            <div class="hl-left"></div>
+            <div class="social-media-icons">
+                <a href="https://www.linkedin.com/company/dablie-foundation/?viewAsMember=true"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://x.com/dablieofficial"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://tiktok.com/@DablieFoundation"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://www.facebook.com/people/Dablie-Foundation/61563937820025/"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://t.me/dabliefoundation"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+            <div class="hl-right"></div>
+            <p>©2024 Dablie Foundation, all rights reserved</p>
+        </div>
+    </footer>
+      <script src="../donate/script.js"></script>
+      <script src="../HomePage/home.js"></script>
+      <script src="../Header & Footer/header.js"></script>
+      <script>
+        function openTab(evt, tabName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tab-content");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tab-button");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(tabName).style.display = "block";
+          evt.currentTarget.className += " active";
+      
+          var membershipText = document.getElementById("membership-text");
+          var membershipOptionsText = document.getElementById("membership-options-text");
+          if (tabName === "individual") {
+            membershipText.innerHTML = "<b>Membership is open to both individuals and businesses.<b>";
+            membershipOptionsText.innerHTML = "If you are an individual, you have one membership option";
+          } else {
+            membershipText.innerHTML = "<b>Membership is open to both individuals and businesses.<b>";
+            membershipOptionsText.innerHTML = "If you are an enterprise, you have three membership options. Choose the membership tier that best suits your needs and aspirations";
+          }
+        }
+        function redirectToNextPage(page, subscriptionType) {
+        sessionStorage.setItem('subscriptionType', subscriptionType);
+        window.location.href = page;
+      }
+        document.getElementById("individual").style.display = "block";
+      </script>
+      
+</body>
+</html>

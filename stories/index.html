@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Stories</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link rel="stylesheet" href="../Header & Footer/header.css">
+        <link rel="stylesheet" href="../Header & Footer/footer.css">
+        <link rel="stylesheet" href="./stories.css">
+        <link rel="stylesheet" href="../HomePage/homepage.css">
+        <link rel="stylesheet" href="../donate/style.css">
+        <link rel="icon" type="image/x-icon" href="../HomePage/images/Dablie_logo.png">
+    </head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="../index.html"><img src="../leadership page/assests/images/logo.png"
+                    alt="Dablie Foundation Logo"></a>
+        </div>
+        <div class="logo2">
+            <a href="../index.html"><img src="../leadership page/assests/images/logo2.png"
+                    alt="Dablie Foundation Logo"></a>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">About <i class="fa fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="../about-us/">About us</a></li>
+                        <li><a href="../our-mission/ ">Our mission</a>
+                        <li><a href="../our-story/ ">Our story</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Our Program <i class="fa fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="../leadership/ ">Leadership Program</a></li>
+                        <li><a href="../scholarships/ ">Scholarship Program</a></li>
+                        <li><a href="../economic-empowerment/ ">Economic Empowerment</a></li>
+                        <li><a href="../business/">Dablie Business Forum</a></li>
+                        <!-- <li><a href="../partners">Partners Directory</a></li> -->
+                        <li><a href="../youth/">Youth Program</a></li>
+                        <li><a href="../other/ ">Other Programs</a></li>
+                    </ul>
+                </li>
+                <li><a href="../events/ ">Events</a></li>
+                <li><a href="../stories/">Stories</a></li>
+            </ul>
+        </nav>
+        <div class="join-us-button">
+            <a href="../membership/ ">Join <img src="../HomePage/images/hands.png" alt="Hand Icon"
+                    class="icon"> </a>
+        </div>
+        <!-- Donate Button -->
+<div class="donate-button">
+    <a href="#" id="open-donation-popup-header">Donate <img src="../HomePage/images/heart.png" alt="heart Icon" class="donate-icon2-image"></a>
+</div>
+
+<div class="hamburger-menu-container">
+    <div class="menu-wrapper">
+        <p class="menu-btn"></p>
+        <p class="menu-btn-middle"></p> <!-- Added middle line -->
+    </div>
+</div>
+
+<!-- Pop-up Overlay -->
+<div id="donation-popup" class="donate-popup-overlay" style="display: none;">
+    <div class="donate-popup-content">
+        <span class="donate-popup-close">&times;</span>
+        <!-- Your existing donation page content goes here -->
+        <div class="donate-title5">
+            <h1 class="donate-subtitl">Donate!</h1>
+        </div>
+        <!-- Rest of your donation page code -->
+
+        <div class="donate-container">
+            <div class="donate-content">
+                <div class="donate-image">
+                    <img src="../donate/images/image.png" alt="Donate Image">
+                </div>
+                <div class="text">
+                    <h3 class="donate-sub" style="margin-top: 15px;">Donate!</h3>
+                    <p class="donate-sub">Your gift today will empower, inspire, and connect the next generation of changemakers. Let’s never stop moving toward the world we want. Make your gift today!</p>
+                </div>
+                <div class="donate-contact">
+                    <a href="#">Questions</a> 
+                    <a href="#">Contact us by Email</a>
+                </div>
+            </div>
+            <div class="donate-donation-form">
+                <div class="donate-donation-content">
+                    <h2 class="donate-title2"><img src="../donate/images/mdi_security-lock-outline.png" class="donate-icon-image"> Secure Donation</h2>
+                    <div class="donate-donation-type">
+                        <button class="once">Donate Once</button>
+                        <button class="monthly active"><img src="../donate/images/mdi_heart.png" class="donate-icon2-image">Monthly</button>
+                    </div>
+                    <div class="donate-amount-once" style="display: none;">
+                        <button>2,400</button>
+                        <button>10,000</button>
+                        <button>30,000</button>
+                        <button>60,000</button>
+                        <button>70,000</button>
+                        <button>80,000</button>
+                    </div>
+                    <div class="donate-amount-options">
+                        <button>1,200</button>
+                        <button>1,500</button>
+                        <button>3,000</button>
+                        <button>6,000</button>
+                        <button>7,000</button>
+                        <button>8,000</button>
+                    </div>
+                    <div class="donate-custom-amount">
+                        <input type="text" value="2,500">
+                        <select id="currency-selector">
+                            <option value="ETB">ETB</option>
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                        </select>
+                    </div>
+                    <div class="donate-button7">
+                        <button class="donate-donate3-button">Donate</button>
+                    </div>
+                </div>
+                
+                <!-- Donor Info Section (Initially Hidden) -->
+                <div class="donate-donor-info" style="display: none;">
+                    <h2>
+                        <span class="donate-back-arrow"><i class="fa-solid fa-angle-left"></i></span> <!-- This is the back arrow -->
+                        Enter your details
+                    </h2>
+                    <form>
+                        <div class="donate-form-group">
+                            <input type="text" placeholder="First name" required>
+                        </div>
+                        <div class="donate-form-group">
+                            <input type="text" placeholder="Last name" required>
+                        </div>
+                        <div class="donate-form-group">
+                            <input type="email" placeholder="Email address (optional)">
+                        </div>
+                        <div class="donate-form-group phone-group">
+                            <select>
+                                <option value="+251" selected>🇪🇹</option>
+                                <!-- Add more country codes as needed -->
+                            </select>
+                            <input type="tel" placeholder="Phone" required>
+                        </div>
+                        <div class="donate-form-group">
+                            <input type="checkbox" id="agree" required>
+                            <label for="agree">I agree to the <a href="#">Terms of Service.</a></label>
+                        </div>
+                        <button type="submit" class="donate-submit-donation">Continue</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</header>
+<nav class="menu-overlay">
+    <ul class="main-menu">
+        <li><a href="#" class="submenu-toggle about-toggle">About<span class="icon-container marginit"><i 
+            class="fa-solid fa-chevron-right"></i></span></a></li>
+        <li><a href="#" class="submenu-toggle programs-toggle">Programs<span class="icon-container marginit"><i
+            class="fa-solid fa-chevron-right"></i></span></a></li>
+        <li><a href="../events/ ">Events</a></li>
+        <li><a href="../stories/">Stories</a></li>
+        <li class="buttons-container">
+            <div class="join-us-button1"><a href="../membership/ ">Join <img
+                        src="../HomePage/images/hands.png" alt="Hand Icon" class="donate-icon-image"></a></div>
+            <div class="button">
+                <a href="#" id="open-donation-popup-new">Donate <img src="../HomePage/images/heart.png" alt="heart Icon" class="donate-icon2-image"></a>
+            </div>
+        </li>
+        </ul>
+        <ul class="submenu programs-submenu">
+            <li><a href="#" class="back-to-main-menu"><i
+                        class="fa-solid fa-chevron-left style"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our Programs</a></li>
+            <li><a href="../leadership/ ">Leadership Program</a></li>
+            <li><a href="../scholarships/ ">Scholarship Program</a></li>
+            <li><a href="../economic-empowerment/ ">Economic Empowerment</a></li>
+            <li><a href="../business/">Dablie Business Forum</a></li>
+            <li><a href="../youth/">Youth Program</a></li>
+            <li><a href="../other/ ">Other Programs</a></li>
+        </ul>
+        <ul class="submenu about-submenu">
+            <li><a href="#" class="back-to-main-menu"><i
+                        class="fa-solid fa-chevron-left style"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About</a></li>
+            <li><a href="../about-us/">About us</a></li>
+            <li><a href="../our-mission/">Our mission</a></li>
+            <li><a href="../our-story/">Our story</a></li>
+        </ul>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/company/dablie-foundation/?viewAsMember=true"><i
+                    class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://x.com/dablieofficial"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://tiktok.com/@DablieFoundation"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.facebook.com/people/Dablie-Foundation/61563937820025/"><i
+                    class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://t.me/dabliefoundation"><i class="fa-brands fa-telegram"></i></a>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Latest <span class="titlestory">Stories</span></h1>
+        <div class="divider"></div>
+        <section>
+            <div id="stories_boxes" class="stories_container"></div>
+            <ul id="pagination" class="pagination"></ul>
+        </section>
+    </div>
+    <footer class="footer">
+        <div class="footer-section">
+            <p class="title">The Foundation<p>
+            <a class="subtitle" href="../about-us/">About</a>
+            <a class="subtitle" href="../our-mission/ ">Our mission</a>
+            <a class="subtitle" href="../our-story/ ">Our story</a>
+        </div>
+        <div class="footer-section">
+            <p class="title">Programs<p>
+            <a class="subtitle" href="../leadership/ " >Leadership Program</a>
+            <a class="subtitle" href="../scholarships/ ">Scholarship Program</a>
+            <a class="subtitle" href="../economic-empowerment/ ">Economic Empowerment</a>
+            <a class="subtitle" href="../business/">Dablie Business Forum</a>
+            <!-- <a class="subtitle" href="../partners">Partners Directory</a> -->
+            <a class="subtitle" href="../youth/">Youth Program</a>
+            <a class="subtitle" href="../other/ ">Other Programs</a>
+        </div>
+        <div class="vl"></div>
+        <div class="footer-section">
+            <p class="title">Discover<p>
+            <a class="subtitle" href="../stories/">Stories</a>
+            <a class="subtitle" href="../events/ ">Events</a>
+        </div>
+        <div class="footer-section">
+            <p class="title">Get Involved<p>
+                <a href="#" class="subtitle" id="open-donation-popup-footer">Donate</a>
+                <a class="subtitle" href="../contact/ ">Contact us</a>
+                <a class="subtitle" href="../work-with-us/">Work with us</a>
+        </div>
+        <div class="footer-bottom">
+            <div class="hl-left"></div>
+            <div class="social-media-icons">
+                <a href="https://www.linkedin.com/company/dablie-foundation/?viewAsMember=true"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://x.com/dablieofficial"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://tiktok.com/@DablieFoundation"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://www.facebook.com/people/Dablie-Foundation/61563937820025/"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://t.me/dabliefoundation"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+            <div class="hl-right"></div>
+            <p>©2024 Dablie Foundation, all rights reserved</p>
+        </div>
+    </footer>
+    <script src="../donate/script.js"></script>
+    <script src="../HomePage/home.js"></script>
+    <script src="../Header & Footer/header.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let currentPage = 1;
+            const paginationLimit = 6;
+
+            function fetchStories(page) {
+                const url = `https://api.dablie.org/news?page=${page}&pagination=${paginationLimit}`;
+                console.log(`Fetching stories from: ${url}`);
+                fetch(url, {
+                    method: 'GET',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Received data:', data);
+                    if (data.status !== 'success' || !data.articles || data.articles.length === 0) {
+                        console.error('Invalid data structure:', data);
+                        throw new Error('Invalid data structure');
+                    }
+                    displayStories(data.articles);
+                    setupPagination(data.total_pages);
+                })
+                .catch(error => console.error('Error fetching data:', error));
+            }
+
+            function displayStories(articles) {
+                const storiesBoxes = document.getElementById('stories_boxes');
+                storiesBoxes.innerHTML = '';
+                articles.forEach(article => {
+                    const storyBox = document.createElement('div');
+                    storyBox.classList.add('stories_box');
+
+                    const img = document.createElement('img');
+                    img.src = `../data/images/${article.image}`;
+                    img.alt = "";
+
+                    const label = document.createElement('label');
+                    label.textContent = article.headline;
+
+                    const p = document.createElement('p');
+                    p.textContent = truncateText(article.description, 3);
+                    
+                    const readMoreLink = document.createElement('a');
+                    readMoreLink.href = `story.html?id=${article.id}`;
+                    readMoreLink.textContent = 'Read More';
+                    readMoreLink.classList.add('read_more_link');
+
+                    storyBox.appendChild(img);
+                    storyBox.appendChild(label);
+                    storyBox.appendChild(p);
+                    storyBox.appendChild(readMoreLink);
+
+                    storiesBoxes.appendChild(storyBox);
+                });
+            }
+
+            function truncateText(text, lines) {
+                const words = text.split(' ');
+                let result = '';
+                let lineCount = 0;
+                for (let i = 0; i < words.length; i++) {
+                    result += words[i] + ' ';
+                    if ((i + 1) % 8 === 0) { // Assuming approximately 10 words per line
+                        lineCount++;
+                    }
+                    if (lineCount >= lines) {
+                        result = result.trim() + '... ';
+                        break;
+                    }
+                }
+                return result.trim();
+            }
+
+            function setupPagination(totalPages) {
+                console.log(`Total pages: ${totalPages}`);
+                const pagination = document.getElementById('pagination');
+                pagination.innerHTML = '';
+
+                for (let i = 1; i <= totalPages; i++) {
+                    const li = document.createElement('li');
+                    const a = document.createElement('a');
+                    a.textContent = i;
+                    a.href = '#';
+                    a.dataset.page = i;
+                    if (i === currentPage) {
+                        a.classList.add('active');
+                    }
+                    a.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        currentPage = parseInt(this.dataset.page);
+                        console.log(`Navigating to page: ${currentPage}`);
+                        fetchStories(currentPage);
+                    });
+
+                    li.appendChild(a);
+                    pagination.appendChild(li);
+                }
+            }
+
+            fetchStories(currentPage);
+        });
+    </script>
+</body>
+</html>
