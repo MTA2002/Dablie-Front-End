@@ -304,7 +304,7 @@
                 <a href="https://t.me/dabliefoundation"><i class="fa-brands fa-telegram"></i></a>
             </div>
             <div class="hl-right"></div>
-            <p>©2024 Dablie Foundation, all rights reserved</p>
+            <p id = "year-text">©2024 Dablie Foundation, all rights reserved</p>
         </div>
     </footer>
     
@@ -312,6 +312,11 @@
     <script src="../HomePage/home.js"></script>
     <script src="../Header & Footer/header.js"></script>
     <script>
+        const currentYear = new Date().getFullYear();
+        const yearText = document.getElementById("year-text");
+        
+        yearText.textContent = `©${currentYear} Dablie Foundation, all rights reserved`;
+        
         document.getElementById('toggle-more').addEventListener('click', function(event) {
             event.preventDefault();
             var hiddenCards = document.querySelectorAll('.program_card.hidden');
