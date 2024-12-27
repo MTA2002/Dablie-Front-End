@@ -46,12 +46,11 @@ npm install
 Step 3: Configure Environment
 
 If the project uses environment variables:
-	1.	Copy the .env.example file to .env:
+1.	Copy the .env.example file to .env:
 
-cp .env.example .env
+       cp .env.example .env
 
-
-	2.	Update the .env file with your local or production environment configurations.
+2.	Update the .env file with your local or production environment configurations.
 
 Step 4: Start the Development Server
 
@@ -74,18 +73,18 @@ The optimized files will be available in the build directory.
 🛠️ Contributing
 
 We welcome contributions from everyone passionate about making a difference. To contribute:
-	1.	Fork this repository.
-	2.	Create a new branch:
+1.	Fork this repository.
+2.	Create a new branch:
 
-git checkout -b feature/YourFeatureName
-
-
-	3.	Make your changes and commit:
-
-git commit -m "Add YourFeatureName"
+    git checkout -b feature/YourFeatureName
 
 
-	4.	Push to your forked repository and create a pull request.
+3.	Make your changes and commit:
+
+    git commit -m "Add YourFeatureName"
+
+
+4.	Push to your forked repository and create a pull request.
 
 For detailed guidelines, see our Contributing Guidelines.
 
